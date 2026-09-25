@@ -1,0 +1,120 @@
+# 
+# Questa Static Verification System
+# Version 2022.4_1 5450673 linux_x86_64 22-Nov-2022
+log created Thu Sep 24 11:09:45 2026 by alehtoah24 on kataja6.oulu.fi
+
+Executing Command : autocheck compile -d pc
+File: /homedir01/alehtoah24/DT2_2026/project/workdir/scripts/qautocheck.tcl, Line: 26
+
+### Starting Step: netlist elaborate ### 
+
+## Elaborating Design...
+Reading MTI mapping for library mapping
+Writing all MTI mappings to vmap output ...
+
+Top level modules:
+	pc
+
+Analyzing design...
+-- Loading module z0in_work.pc
+Optimizing 3 design-units (inlining 0/1 module instances):
+-- Optimizing package z0in_work.mycpu_pkg(fast)
+-- Optimizing package z0in_work.mycpu_pkg_sv_unit(fast)
+-- Optimizing module z0in_work.pc(fast)
+Optimized design name is zi_opt_af0_1411892106_1
+
+### Starting Step: netlist create ### 
+
+## Synthesizing netlist...
+Processing module 'pc'
+Elaborating module 'pc'.
+
+##Time Taken (Synthesis) = 871575.000000 ticks = 0.871575 secs
+
+### Starting Step: autocheck compile ### 
+
+## Processing Formal Logic...
+Processing module 'pc'
+Restoring module 'pc'.
+Flattening design 'pc'.
+Info    : Detected clock.  Clock: clk.  [netlist-11]
+Design is processed for formal verification.  Design 'pc'.
+Info    : Detected asynchronous reset.  Signal: rst_n, active low.  [netlist-106]
+
+Clocks
+------------------------------------------------------------------------------
+Port                                   Period         Waveform
+------------------------------------------------------------------------------
+clk                      [inferred]       100             0 50 
+------------------------------------------------------------------------------
+
+Blackboxes
+------------------------------------------------------------------------------
+Module name                                                Reason
+------------------------------------------------------------------------------
+<no blackboxed modules>
+------------------------------------------------------------------------------
+
+Inferred directives
+------------------------------------------------------------------------------
+netlist clock clk -period 100 -waveform 0 50
+------------------------------------------------------------------------------
+
+Design is linked for formal analysis.  Design 'pc'.
+Formal model has been created.
+
+Property Summary
+-------------------------------------------------------------------------------
+Total  Directives :0
+Assert Directives :0
+Assume Directives :0
+Cover  Directives :0
+-------------------------------------------------------------------------------
+
+AutoCheck Compile Summary
+-------------------------------------------------------------------------------
+Check                     Evaluations         Found        Waived
+-------------------------------------------------------------------------------
+ASSIGN_IMPLICIT_CONSTANT            4             0             0
+CASE_DUPLICATE                      1             0             0
+CLK_DELAY                           1             0             0
+CLK_IN_DATA                         4             0             0
+COMBO_LOOP                          3             0             0
+DECLARATION_UNDRIVEN                2             0             0
+DECLARATION_UNUSED                  2             0             0
+DECLARATION_UNUSED_UNDRIVEN         0             0             0
+FUNCTION_INCOMPLETE_ASSIGN          0             0             0
+INDEX_UNREACHABLE                   0             0             0
+LATCH_INFERRED                      0             0             0
+LOGIC_UNDRIVEN                      2             0             0
+LOGIC_UNUSED                        0             0             0
+PORT_UNDRIVEN                       6             0             0
+PORT_UNUSED                         6             2             0
+REG_MIXED_ASSIGNS                   1             0             0
+REG_NO_RESET                        1             0             0
+REG_RACE                            0             0             0
+REG_VARIABLE_ARESET                 2             0             0
+RESET_HIGH_LOW                      1             0             0
+RESET_SYNC_ASYNC                    1             0             0
+SLIST_INCOMPLETE                    0             0             0
+X_ASSIGN_REACHABLE                  0             0             0
+-------------------------------------------------------------------------------
+AC Total                           37             2             0
+-------------------------------------------------------------------------------
+
+
+To see results in the GUI run:
+qverify /homedir01/alehtoah24/DT2_2026/project/output/qautocheck_run_log/autocheck.db
+
+
+Message Summary
+---------------------------------------------------------------------------
+Count  Type     Message ID         Summary
+---------------------------------------------------------------------------
+    1  Info     netlist-106        Detected asynchronous reset.
+    1  Info     netlist-11         Detected clock.
+
+Final Process Statistics: Max memory 616MB, CPU time 2s, Total time 3s
+
+End of log Thu Sep 24 11:09:48 2026
+

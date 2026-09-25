@@ -1,0 +1,89 @@
+
+Questa AutoCheck Version 2022.4_1 5450673 linux_x86_64 22-Nov-2022
+
+****************************************************************************************
+AutoCheck Setting Report
+Created Thu Sep 24 11:09:49 2026
+****************************************************************************************
+
+
+****************************************************************************************
+Section A:  Applied Directives
+****************************************************************************************
+autocheck enable 
+
+netlist clock clk [Inferred]
+
+netlist constraint {rst_n } -value 1'b1 -after_init [Inferred]
+
+netlist reset rst_n -active_low [Inferred]
+
+
+
+****************************************************************************************
+Section B:  Unapplied Directives
+****************************************************************************************
+
+
+****************************************************************************************
+Section C:  Wild Card Expansion for Applied Directives
+****************************************************************************************
+
+
+****************************************************************************************
+Section D:  AutoCheck Check Settings
+****************************************************************************************
+Compile Checks                 Severity             Status              
+----------------------------------------------------------------------------------------
+ASSIGN_IMPLICIT_CONSTANT       Caution              ON                  
+CASE_DUPLICATE                 Caution              ON                  
+CLK_DELAY                      Caution              ON                  
+CLK_IN_DATA                    Violation            ON                  
+COMBO_LOOP                     Violation            ON                  
+DECLARATION_UNDRIVEN           Violation            ON                  
+DECLARATION_UNUSED             Caution              ON                  
+DECLARATION_UNUSED_UNDRIVEN    Caution              ON                  
+FUNCTION_INCOMPLETE_ASSIGN     Caution              ON                  
+INDEX_UNREACHABLE              Caution              ON                  
+LATCH_INFERRED                 Caution              ON                  
+LOGIC_UNDRIVEN                 Violation            ON                  
+LOGIC_UNUSED                   Caution              ON                  
+PORT_UNDRIVEN                  Violation            ON                  
+PORT_UNUSED                    Caution              ON                  
+REG_MIXED_ASSIGNS              Caution              ON                  
+REG_NO_RESET                   Caution              ON                  
+REG_RACE                       Caution              ON                  
+REG_VARIABLE_ARESET            Caution              ON                  
+RESET_HIGH_LOW                 Caution              ON                  
+RESET_SYNC_ASYNC               Caution              ON                  
+SLIST_INCOMPLETE               Caution              ON                  
+X_ASSIGN_REACHABLE             Violation            ON                  
+
+Verify Checks                  Severity             Status              
+----------------------------------------------------------------------------------------
+ARITH_OVERFLOW_SUB             Violation            ON                  
+ARITH_OVERFLOW_VAL             Caution              ON                  
+ARITH_ZERO_DIV                 Violation            ON                  
+ARITH_ZERO_MOD                 Violation            ON                  
+BLOCK_UNREACHABLE              Caution              ON                  
+BUS_MULTIPLY_DRIVEN            Violation            ON                  
+BUS_UNDRIVEN                   Violation            ON                  
+BUS_VALUE_CONFLICT             Violation            ON                  
+CASE_DEFAULT                   Violation            ON                  
+CASE_FULL                      Violation            ON                  
+CASE_PARALLEL                  Violation            ON                  
+FSM_DEADLOCK_STATE             Caution              ON                  
+FSM_LOCKOUT_STATE              Caution              ON                  
+FSM_STUCK_BIT                  Caution              ON                  
+FSM_UNREACHABLE_STATE          Caution              ON                  
+FSM_UNREACHABLE_TRANS          Caution              ON                  
+INDEX_ILLEGAL                  Violation            ON                  
+INIT_X_OPTIMISM                Caution              ON                  
+INIT_X_PESSIMISM               Caution              ON                  
+INIT_X_UNRESOLVED              Caution              ON                  
+INIT_X_UNRESOLVED_MEM          Caution              ON                  
+ONE_COLD                       Violation            ON                  
+ONE_HOT                        Violation            ON                  
+REG_MULTIPLY_DRIVEN            Violation            ON                  
+REG_STUCK_AT                   Caution              ON                  
+REG_TOGGLE_VIOLATION           Caution              ON                  

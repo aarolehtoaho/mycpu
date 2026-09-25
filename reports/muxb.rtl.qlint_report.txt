@@ -1,0 +1,115 @@
+====================================================================================================
+Lint Check Report
+Questa Lint  Version 2022.4_1 5450673 linux_x86_64 22-Nov-2022
+
+Timestamp            : Tue Sep  8 12:18:07 2026
+Description          : Report for referring checks count, check violations details, and  design information
+Design               : muxb
+Database             : /homedir01/alehtoah24/DT2_2026/project/workdir/output/qlint/lint.db
+Design Quality Score : 100%
+
+Sections:
+   Section 1 : Check Summary
+   Section 2 : Check Details
+   Section 3 : Design Information
+====================================================================================================
+
+
+====================================================================================================
+Section 1 : Check Summary
+====================================================================================================
+-------------
+| Error (0) |
+-------------
+
+---------------
+| Warning (0) |
+---------------
+
+-------------
+| Info (10) |
+-------------
+  combo_path_input_to_output              : 1
+  line_char_large                         : 3
+  module_output_not_registered            : 1
+  reserved_keyword                        : 5
+
+----------------
+| Resolved (0) |
+----------------
+
+
+====================================================================================================
+Section 2 : Check Details
+====================================================================================================
+-------------
+| Error (0) |
+-------------
+
+
+---------------
+| Warning (0) |
+---------------
+
+
+-------------
+| Info (10) |
+-------------
+
+Check: combo_path_input_to_output [Category: Connectivity] (1)
+       [Message: Top level input to output has pure combinational path. Input port(s) '<input>', Output port '<output>', Module '<module>', File '<file>', Line '<line>']
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+combo_path_input_to_output: [uninspected] Top level input to output has pure combinational path. Input port(s) 'd0_in, d1_in and sel_in', Output port 'm_out', Module 'muxb', File '/homedir01/alehtoah24/DT2_2026/project/workdir/input/muxb.sv', Line '9' [Example Hierarchy:muxb]
+
+
+Check: line_char_large [Category: Rtl Design Style] (3)
+       [Message: Line has more characters than the specified limit. Current count '<count>', Specified Limit '<limit>', Tab equivalent spacing '<tab_size>', File '<file>', Line '<line>'.]
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+line_char_large: [uninspected] Line has more characters than the specified limit. Current count '135', Specified Limit '110', Tab equivalent spacing '2', File '/homedir01/alehtoah24/DT2_2026/project/input/muxb.sv', Line '11'. [RTL ID:4896c10b_00200]
+
+line_char_large: [uninspected] Line has more characters than the specified limit. Current count '156', Specified Limit '110', Tab equivalent spacing '2', File '/homedir01/alehtoah24/DT2_2026/project/input/mycpu.svh', Line '12'. [RTL ID:8628e0cc_00200]
+
+line_char_large: [uninspected] Line has more characters than the specified limit. Current count '142', Specified Limit '110', Tab equivalent spacing '2', File '/homedir01/alehtoah24/DT2_2026/project/input/mycpu.svh', Line '15'. [RTL ID:81aca787_00200]
+
+
+Check: module_output_not_registered [Category: Connectivity] (1)
+       [Message: Module output port is not registered. Port '<port>', Module '<module>', File '<file>', Line '<line>'.]
+------------------------------------------------------------------------------------------------------------------------
+module_output_not_registered: [uninspected] Module output port is not registered. Port 'm_out', Module 'muxb', File '/homedir01/alehtoah24/DT2_2026/project/workdir/input/muxb.sv', Line '9'. [Example Hierarchy:muxb]
+
+
+Check: reserved_keyword [Category: Nomenclature Style] (5)
+       [Message: Name of the design element matches a reserved keyword. Name '<name>', Reason '<reason>', Module '<module>', File '<file>', Line '<line>'.]
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+reserved_keyword: [uninspected] Name of the design element matches a reserved keyword. Name 'FOR', Reason 'Case variant of verilog keyword', Module 'mycpu_pkg', File '/homedir01/alehtoah24/DT2_2026/project/workdir/input/mycpu_pkg.sv', Line '25'.
+
+reserved_keyword: [uninspected] Name of the design element matches a reserved keyword. Name 'AND', Reason 'Case variant of verilog keyword', Module 'mycpu_pkg', File '/homedir01/alehtoah24/DT2_2026/project/workdir/input/mycpu_pkg.sv', Line '45'.
+
+reserved_keyword: [uninspected] Name of the design element matches a reserved keyword. Name 'OR', Reason 'Case variant of verilog keyword', Module 'mycpu_pkg', File '/homedir01/alehtoah24/DT2_2026/project/workdir/input/mycpu_pkg.sv', Line '46'.
+
+reserved_keyword: [uninspected] Name of the design element matches a reserved keyword. Name 'XOR', Reason 'Case variant of verilog keyword', Module 'mycpu_pkg', File '/homedir01/alehtoah24/DT2_2026/project/workdir/input/mycpu_pkg.sv', Line '47'.
+
+reserved_keyword: [uninspected] Name of the design element matches a reserved keyword. Name 'NOT', Reason 'Case variant of verilog keyword', Module 'mycpu_pkg', File '/homedir01/alehtoah24/DT2_2026/project/workdir/input/mycpu_pkg.sv', Line '48'.
+
+
+
+----------------
+| Resolved (0) |
+----------------
+
+
+
+====================================================================================================
+Section 3 : Design Information
+====================================================================================================
+-----------
+| Summary |
+-----------
+  Register Bits                           : 0
+  Latch Bits                              : 0
+  User-specified Blackboxes               : 0
+  Inferred Blackboxes                     : 0
+  Empty Modules                           : 0
+  Unresolved Modules                      : 0
+  Hierarchical IPs                        : 0
+

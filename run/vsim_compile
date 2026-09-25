@@ -1,0 +1,32 @@
+#!/bin/csh
+
+set DESIGN_NAME = `scripts/get_variable.tcl DESIGN_NAME >& /dev/null ; cat output/variable`
+if ( $DESIGN_NAME == "") then
+    echo "Error: Variable DESIGN_NAME has not been set in input/0_setup_design.tcl."
+    exit
+endif
+
+source run/setup_env.csh
+
+cd $WORKDIR
+
+if ( -f compilation_errors.txt ) then
+    rm -f compilation_errors.txt
+endif
+
+vsim -c -do scripts/vsim_compile.tcl -l compilation_errors.txt $*
+
+echo "-----------------------------------------------------------------------------------------"
+echo "Errors and warnings in Transcript:"
+echo "-----------------------------------------------------------------------------------------"
+grep -i -e '\*\*' compilation_errors.txt | grep Error
+echo "-----------------------------------------------------------------------------------------"
+grep -i -e '\*\*' compilation_errors.txt | grep Warning
+echo "-----------------------------------------------------------------------------------------"
+
+cd ..
+
+source run/cleanup_env.csh
+
+
+

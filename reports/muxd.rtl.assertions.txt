@@ -1,0 +1,51 @@
+Coverage Report by instance with details
+
+=================================================================================
+=== Instance: /muxd_tb/TEST
+=== Design Unit: work.muxd_test
+=================================================================================
+
+Assertion Coverage:
+    Assertions                       1         1         0   100.00%
+--------------------------------------------------------------------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass     Vacuous    Disable    Attempt     Active Peak Active ATV
+                                                  Count        Count    Count      Count      Count       Count  Count          
+--------------------------------------------------------------------------------------------------------------------------------
+/muxd_tb/TEST/test_program/#ublk#245815396#25/immed__33
+                     input/muxd_test.sv(33)             0         20          0          0         20          0           0 off
+
+=================================================================================
+=== Instance: /muxd_tb/SVA_muxd
+=== Design Unit: work.muxd_svamod
+=================================================================================
+
+Assertion Coverage:
+    Assertions                       3         3         0   100.00%
+--------------------------------------------------------------------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass     Vacuous    Disable    Attempt     Active Peak Active ATV
+                                                  Count        Count    Count      Count      Count       Count  Count          
+--------------------------------------------------------------------------------------------------------------------------------
+/muxd_tb/SVA_muxd/X_sel_in
+                     input/muxd_svamod.sv(17)           0         20          0          2         22          0           1 off
+/muxd_tb/SVA_muxd/X_d_in
+                     input/muxd_svamod.sv(18)           0         20          0          2         22          0           1 off
+/muxd_tb/SVA_muxd/X_m_out
+                     input/muxd_svamod.sv(19)           0         20          0          2         22          0           1 off
+
+
+ASSERTION RESULTS:
+--------------------------------------------------------------------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass     Vacuous    Disable    Attempt     Active Peak Active ATV
+                                                  Count        Count    Count      Count      Count       Count  Count          
+--------------------------------------------------------------------------------------------------------------------------------
+/muxd_tb/TEST/test_program/#ublk#245815396#25/immed__33
+                     input/muxd_test.sv(33)             0         20          0          0         20          0           0 off
+/muxd_tb/SVA_muxd/X_sel_in
+                     input/muxd_svamod.sv(17)           0         20          0          2         22          0           1 off
+/muxd_tb/SVA_muxd/X_d_in
+                     input/muxd_svamod.sv(18)           0         20          0          2         22          0           1 off
+/muxd_tb/SVA_muxd/X_m_out
+                     input/muxd_svamod.sv(19)           0         20          0          2         22          0           1 off
+
+Total Coverage By Instance (filtered view): 100.00%
+

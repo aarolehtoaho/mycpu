@@ -1,0 +1,117 @@
+# 
+# Questa Static Verification System
+# Version 2022.4_1 5450673 linux_x86_64 22-Nov-2022
+log created Thu Sep 24 11:09:48 2026 by alehtoah24 on kataja6.oulu.fi
+
+Executing Command : autocheck verify -timeout 5m 
+File: /homedir01/alehtoah24/DT2_2026/project/workdir/scripts/qautocheck.tcl, Line: 34
+
+Info    : Using initialization sequence file to initialize design state.  File '/homedir01/alehtoah24/DT2_2026/project/workdir/input/questa_seq.tcl'.  [formal-205]
+Info    : Automatically constraining reset signal to de-assert after initialization sequence (use -auto_constraint_off option to disable).  Signal 'rst_n', Value '1'.  [formal-285]
+Info	: Warning(line 3): no $default_clock declared, using clk
+Applying synthesis semantics to design: pc
+[00:00:00] Status: Done 0/9, 0 issues, Mem=0GB
+Info    : Established connection with engine process.  Hostname 'kataja6.oulu.fi', PID 5859, Id 1, Time [00:00:00].  [formal-385]
+Info    : Established connection with engine process.  Hostname 'kataja6.oulu.fi', PID 5864, Id 2, Time [00:00:00].  [formal-385]
+Info    : Established connection with engine process.  Hostname 'kataja6.oulu.fi', PID 5869, Id 3, Time [00:00:00].  [formal-385]
+Info    : Established connection with engine process.  Hostname 'kataja6.oulu.fi', PID 5870, Id 4, Time [00:00:00].  [formal-385]
+[00:00:00] Status: Done 9/9, 2 issues, Mem=1GB
+
+AutoCheck Compile Summary
+-------------------------------------------------------------------------------
+Check                     Evaluations         Found        Waived
+-------------------------------------------------------------------------------
+ASSIGN_IMPLICIT_CONSTANT            4             0             0
+CASE_DUPLICATE                      1             0             0
+CLK_DELAY                           1             0             0
+CLK_IN_DATA                         4             0             0
+COMBO_LOOP                          3             0             0
+DECLARATION_UNDRIVEN                2             0             0
+DECLARATION_UNUSED                  2             0             0
+DECLARATION_UNUSED_UNDRIVEN         0             0             0
+FUNCTION_INCOMPLETE_ASSIGN          0             0             0
+INDEX_UNREACHABLE                   0             0             0
+LATCH_INFERRED                      0             0             0
+LOGIC_UNDRIVEN                      2             0             0
+LOGIC_UNUSED                        0             0             0
+PORT_UNDRIVEN                       6             0             0
+PORT_UNUSED                         6             2             0
+REG_MIXED_ASSIGNS                   1             0             0
+REG_NO_RESET                        1             0             0
+REG_RACE                            0             0             0
+REG_VARIABLE_ARESET                 2             0             0
+RESET_HIGH_LOW                      1             0             0
+RESET_SYNC_ASYNC                    1             0             0
+SLIST_INCOMPLETE                    0             0             0
+X_ASSIGN_REACHABLE                  0             0             0
+-------------------------------------------------------------------------------
+AC Total                           37             2             0
+-------------------------------------------------------------------------------
+
+
+AutoCheck Verify Summary
+-------------------------------------------------------------------------------
+Check                     Evaluations         Found        Waived
+-------------------------------------------------------------------------------
+ARITH_OVERFLOW_SUB                  0             0             0
+ARITH_OVERFLOW_VAL                  2             2             0
+ARITH_ZERO_DIV                      0             0             0
+ARITH_ZERO_MOD                      0             0             0
+BLOCK_UNREACHABLE                   6             0             0
+BUS_MULTIPLY_DRIVEN                 0             0             0
+BUS_UNDRIVEN                        0             0             0
+BUS_VALUE_CONFLICT                  0             0             0
+CASE_DEFAULT                        0             0             0
+CASE_FULL                           0             0             0
+CASE_PARALLEL                       0             0             0
+FSM_DEADLOCK_STATE                  0             0             0
+FSM_LOCKOUT_STATE                   0             0             0
+FSM_STUCK_BIT                       0             0             0
+FSM_UNREACHABLE_STATE               0             0             0
+FSM_UNREACHABLE_TRANS               0             0             0
+INDEX_ILLEGAL                       0             0             0
+INIT_X_OPTIMISM                     1             0             0
+INIT_X_PESSIMISM                    0             0             0
+INIT_X_UNRESOLVED                   0             0             0
+INIT_X_UNRESOLVED_MEM               0             0             0
+ONE_COLD                            0             0             0
+ONE_HOT                             0             0             0
+REG_MULTIPLY_DRIVEN                 0             0             0
+REG_STUCK_AT                        1             0             0
+REG_TOGGLE_VIOLATION                0             0             0
+-------------------------------------------------------------------------------
+AC Total                           10             2             0
+-------------------------------------------------------------------------------
+
+
+
+--------- Process Statistics ----------
+Elapsed Time                       0 s
+Total CPU Time                     0 s
+Total Peak Memory                1.0 GB
+---------- Engine Processes -----------
+Average CPU Time                   0 s
+Minimum CPU Utilization          0.0 %
+Average Peak Memory              0.2 GB
+Maximum Peak Memory              0.2 GB
+Peak Cores                         4
+Distinct Machines                  1
+Launch Failures                    0
+Unexpected Process Terminations    0
+Successful Re-connections          0
+---------------------------------------
+
+
+Message Summary
+---------------------------------------------------------------------------
+Count  Type     Message ID         Summary
+---------------------------------------------------------------------------
+    1  Info     formal-205         Using initialization sequence file to initialize design state.
+    1  Info     formal-285         Automatically constraining reset signal to de-assert after initialization sequence (use -auto_constraint_off option to disable).
+    4  Info     formal-385         Established connection with engine process.
+
+Final Process Statistics: Peak Memory 0.29GB, Cumulative CPU Time 0s, Elapsed Time 0s
+
+To see results in the GUI run:
+qverify /homedir01/alehtoah24/DT2_2026/project/output/qautocheck_run_log/autocheck.db
+

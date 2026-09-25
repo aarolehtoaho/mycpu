@@ -1,0 +1,16 @@
+Recursive Coverage Report Summary Data by instance
+
+=================================================================================
+=== Instance: /pc_tb/DUT
+=== Design Unit: work.pc
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Assertions                       6         6         0   100.00%
+    Branches                         7         6         1    85.71%
+    Statements                       7         7         0   100.00%
+    Toggles                        212       212         0   100.00%
+
+
+Total Coverage By Instance (filtered view): 96.42%
+

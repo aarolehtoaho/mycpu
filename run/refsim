@@ -1,0 +1,80 @@
+#!/bin/csh
+
+set DESIGN_NAME = `scripts/get_variable.tcl DESIGN_NAME >& /dev/null ; cat output/variable`
+if ( $DESIGN_NAME == "") then
+    echo "Error: Variable DESIGN_NAME has not been set in input/0_setup_design.tcl."
+    exit
+endif
+
+source run/setup_env.csh
+
+##################################################################################
+# Clean up previous runs and set up a new directory.
+##################################################################################
+
+rm -rf output/refmod
+mkdir output/refmod
+cd output/refmod
+ln -s ../../input
+ln -s ../../scripts
+mkdir output reports refdata
+
+##################################################################################
+# Reference model is compiled with student's package files, encrypted design files,
+# and plain-text testbench files.
+##################################################################################
+
+set USER_FILES = "input/mycpu_pkg.sv input/cu_pkg.sv "
+
+set DESIGN_FILES = "${DT2_HOME}/refmod/cu.sv ${DT2_HOME}/refmod/cu_svamod.sv ${DT2_HOME}/refmod/fu.sv ${DT2_HOME}/refmod/fu_svamod.sv ${DT2_HOME}/refmod/ir.sv ${DT2_HOME}/refmod/ir_svamod.sv ${DT2_HOME}/refmod/muxm.sv ${DT2_HOME}/refmod/muxm_svamod.sv ${DT2_HOME}/refmod/muxb.sv ${DT2_HOME}/refmod/muxb_svamod.sv ${DT2_HOME}/refmod/muxd.sv ${DT2_HOME}/refmod/muxd_svamod.sv ${DT2_HOME}/refmod/pc.sv ${DT2_HOME}/refmod/pc_svamod.sv ${DT2_HOME}/refmod/rb.sv ${DT2_HOME}/refmod/rb_svamod.sv ${DT2_HOME}/refmod/mycpu.sv ${DT2_HOME}/refmod/mycpu_svamod.sv"
+
+set TB_FILES = "input/mycpu_tb.sv input/mycpu_test.sv"
+
+# Compilation
+
+set instr = "IOR LDI MOVA MOVB NOT AND OR XOR INC DEC ADD SUB MUL ADI SHR SHL SRA SLA LD ST BRZ BRN JMP IOW"
+
+# Simulations
+
+echo "" > reports/refsim_log.txt
+
+foreach i ($instr)
+    echo $i
+    bash scripts/asm.bash ${i}.asm >>& reports/refsim_log.txt
+
+    foreach f ($USER_FILES)
+	vlog -sv +incdir+input +define+design_top_is_mycpu  +define+DESIGN_NAME_MACRO=mycpu $f >>& reports/refsim_log.txt
+    end
+
+    foreach f ($DESIGN_FILES)
+	vlog -sv +incdir+input +define+design_top_is_mycpu  +define+DESIGN_NAME_MACRO=mycpu +define+REFSIM $f >>& reports/refsim_log.txt
+    end
+
+    foreach f ($TB_FILES)
+	vlog -sv +incdir+input +define+design_top_is_mycpu  +define+DESIGN_NAME_MACRO=mycpu $f >>& reports/refsim_log.txt
+    end
+
+    # Optimization
+    vopt +acc -debugdb -o mycpu_vopt work.mycpu_tb >>& reports/refsim_log.txt
+
+
+    vsim -c mycpu_vopt -debugdb -msgmode both -do "run -all" >>& reports/refsim_log.txt
+    mv reports/mycpu_simulation.txt refdata/mycpu_simulation.${i}.txt
+    mv reports/mycpu_memory.txt refdata/mycpu_memory.${i}.txt    
+end
+
+cp -r refdata ../../reports
+
+# Copy reference results to students 'reports'
+
+
+# Clean up
+cd ../..
+#rm -rf output/refmod
+
+echo "==============================================================================================="
+echo "Reference data is available in reports/refdata"
+ls -l reports/refdata
+echo "==============================================================================================="
+
+source run/cleanup_env.csh

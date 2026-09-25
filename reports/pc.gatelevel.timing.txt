@@ -1,0 +1,65 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : pc
+Version: T-2022.03-SP5-1
+Date   : Thu Sep 24 11:06:11 2026
+****************************************
+
+Operating Conditions: tt1p05v25c   Library: saed32hvt_tt1p05v25c
+Wire Load Model Mode: enclosed
+
+  Startpoint: pc_r_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: pc_r_reg[15]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  pc                 8000                  saed32hvt_tt1p05v25c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  pc_r_reg[0]/CLK (DFFARX1_HVT)            0.00       0.00 r
+  pc_r_reg[0]/Q (DFFARX1_HVT)              0.18       0.18 r
+  U84/C1 (HADDX1_HVT)                      0.10       0.28 r
+  U82/CO (FADDX1_HVT)                      0.13       0.41 r
+  U80/CO (FADDX1_HVT)                      0.14       0.55 r
+  U78/CO (FADDX1_HVT)                      0.14       0.69 r
+  U76/CO (FADDX1_HVT)                      0.14       0.83 r
+  U74/CO (FADDX1_HVT)                      0.14       0.97 r
+  U71/CO (FADDX1_HVT)                      0.14       1.11 r
+  U68/CO (FADDX1_HVT)                      0.14       1.25 r
+  U65/CO (FADDX1_HVT)                      0.14       1.39 r
+  U62/CO (FADDX1_HVT)                      0.14       1.53 r
+  U59/CO (FADDX1_HVT)                      0.14       1.67 r
+  U56/CO (FADDX1_HVT)                      0.14       1.81 r
+  U53/CO (FADDX1_HVT)                      0.14       1.95 r
+  U50/CO (FADDX1_HVT)                      0.14       2.09 r
+  U47/CO (FADDX1_HVT)                      0.13       2.22 r
+  U39/Y (XOR2X1_HVT)                       0.13       2.36 f
+  U41/Y (NAND2X0_HVT)                      0.04       2.40 r
+  U46/Y (NAND3X0_HVT)                      0.09       2.50 f
+  pc_r_reg[15]/D (DFFARX1_HVT)             0.01       2.51 f
+  data arrival time                                   2.51
+
+  clock clk (rise edge)                    4.25       4.25
+  clock network delay (ideal)              0.00       4.25
+  pc_r_reg[15]/CLK (DFFARX1_HVT)           0.00       4.25 r
+  library setup time                      -0.07       4.18
+  data required time                                  4.18
+  -----------------------------------------------------------
+  data required time                                  4.18
+  data arrival time                                  -2.51
+  -----------------------------------------------------------
+  slack (MET)                                         1.67
+
+
+1

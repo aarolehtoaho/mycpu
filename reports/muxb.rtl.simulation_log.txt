@@ -1,0 +1,301 @@
+# 0
+# 1
+# QuestaSim-64 vlog 2022.4_1 Compiler 2022.11 Nov 11 2022
+# Start time: 12:15:11 on Sep 08,2026
+# vlog -reportprogress 300 -suppress 13314 "+define+RTL_SIM" "+define+design_top_is_muxb" -work work -timescale 1ns/1ps "+cover=bcxefs" input/mycpu_pkg.sv 
+# -- Compiling package mycpu_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 12:15:11 on Sep 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2022.4_1 Compiler 2022.11 Nov 11 2022
+# Start time: 12:15:11 on Sep 08,2026
+# vlog -reportprogress 300 -suppress 13314 "+define+RTL_SIM" "+define+design_top_is_muxb" -work work -timescale 1ns/1ps "+cover=bcxefs" input/muxb_svamod.sv 
+# -- Compiling package muxb_svamod_sv_unit
+# -- Importing package mycpu_pkg
+# -- Compiling module muxb_svamod
+# 
+# Top level modules:
+# 	muxb_svamod
+# End time: 12:15:11 on Sep 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2022.4_1 Compiler 2022.11 Nov 11 2022
+# Start time: 12:15:12 on Sep 08,2026
+# vlog -reportprogress 300 -suppress 13314 "+define+RTL_SIM" "+define+design_top_is_muxb" -work work -timescale 1ns/1ps "+cover=bcxefs" input/muxb.sv 
+# -- Compiling package muxb_sv_unit
+# -- Importing package mycpu_pkg
+# -- Compiling module muxb
+# 
+# Top level modules:
+# 	muxb
+# End time: 12:15:12 on Sep 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2022.4_1 Compiler 2022.11 Nov 11 2022
+# Start time: 12:15:12 on Sep 08,2026
+# vlog -reportprogress 300 -suppress 13314 "+define+RTL_SIM" "+define+design_top_is_muxb" -work work -timescale 1ns/1ps "+cover=bcxefs" input/muxb_test.sv input/muxb_tb.sv 
+# -- Compiling package muxb_test_sv_unit
+# -- Importing package mycpu_pkg
+# -- Compiling program muxb_test
+# -- Compiling package muxb_tb_sv_unit
+# -- Compiling module muxb_tb
+# 
+# Top level modules:
+# 	muxb_tb
+# End time: 12:15:12 on Sep 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Library vendor : Model Technology
+# Maximum unnamed designs : 3
+# MODULE muxb
+#     Depends on: X sv_std std 9oUSJO;AeEaW`l:M@^WG92
+#     Depends on: X work mycpu_pkg ^[b<gQf<6;1<6jP=4P@>]1
+#     Depends on: X work muxb_sv_unit GEg<ObZa0iB]:^mlBbUE_2
+#     Compile time: Tue Sep  8 12:15:12 2026
+#     Version string: Dg1SIo80bB@j0V0VzS_@n1
+#     Optimized Verilog design root: 1
+#     Debug Symbol file exists
+#     DU Coverage Signature: [7W:RgIO1SZ5^IK04h@o33
+#     Verilog version: Z_ocLaCQV]CkCJo^OP^d?0
+#     Source directory: /homedir01/alehtoah24/DT2_2026/project/workdir
+#     Source modified time: Tue Sep  8 11:45:21 2026
+#     HDL source file: input/muxb.sv
+#     Source file: input/muxb.sv
+#     Start location: input/muxb.sv:5:21
+#     Opcode format: 2022.4_1; VLOG SE-64 Object version 75
+#     VHDL language standard: 1
+#     Compiled in vopt flow
+#     Compile options: -suppress 13314 -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Full compile options: -suppress 13314 +define+RTL_SIM +define+design_top_is_muxb -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Compile defaults: CvgOpt=0
+# Verilog PACKAGE muxb_sv_unit
+#     Depends on: X sv_std std 9oUSJO;AeEaW`l:M@^WG92
+#     Depends on: X work mycpu_pkg ^[b<gQf<6;1<6jP=4P@>]1
+#     Compile time: Tue Sep  8 12:15:12 2026
+#     Version string: GEg<ObZa0iB]:^mlBbUE_2
+#     Optimized Verilog design root: 1
+#     Debug Symbol file exists
+#     DU Coverage Signature: APDE_<S04[l<eji6@DLC21
+#     Verilog version: GEg<ObZa0iB]:^mlBbUE_2
+#     Source directory: /homedir01/alehtoah24/DT2_2026/project/workdir
+#     Source modified time: Tue Sep  8 11:45:21 2026
+#     HDL source file: input/muxb.sv
+#     Source file: input/muxb.sv
+#     Source file: input/mycpu.svh
+#     Start location: input/muxb.sv:3:0
+#     Opcode format: 2022.4_1; VLOG SE-64 Object version 75
+#     VHDL language standard: 1
+#     Compiled in vopt flow
+#     Compile options: -suppress 13314 -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Full compile options: -suppress 13314 +define+RTL_SIM +define+design_top_is_muxb -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Compile defaults: CvgOpt=0
+# MODULE muxb_svamod
+#     Depends on: X sv_std std 9oUSJO;AeEaW`l:M@^WG92
+#     Depends on: X work mycpu_pkg ^[b<gQf<6;1<6jP=4P@>]1
+#     Depends on: X work muxb_svamod_sv_unit J`I^lA9T=IQdi[4U7C6PK1
+#     Compile time: Tue Sep  8 12:15:11 2026
+#     Version string: Dg1SIo80bB@j0V0VzS_@n1
+#     Optimized Verilog design root: 1
+#     Debug Symbol file exists
+#     DU Coverage Signature: 79MKTLmGW@NcZcfXQ>GJ70
+#     Verilog version: g`?`Y?k>ZoUfJ5^^l]fiX3
+#     Source directory: /homedir01/alehtoah24/DT2_2026/project/workdir
+#     Source modified time: Mon Aug 31 13:23:29 2026
+#     HDL source file: input/muxb_svamod.sv
+#     Source file: input/muxb_svamod.sv
+#     Start location: input/muxb_svamod.sv:7:17
+#     Opcode format: 2022.4_1; VLOG SE-64 Object version 75
+#     VHDL language standard: 1
+#     Compiled in vopt flow
+#     Compile options: -suppress 13314 -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Full compile options: -suppress 13314 +define+RTL_SIM +define+design_top_is_muxb -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Compile defaults: CvgOpt=0
+# Verilog PACKAGE muxb_svamod_sv_unit
+#     Depends on: X sv_std std 9oUSJO;AeEaW`l:M@^WG92
+#     Depends on: X work mycpu_pkg ^[b<gQf<6;1<6jP=4P@>]1
+#     Compile time: Tue Sep  8 12:15:11 2026
+#     Version string: J`I^lA9T=IQdi[4U7C6PK1
+#     Optimized Verilog design root: 1
+#     Debug Symbol file exists
+#     DU Coverage Signature: a5h4QPUONYU@:<ZS:X>Wl0
+#     Verilog version: J`I^lA9T=IQdi[4U7C6PK1
+#     Source directory: /homedir01/alehtoah24/DT2_2026/project/workdir
+#     Source modified time: Fri Sep  4 11:32:43 2026
+#     HDL source file: input/muxb_svamod.sv
+#     Source file: input/muxb_svamod.sv
+#     Source file: input/mycpu.svh
+#     Start location: input/muxb_svamod.sv:5:0
+#     Opcode format: 2022.4_1; VLOG SE-64 Object version 75
+#     VHDL language standard: 1
+#     Compiled in vopt flow
+#     Compile options: -suppress 13314 -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Full compile options: -suppress 13314 +define+RTL_SIM +define+design_top_is_muxb -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Compile defaults: CvgOpt=0
+# MODULE muxb_tb
+#     Depends on: X sv_std std 9oUSJO;AeEaW`l:M@^WG92
+#     Depends on: X work mycpu_pkg ^[b<gQf<6;1<6jP=4P@>]1
+#     Depends on: X work muxb_tb_sv_unit CcUYmeQ_8m1<Bh;WDAQYI1
+#     Compile time: Tue Sep  8 12:15:12 2026
+#     Version string: Dg1SIo80bB@j0V0VzS_@n1
+#     Optimized Verilog design root: 1
+#     Debug Symbol file exists
+#     DU Coverage Signature: C0H=:jThmRQQC;0lDC5Z@1
+#     Verilog version: Wg[6:LD1cEP@0zjL@iH__3
+#     Source directory: /homedir01/alehtoah24/DT2_2026/project/workdir
+#     Source modified time: Tue Sep  8 12:14:03 2026
+#     HDL source file: input/muxb_tb.sv
+#     Source file: input/muxb_tb.sv
+#     Source file: input/mycpu_svabind.svh
+#     Start location: input/muxb_tb.sv:7:89
+#     Opcode format: 2022.4_1; VLOG SE-64 Object version 75
+#     VHDL language standard: 1
+#     Compiled in vopt flow
+#     Compile options: -suppress 13314 -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Full compile options: -suppress 13314 +define+RTL_SIM +define+design_top_is_muxb -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Compile defaults: CvgOpt=0
+# Verilog PACKAGE muxb_tb_sv_unit
+#     Depends on: X sv_std std 9oUSJO;AeEaW`l:M@^WG92
+#     Depends on: X work mycpu_pkg ^[b<gQf<6;1<6jP=4P@>]1
+#     Compile time: Tue Sep  8 12:15:12 2026
+#     Version string: CcUYmeQ_8m1<Bh;WDAQYI1
+#     Optimized Verilog design root: 1
+#     Debug Symbol file exists
+#     DU Coverage Signature: ZoT]=@khd@B>=IE`RZCB_0
+#     Verilog version: CcUYmeQ_8m1<Bh;WDAQYI1
+#     Source directory: /homedir01/alehtoah24/DT2_2026/project/workdir
+#     Source modified time: Tue Sep  8 12:14:03 2026
+#     HDL source file: input/muxb_tb.sv
+#     Source file: input/muxb_tb.sv
+#     Source file: input/mycpu.svh
+#     Start location: input/muxb_tb.sv:5:0
+#     Opcode format: 2022.4_1; VLOG SE-64 Object version 75
+#     VHDL language standard: 1
+#     Compiled in vopt flow
+#     Compile options: -suppress 13314 -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Full compile options: -suppress 13314 +define+RTL_SIM +define+design_top_is_muxb -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Compile defaults: CvgOpt=0
+# PROGRAM muxb_test
+#     Depends on: X sv_std std 9oUSJO;AeEaW`l:M@^WG92
+#     Depends on: X work mycpu_pkg ^[b<gQf<6;1<6jP=4P@>]1
+#     Depends on: X work muxb_test_sv_unit K0GdcFDROd9OVOJoJhLLP2
+#     Compile time: Tue Sep  8 12:15:12 2026
+#     Version string: Dg1SIo80bB@j0V0VzS_@n1
+#     Optimized Verilog design root: 1
+#     Debug Symbol file exists
+#     DU Coverage Signature: QaR5H?oEAY?T933]ES8gg0
+#     Verilog version: `^ePeMngzWX>NiiFo7H[11
+#     Source directory: /homedir01/alehtoah24/DT2_2026/project/workdir
+#     Source modified time: Tue Sep  8 11:39:54 2026
+#     HDL source file: input/muxb_test.sv
+#     Source file: input/muxb_test.sv
+#     Start location: input/muxb_test.sv:7:0
+#     Opcode format: 2022.4_1; VLOG SE-64 Object version 75
+#     VHDL language standard: 1
+#     Compiled in vopt flow
+#     Compile options: -suppress 13314 -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Full compile options: -suppress 13314 +define+RTL_SIM +define+design_top_is_muxb -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Compile defaults: CvgOpt=0
+# Verilog PACKAGE muxb_test_sv_unit
+#     Depends on: X sv_std std 9oUSJO;AeEaW`l:M@^WG92
+#     Depends on: X work mycpu_pkg ^[b<gQf<6;1<6jP=4P@>]1
+#     Compile time: Tue Sep  8 12:15:12 2026
+#     Version string: K0GdcFDROd9OVOJoJhLLP2
+#     Optimized Verilog design root: 1
+#     Debug Symbol file exists
+#     DU Coverage Signature: ]MjMi3oUaJ>N`1@FZFSg90
+#     Verilog version: K0GdcFDROd9OVOJoJhLLP2
+#     Source directory: /homedir01/alehtoah24/DT2_2026/project/workdir
+#     Source modified time: Tue Sep  8 11:39:54 2026
+#     HDL source file: input/muxb_test.sv
+#     Source file: input/muxb_test.sv
+#     Source file: input/mycpu.svh
+#     Start location: input/muxb_test.sv:5:0
+#     Opcode format: 2022.4_1; VLOG SE-64 Object version 75
+#     VHDL language standard: 1
+#     Compiled in vopt flow
+#     Compile options: -suppress 13314 -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Full compile options: -suppress 13314 +define+RTL_SIM +define+design_top_is_muxb -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Compile defaults: CvgOpt=0
+# Verilog PACKAGE mycpu_pkg
+#     Depends on: X sv_std std 9oUSJO;AeEaW`l:M@^WG92
+#     Compile time: Tue Sep  8 12:15:11 2026
+#     Debug Symbol file exists
+#     DU Coverage Signature: TVkQY06jlT;lYYzPD`J5c2
+#     Verilog version: ^[b<gQf<6;1<6jP=4P@>]1
+#     Source directory: /homedir01/alehtoah24/DT2_2026/project/workdir
+#     Source modified time: Thu Sep  3 10:01:24 2026
+#     HDL source file: input/mycpu_pkg.sv
+#     Source file: input/mycpu_pkg.sv
+#     Start location: input/mycpu_pkg.sv:1:0
+#     Version string: ^[b<gQf<6;1<6jP=4P@>]1
+#     Opcode format: 2022.4_1; VLOG SE-64 Object version 75
+#     Optimized Verilog design root: 1
+#     VHDL language standard: 1
+#     Compiled in vopt flow
+#     Compile options: -suppress 13314 -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Full compile options: -suppress 13314 +define+RTL_SIM +define+design_top_is_muxb -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Compile defaults: CvgOpt=0
+# QuestaSim-64 vopt 2022.4_1 Compiler 2022.11 Nov 11 2022
+# Start time: 12:15:12 on Sep 08,2026
+# vopt -reportprogress 300 -work work "+acc" -debugdb "+cover=bcxefs" -suppress 10587 muxb_tb -o muxb_opt 
+# 
+# Top level modules:
+# 	muxb_tb
+# 
+# Analyzing design...
+# -- Loading module muxb_tb
+# -- Loading module muxb
+# -- Loading program muxb_test
+# -- Loading module muxb_svamod
+# Optimizing 9 design-units (inlining 0/4 module instances):
+# -- Optimizing package mycpu_pkg(fast)
+# -- Optimizing package muxb_tb_sv_unit(fast)
+# -- Optimizing package muxb_sv_unit(fast)
+# -- Optimizing package muxb_test_sv_unit(fast)
+# -- Optimizing package muxb_svamod_sv_unit(fast)
+# -- Optimizing program muxb_test(fast)
+# -- Optimizing module muxb_svamod(fast)
+# -- Processing module muxb_svamod(fast) for debug
+# -- Optimizing module muxb_tb(fast)
+# -- Processing module muxb_tb(fast) for debug
+# -- Optimizing module muxb(fast)
+# -- Processing module muxb(fast) for debug
+# Optimized design name is muxb_opt
+# End time: 12:15:12 on Sep 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0, Suppressed Warnings: 1
+# vsim -suppress 13314 -work work "+nowarnTSCALE" -t 1ps -msgmode both -debugdb -fsmdebug -assertdebug -coverage muxb_opt 
+# Start time: 12:15:12 on Sep 08,2026
+# Loading sv_std.std
+# Loading work.mycpu_pkg(fast)
+# Loading work.muxb_tb_sv_unit(fast)
+# Loading work.muxb_tb(fast)
+# Loading work.muxb_sv_unit(fast)
+# Loading work.muxb(fast)
+# Loading work.muxb_test_sv_unit(fast)
+# Loading work.muxb_test(fast)
+# Loading work.muxb_svamod_sv_unit(fast)
+# Loading work.muxb_svamod(fast)
+# ** Note: (vsim-8900) Creating design debug database vsim.dbg.
+# 0 ps
+# 2428 ps
+# -------------------------------------------------------------------------------
+# SIMULATION START 09/08/2026:12:15:15 alehtoah24
+# -------------------------------------------------------------------------------
+# ** Info: T1
+#    Time: 40 ns  Scope: muxb_tb.TEST.test_program File: input/muxb_test.sv Line: 24
+# ** Info: T2
+#    Time: 70 ns  Scope: muxb_tb.TEST.test_program File: input/muxb_test.sv Line: 35
+# ** Info: T3
+#    Time: 90 ns  Scope: muxb_tb.TEST.test_program File: input/muxb_test.sv Line: 46
+# ** Note: $finish    : input/muxb_test.sv(60)
+#    Time: 490 ns  Iteration: 1  Instance: /muxb_tb/TEST
+# 1
+# Break in NamedBeginStat test_program at input/muxb_test.sv line 60
+# 0
+# -------------------------------------------------------------------------------
+# SIMULATION END (0 assertions failed)
+# -------------------------------------------------------------------------------
+# 0 ps
+# 514500 ps
+add schematic -full sim:/muxb_tb/DUT
+# End time: 12:55:28 on Sep 08,2026, Elapsed time: 0:40:16
+# Errors: 0, Warnings: 0

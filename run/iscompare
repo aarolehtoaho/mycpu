@@ -1,0 +1,23 @@
+#!/bin/csh
+
+if ( $#argv != 1 ) then
+   echo "Usage: iscompare INSTRUCTION"
+   exit
+endif
+
+set ins = $1
+
+if ( ! -f reports/refdata/mycpu_simulation.${ins}.txt ) then
+   echo "Error: File reports/refdara/mycpu_simulation.${ins}.txt does not exists. Run refsim again."
+   exit
+endif
+
+if ( ! -f reports/istest/mycpu_simulation.${ins}.txt ) then
+   echo "Error: File reports/istest/mycpu_simulation.${ins}.txt does not exists. Run istest again."
+   exit
+endif
+
+sort -r reports/istest/mycpu_simulation.${ins}.txt reports/refdata/mycpu_simulation.${ins}.txt | uniq -u > workdir/${ins}.differences
+gedit reports/istest/mycpu_simulation.${ins}.txt reports/refdata/mycpu_simulation.${ins}.txt reports/istest/mycpu_istest_diff.${ins}.txt workdir/${ins}.differences >& /dev/null &
+
+

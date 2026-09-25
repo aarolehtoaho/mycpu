@@ -1,0 +1,460 @@
+# 0
+# 1
+# QuestaSim-64 vlog 2022.4_1 Compiler 2022.11 Nov 11 2022
+# Start time: 12:43:16 on Sep 23,2026
+# vlog -reportprogress 300 -suppress 13314 "+define+RTL_SIM" "+define+design_top_is_fu" -work work -timescale 1ns/1ps "+cover=bcxefs" input/mycpu_pkg.sv 
+# -- Compiling package mycpu_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 12:43:16 on Sep 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2022.4_1 Compiler 2022.11 Nov 11 2022
+# Start time: 12:43:16 on Sep 23,2026
+# vlog -reportprogress 300 -suppress 13314 "+define+RTL_SIM" "+define+design_top_is_fu" -work work -timescale 1ns/1ps "+cover=bcxefs" input/fu_svamod.sv 
+# -- Compiling package fu_svamod_sv_unit
+# -- Importing package mycpu_pkg
+# -- Compiling module fu_svamod
+# 
+# Top level modules:
+# 	fu_svamod
+# End time: 12:43:16 on Sep 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2022.4_1 Compiler 2022.11 Nov 11 2022
+# Start time: 12:43:16 on Sep 23,2026
+# vlog -reportprogress 300 -suppress 13314 "+define+RTL_SIM" "+define+design_top_is_fu" -work work -timescale 1ns/1ps "+cover=bcxefs" input/fu.sv 
+# -- Compiling package fu_sv_unit
+# -- Importing package mycpu_pkg
+# -- Compiling module fu
+# 
+# Top level modules:
+# 	fu
+# End time: 12:43:16 on Sep 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2022.4_1 Compiler 2022.11 Nov 11 2022
+# Start time: 12:43:16 on Sep 23,2026
+# vlog -reportprogress 300 -suppress 13314 "+define+RTL_SIM" "+define+design_top_is_fu" -work work -timescale 1ns/1ps "+cover=bcxefs" input/fu_test.sv input/fu_tb.sv 
+# -- Compiling package fu_test_sv_unit
+# -- Importing package mycpu_pkg
+# -- Compiling module fu_test
+# -- Compiling package fu_tb_sv_unit
+# -- Compiling module fu_tb
+# 
+# Top level modules:
+# 	fu_tb
+# End time: 12:43:16 on Sep 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Library vendor : Model Technology
+# Maximum unnamed designs : 3
+# MODULE fu
+#     Depends on: X sv_std std 9oUSJO;AeEaW`l:M@^WG92
+#     Depends on: X work mycpu_pkg ]5VEzd`ldP?I61RCUeHeR0
+#     Depends on: X work fu_sv_unit VNWh05EkWeAHbU4eT<FdV1
+#     Compile time: Wed Sep 23 12:43:16 2026
+#     Version string: Dg1SIo80bB@j0V0VzS_@n1
+#     Optimized Verilog design root: 1
+#     Debug Symbol file exists
+#     DU Coverage Signature: lieBb=K^J[Z1Zj@ge:N5F1
+#     Verilog version: P?::2JBJ>lSRJ44U@KmF11
+#     Source directory: /homedir01/alehtoah24/DT2_2026/project/workdir
+#     Source modified time: Tue Sep 15 10:04:46 2026
+#     HDL source file: input/fu.sv
+#     Source file: input/fu.sv
+#     Start location: input/fu.sv:5:94
+#     Opcode format: 2022.4_1; VLOG SE-64 Object version 75
+#     VHDL language standard: 1
+#     Compiled in vopt flow
+#     Compile options: -suppress 13314 -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Full compile options: -suppress 13314 +define+RTL_SIM +define+design_top_is_fu -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Compile defaults: CvgOpt=0
+# Verilog PACKAGE fu_sv_unit
+#     Depends on: X sv_std std 9oUSJO;AeEaW`l:M@^WG92
+#     Depends on: X work mycpu_pkg ]5VEzd`ldP?I61RCUeHeR0
+#     Compile time: Wed Sep 23 12:43:16 2026
+#     Version string: VNWh05EkWeAHbU4eT<FdV1
+#     Optimized Verilog design root: 1
+#     Debug Symbol file exists
+#     DU Coverage Signature: ]7oJ5kS?ObdRge78SRdai0
+#     Verilog version: VNWh05EkWeAHbU4eT<FdV1
+#     Source directory: /homedir01/alehtoah24/DT2_2026/project/workdir
+#     Source modified time: Tue Sep 15 10:04:46 2026
+#     HDL source file: input/fu.sv
+#     Source file: input/fu.sv
+#     Source file: input/mycpu.svh
+#     Start location: input/fu.sv:3:0
+#     Opcode format: 2022.4_1; VLOG SE-64 Object version 75
+#     VHDL language standard: 1
+#     Compiled in vopt flow
+#     Compile options: -suppress 13314 -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Full compile options: -suppress 13314 +define+RTL_SIM +define+design_top_is_fu -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Compile defaults: CvgOpt=0
+# MODULE fu_svamod
+#     Depends on: X sv_std std 9oUSJO;AeEaW`l:M@^WG92
+#     Depends on: X work mycpu_pkg ]5VEzd`ldP?I61RCUeHeR0
+#     Depends on: X work fu_svamod_sv_unit 7F`@n^Ye=MljQAb1[1o363
+#     Compile time: Wed Sep 23 12:43:16 2026
+#     Version string: Dg1SIo80bB@j0V0VzS_@n1
+#     Optimized Verilog design root: 1
+#     Debug Symbol file exists
+#     DU Coverage Signature: UQYjAUbYd@OoFhjh7KJ@P3
+#     Verilog version: c67V_kGYIQQiHRIFaTO3g3
+#     Source directory: /homedir01/alehtoah24/DT2_2026/project/workdir
+#     Source modified time: Mon Aug 31 13:23:29 2026
+#     HDL source file: input/fu_svamod.sv
+#     Source file: input/fu_svamod.sv
+#     Start location: input/fu_svamod.sv:7:141
+#     Opcode format: 2022.4_1; VLOG SE-64 Object version 75
+#     VHDL language standard: 1
+#     Compiled in vopt flow
+#     Compile options: -suppress 13314 -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Full compile options: -suppress 13314 +define+RTL_SIM +define+design_top_is_fu -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Compile defaults: CvgOpt=0
+# Verilog PACKAGE fu_svamod_sv_unit
+#     Depends on: X sv_std std 9oUSJO;AeEaW`l:M@^WG92
+#     Depends on: X work mycpu_pkg ]5VEzd`ldP?I61RCUeHeR0
+#     Compile time: Wed Sep 23 12:43:16 2026
+#     Version string: 7F`@n^Ye=MljQAb1[1o363
+#     Optimized Verilog design root: 1
+#     Debug Symbol file exists
+#     DU Coverage Signature: ShL5R:MkNM<K_dKEaPH?F1
+#     Verilog version: 7F`@n^Ye=MljQAb1[1o363
+#     Source directory: /homedir01/alehtoah24/DT2_2026/project/workdir
+#     Source modified time: Fri Sep  4 11:32:43 2026
+#     HDL source file: input/fu_svamod.sv
+#     Source file: input/fu_svamod.sv
+#     Source file: input/mycpu.svh
+#     Start location: input/fu_svamod.sv:5:0
+#     Opcode format: 2022.4_1; VLOG SE-64 Object version 75
+#     VHDL language standard: 1
+#     Compiled in vopt flow
+#     Compile options: -suppress 13314 -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Full compile options: -suppress 13314 +define+RTL_SIM +define+design_top_is_fu -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Compile defaults: CvgOpt=0
+# MODULE fu_tb
+#     Depends on: X sv_std std 9oUSJO;AeEaW`l:M@^WG92
+#     Depends on: X work mycpu_pkg ]5VEzd`ldP?I61RCUeHeR0
+#     Depends on: X work fu_tb_sv_unit FTjLC3fW4eCnf59^417Q>3
+#     Compile time: Wed Sep 23 12:43:16 2026
+#     Version string: Dg1SIo80bB@j0V0VzS_@n1
+#     Optimized Verilog design root: 1
+#     Debug Symbol file exists
+#     DU Coverage Signature: eRlNGXnVQZN?Tz1=GkkO70
+#     Verilog version: lP><i=JoE]YHAXkmTDUz43
+#     Source directory: /homedir01/alehtoah24/DT2_2026/project/workdir
+#     Source modified time: Mon Aug 31 13:23:29 2026
+#     HDL source file: input/fu_tb.sv
+#     Source file: input/fu_tb.sv
+#     Source file: input/mycpu_svabind.svh
+#     Start location: input/fu_tb.sv:5:91
+#     Opcode format: 2022.4_1; VLOG SE-64 Object version 75
+#     VHDL language standard: 1
+#     Compiled in vopt flow
+#     Compile options: -suppress 13314 -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Full compile options: -suppress 13314 +define+RTL_SIM +define+design_top_is_fu -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Compile defaults: CvgOpt=0
+# Verilog PACKAGE fu_tb_sv_unit
+#     Depends on: X sv_std std 9oUSJO;AeEaW`l:M@^WG92
+#     Depends on: X work mycpu_pkg ]5VEzd`ldP?I61RCUeHeR0
+#     Compile time: Wed Sep 23 12:43:16 2026
+#     Version string: FTjLC3fW4eCnf59^417Q>3
+#     Optimized Verilog design root: 1
+#     Debug Symbol file exists
+#     DU Coverage Signature: UAKTKd2U<Jo6_g_oel;Oa1
+#     Verilog version: FTjLC3fW4eCnf59^417Q>3
+#     Source directory: /homedir01/alehtoah24/DT2_2026/project/workdir
+#     Source modified time: Fri Sep  4 11:32:43 2026
+#     HDL source file: input/fu_tb.sv
+#     Source file: input/fu_tb.sv
+#     Source file: input/mycpu.svh
+#     Start location: input/fu_tb.sv:3:0
+#     Opcode format: 2022.4_1; VLOG SE-64 Object version 75
+#     VHDL language standard: 1
+#     Compiled in vopt flow
+#     Compile options: -suppress 13314 -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Full compile options: -suppress 13314 +define+RTL_SIM +define+design_top_is_fu -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Compile defaults: CvgOpt=0
+# MODULE fu_test
+#     Depends on: X sv_std std 9oUSJO;AeEaW`l:M@^WG92
+#     Depends on: X work mycpu_pkg ]5VEzd`ldP?I61RCUeHeR0
+#     Depends on: X work fu_test_sv_unit BjOo?]0X6@NLlIg1Vmd`O2
+#     Compile time: Wed Sep 23 12:43:16 2026
+#     Version string: Dg1SIo80bB@j0V0VzS_@n1
+#     Optimized Verilog design root: 1
+#     Debug Symbol file exists
+#     DU Coverage Signature: A[f<XKj>KITdzL[lNRmzX1
+#     Verilog version: Tj@m0dYC8QHV^CIK41iEh1
+#     Source directory: /homedir01/alehtoah24/DT2_2026/project/workdir
+#     Source modified time: Mon Aug 31 13:23:29 2026
+#     HDL source file: input/fu_test.sv
+#     Source file: input/fu_test.sv
+#     Start location: input/fu_test.sv:5:47
+#     Opcode format: 2022.4_1; VLOG SE-64 Object version 75
+#     VHDL language standard: 1
+#     Compiled in vopt flow
+#     Compile options: -suppress 13314 -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Full compile options: -suppress 13314 +define+RTL_SIM +define+design_top_is_fu -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Compile defaults: CvgOpt=0
+# Verilog PACKAGE fu_test_sv_unit
+#     Depends on: X sv_std std 9oUSJO;AeEaW`l:M@^WG92
+#     Depends on: X work mycpu_pkg ]5VEzd`ldP?I61RCUeHeR0
+#     Compile time: Wed Sep 23 12:43:16 2026
+#     Version string: BjOo?]0X6@NLlIg1Vmd`O2
+#     Optimized Verilog design root: 1
+#     Debug Symbol file exists
+#     DU Coverage Signature: R64^PCX0AO]ZNK6aZj[d00
+#     Verilog version: BjOo?]0X6@NLlIg1Vmd`O2
+#     Source directory: /homedir01/alehtoah24/DT2_2026/project/workdir
+#     Source modified time: Fri Sep  4 11:32:43 2026
+#     HDL source file: input/fu_test.sv
+#     Source file: input/fu_test.sv
+#     Source file: input/mycpu.svh
+#     Start location: input/fu_test.sv:3:0
+#     Opcode format: 2022.4_1; VLOG SE-64 Object version 75
+#     VHDL language standard: 1
+#     Compiled in vopt flow
+#     Compile options: -suppress 13314 -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Full compile options: -suppress 13314 +define+RTL_SIM +define+design_top_is_fu -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Compile defaults: CvgOpt=0
+# Verilog PACKAGE mycpu_pkg
+#     Depends on: X sv_std std 9oUSJO;AeEaW`l:M@^WG92
+#     Compile time: Wed Sep 23 12:43:16 2026
+#     Debug Symbol file exists
+#     DU Coverage Signature: TVkQY06jlT;lYYzPD`J5c2
+#     Verilog version: ]5VEzd`ldP?I61RCUeHeR0
+#     Source directory: /homedir01/alehtoah24/DT2_2026/project/workdir
+#     Source modified time: Thu Sep  3 10:01:24 2026
+#     HDL source file: input/mycpu_pkg.sv
+#     Source file: input/mycpu_pkg.sv
+#     Start location: input/mycpu_pkg.sv:1:0
+#     Version string: ]5VEzd`ldP?I61RCUeHeR0
+#     Opcode format: 2022.4_1; VLOG SE-64 Object version 75
+#     Optimized Verilog design root: 1
+#     VHDL language standard: 1
+#     Compiled in vopt flow
+#     Compile options: -suppress 13314 -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Full compile options: -suppress 13314 +define+RTL_SIM +define+design_top_is_fu -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Compile defaults: CvgOpt=0
+# QuestaSim-64 vopt 2022.4_1 Compiler 2022.11 Nov 11 2022
+# Start time: 12:43:16 on Sep 23,2026
+# vopt -reportprogress 300 -work work "+acc" -debugdb "+cover=bcxefs" -suppress 10587 fu_tb -o fu_opt 
+# 
+# Top level modules:
+# 	fu_tb
+# 
+# Analyzing design...
+# -- Loading module fu_tb
+# -- Loading module fu
+# -- Loading module fu_test
+# -- Loading module fu_svamod
+# Optimizing 9 design-units (inlining 0/4 module instances):
+# -- Optimizing package mycpu_pkg(fast)
+# -- Optimizing package fu_tb_sv_unit(fast)
+# -- Optimizing package fu_sv_unit(fast)
+# -- Optimizing package fu_test_sv_unit(fast)
+# -- Optimizing package fu_svamod_sv_unit(fast)
+# -- Optimizing module fu_svamod(fast)
+# -- Processing module fu_svamod(fast) for debug
+# -- Optimizing module fu(fast)
+# -- Processing module fu(fast) for debug
+# -- Optimizing module fu_test(fast)
+# -- Processing module fu_test(fast) for debug
+# -- Optimizing module fu_tb(fast)
+# -- Processing module fu_tb(fast) for debug
+# Optimized design name is fu_opt
+# End time: 12:43:17 on Sep 23,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0, Suppressed Warnings: 1
+# vsim -suppress 13314 -work work "+nowarnTSCALE" -t 1ps -msgmode both -debugdb -fsmdebug -assertdebug -coverage fu_opt 
+# Start time: 12:43:17 on Sep 23,2026
+# Loading sv_std.std
+# Loading work.mycpu_pkg(fast)
+# Loading work.fu_tb_sv_unit(fast)
+# Loading work.fu_tb(fast)
+# Loading work.fu_sv_unit(fast)
+# Loading work.fu(fast)
+# Loading work.fu_test_sv_unit(fast)
+# Loading work.fu_test(fast)
+# Loading work.fu_svamod_sv_unit(fast)
+# Loading work.fu_svamod(fast)
+# ** Note: (vsim-8900) Creating design debug database vsim.dbg.
+# 0 ps
+# 1128 ps
+# -------------------------------------------------------------------------------
+# SIMULATION START 09/23/2026:12:43:19 alehtoah24
+# -------------------------------------------------------------------------------
+# ** Info: T1:
+#    Time: 40 ns  Scope: fu_tb.TEST.test_program File: input/fu_test.sv Line: 26
+# ===============================================================================
+#      fs_in              a_in             b_in =>            f_out Z N
+# ===============================================================================
+#      FMOVA  0011000010011010 0011011010110110 => 0011000010011010 0 0
+#       FINC  0100101111011100 1101110100000000 => 0100101111011101 0 0
+#       FADD  0111110001111001 0011010001101101 => 1011000011100110 0 1
+#       FMUL  0110111111001100 1010000010011101 => 1000000000000000 0 1
+#       FSRA  0011100101001000 0010000010010001 => 0000111001010010 0 0
+#       FSUB  0000110000010110 1001011110000110 => 0111010010010000 0 0
+#       FDEC  0111110100010100 1111111110100011 => 0111110100010011 0 0
+#       FSLA  0011110101101101 0010101000010001 => 1111010110110100 0 1
+#       FAND  1101110010100001 0101110001100101 => 0101110000100001 0 0
+#        FOR  1010011001001100 1101010101100000 => 1111011101101100 0 1
+#       FXOR  1101000101000010 1100110111000100 => 0001110010000110 0 0
+#       FNOT  1110010100000010 0011110000110010 => 0001101011111101 0 0
+#      FMOVB  0101011001110000 0011011000110111 => 0011011000110111 0 0
+#       FSHR  1000010110001000 0010110010010111 => 0001011001001011 0 0
+#       FSHL  1101001010011111 0110000110100100 => 1100001101001000 0 1
+#       FUSR  1110010110000010 1011000101110001 => 0000000000000000 1 0
+#      FMOVA  1101010101110010 0100010001100011 => 1101010101110010 0 1
+#       FINC  1101100101000100 1100000100000101 => 1101100101000101 0 1
+#       FADD  1011101011010100 0001000001010101 => 1100101100101001 0 1
+#       FMUL  1111100110011100 0110011110000010 => 1000000000000000 0 1
+#       FSRA  1100011001111011 1010001001011011 => 1111110001100111 0 1
+#       FSUB  0101001010001011 0110011000011000 => 1110110001110011 0 1
+#       FDEC  1000011011011111 0110011010110000 => 1000011011011110 0 1
+#       FSLA  0001000001101100 0001000100010001 => 0100000110110000 0 0
+#       FAND  1000001100100010 0000110110011000 => 0000000100000000 0 0
+#        FOR  1000110101010110 1000011000001001 => 1000111101011111 0 1
+#       FXOR  1000111001111000 1110101101001110 => 0110010100110110 0 0
+#       FNOT  1000111111010011 1101100111001011 => 0111000000101100 0 0
+#      FMOVB  1001111010110111 0011100010001000 => 0011100010001000 0 0
+#       FSHR  1101110001111000 0101000010010100 => 0010100001001010 0 0
+#       FSHL  1100010001001101 0101000111001000 => 1010001110010000 0 1
+#       FUSR  0001111100001110 1111010000001000 => 0000000000000000 1 0
+#      FMOVA  1110011101001000 1011001111100110 => 1110011101001000 0 1
+#       FINC  0100111100000000 1000011001011101 => 0100111100000001 0 0
+#       FADD  1011001000111000 1101101011000000 => 1000110011111000 0 1
+#       FMUL  0001110010101010 0001100001010010 => 0111111111111111 0 0
+#       FSRA  1100001000101011 0000110111111110 => 1111111110000100 0 1
+#       FSUB  1010110111100110 0111101000110100 => 0011001110110010 0 0
+#       FDEC  0000101101100110 0001110001101100 => 0000101101100101 0 0
+#       FSLA  0100100001011110 1100001011110110 => 0010111100000000 0 0
+#       FAND  0001000101100100 1011101010010000 => 0001000000000000 0 0
+#        FOR  0101001110010001 1011111110000010 => 1111111110010011 0 1
+#       FXOR  0011101111110010 1000101000010000 => 1011000111100010 0 1
+#       FNOT  1011111111011111 0000100011000001 => 0100000000100000 0 0
+#      FMOVB  0110001001000111 1100101001101000 => 1100101001101000 0 1
+#       FSHR  1100011100110011 1010110011101110 => 0101011001110111 0 0
+#       FSHL  1111111100101011 0101101011110101 => 1011010111101010 0 1
+#       FUSR  0010110110100100 1011011000110110 => 0000000000000000 1 0
+#      FMOVA  0111001001001001 0011010100010011 => 0111001001001001 0 0
+#       FINC  1101000000001101 1111101111000000 => 1101000000001110 0 1
+#       FADD  1100010011110011 0001101001100011 => 1101111101010110 0 1
+#       FMUL  0110001000001011 1101110111111000 => 1000000000000000 0 1
+#       FSRA  0000011111000101 1000111101001001 => 0000000111110001 0 0
+#       FSUB  1000011100100100 0111101011101101 => 0000110000110111 0 0
+#       FDEC  0000011100111011 0110100110000010 => 0000011100111010 0 0
+#       FSLA  0110001010100001 1001010011000000 => 1100010101000010 0 1
+#       FAND  0110001001001011 1101110101001010 => 0100000001001010 0 0
+#        FOR  0001001101001110 0011110111010100 => 0011111111011110 0 0
+#       FXOR  0101011101001011 0001000101010110 => 0100011000011101 0 0
+#       FNOT  1111001011000000 0010010110011111 => 0000110100111111 0 0
+#      FMOVB  0010010001110010 1010001111011001 => 1010001111011001 0 1
+#       FSHR  0111101111101000 1111111010011100 => 0111111101001110 0 0
+#       FSHL  1000001100111101 1100101001100100 => 1001010011001000 0 1
+#       FUSR  0011010001110001 0000101001011001 => 0000000000000000 1 0
+#      FMOVA  1110011110100000 0110011000100011 => 1110011110100000 0 1
+#       FINC  0000000010101000 0010010011101010 => 0000000010101001 0 0
+#       FADD  1001011000101110 1000010100010001 => 0001101100111111 0 0
+#       FMUL  1111100010011101 1100001111100101 => 0111111111111111 0 0
+#       FSRA  1000001011000010 0101010111001110 => 1111111100000101 0 1
+#       FSUB  1000111000110001 0100000101111110 => 0100110010110011 0 0
+#       FDEC  0001000111101010 0110000010010101 => 0001000111101001 0 0
+#       FSLA  0111100010011110 0000010111010011 => 1000100111100000 0 1
+#       FAND  1111111110100010 1101001000100101 => 1101001000100000 0 1
+#        FOR  0011111110110100 0010100110101000 => 0011111110111100 0 0
+#       FXOR  0111111011010111 0011110101111111 => 0100001110101000 0 0
+#       FNOT  1100110110010011 1100111000001011 => 0011001001101100 0 0
+#      FMOVB  1111101101101100 1001100100001001 => 1001100100001001 0 1
+#       FSHR  0000000001100001 0000010110011110 => 0000001011001111 0 0
+#       FSHL  1111110010111010 0000001110001011 => 0000011100010110 0 0
+#       FUSR  1010111011010001 0100000110110010 => 0000000000000000 1 0
+#      FMOVA  1110110010111100 0011011000000101 => 1110110010111100 0 1
+#       FINC  1111000101101011 0110010101000010 => 1111000101101100 0 1
+#       FADD  1111001100010110 1100110001011111 => 1011111101110101 0 1
+#       FMUL  1101000010001101 0011001001001010 => 1000000000000000 0 1
+#       FSRA  0110011111011011 0101110011011001 => 0001100111110110 0 0
+#       FSUB  0010110101101101 1101100101111111 => 0101001111101110 0 0
+#       FDEC  1001100001101100 1011011111101001 => 1001100001101011 0 1
+#       FSLA  0011111010100101 1100001100000111 => 1010010100000000 0 1
+#       FAND  0000100110011010 0010001100010001 => 0000000100010000 0 0
+#        FOR  0101101010110001 0000111000110100 => 0101111010110101 0 0
+#       FXOR  0001001100111111 1100100100101110 => 1101101000010001 0 1
+#       FNOT  1110010111110011 0000011110001000 => 0001101000001100 0 0
+#      FMOVB  0110010110000010 1111110011100100 => 1111110011100100 0 1
+#       FSHR  1010110000100010 1110001011101101 => 0111000101110110 0 0
+#       FSHL  1011100010100100 1011010011010010 => 0110100110100100 0 0
+#       FUSR  0100001000000111 0101010111111001 => 0000000000000000 1 0
+#      FMOVA  0001101101010100 0010010111010000 => 0001101101010100 0 0
+#       FINC  0111111000111001 1011111111000110 => 0111111000111010 0 0
+#       FADD  0011110011111011 1100110100110100 => 0000101000101111 0 0
+#       FMUL  1000000110010100 0100001100000111 => 1000000000000000 0 1
+#       FSRA  0001101101110111 1000110001011010 => 0000001101101110 0 0
+#       FSUB  1110001001010100 0110011001101000 => 0111101111101100 0 0
+#       FDEC  0100110000101111 1000111110110001 => 0100110000101110 0 0
+#       FSLA  0000111101111011 1111111000111011 => 1111011110110000 0 1
+#       FAND  0101100100000000 1100001110000011 => 0100000100000000 0 0
+#        FOR  1100010011110001 1110110110100110 => 1110110111110111 0 1
+#       FXOR  1000001101010100 0101101010001011 => 1101100111011111 0 1
+#       FNOT  0111111110111101 0001111100100100 => 1000000001000010 0 1
+#      FMOVB  1111010010000010 1110000110110110 => 1110000110110110 0 1
+#       FSHR  1110100111011111 0111100111001110 => 0011110011100111 0 0
+#       FSHL  1000110101101111 1001100001101111 => 0011000011011110 0 0
+#       FUSR  0100100111011001 1100111111011010 => 0000000000000000 1 0
+#      FMOVA  1000111001011000 0110011001001010 => 1000111001011000 0 1
+#       FINC  0101011000011000 1110011010010010 => 0101011000011001 0 0
+#       FADD  1100011100011001 1100110100111101 => 1001010001010110 0 1
+#       FMUL  0110100100111110 1010000100101011 => 1000000000000000 0 1
+#       FSRA  0101001110010011 1110001100100110 => 0000000010100111 0 0
+#       FSUB  1100110101101110 0000100110011110 => 1100001111010000 0 1
+#       FDEC  0110100101111111 1101000101111010 => 0110100101111110 0 0
+#       FSLA  0011011010101000 0010100001010000 => 0110110101010000 0 0
+#       FAND  0111110110010100 1110001010011001 => 0110000010010000 0 0
+#        FOR  1010100011000110 1001111100111111 => 1011111111111111 0 1
+#       FXOR  1101110101110110 0001011010101101 => 1100101111011011 0 1
+#       FNOT  0000001000111100 1111100101010100 => 1111110111000011 0 1
+#      FMOVB  0101100011100111 0110010101111110 => 0110010101111110 0 0
+#       FSHR  1111100110000000 0000000001101110 => 0000000000110111 0 0
+#       FSHL  1011110110000100 0110001011000010 => 1100010110000100 0 1
+#       FUSR  1011100100010000 1001101110100100 => 0000000000000000 1 0
+#      FMOVA  1010000101110010 1111110001111110 => 1010000101110010 0 1
+#       FINC  0100100011110101 1111111001111110 => 0100100011110110 0 0
+#       FADD  0010010110010011 1010110101010001 => 1101001011100100 0 1
+#       FMUL  0000000011101000 0010111010110111 => 0111111111111111 0 0
+#       FSRA  0011010000111011 0110011101000111 => 0000000000110100 0 0
+#       FSUB  0110110000011111 0100100010000011 => 0010001110011100 0 0
+#       FDEC  1110100000100101 1001000101010000 => 1110100000100100 0 1
+#       FSLA  0101111001000110 1101100100011101 => 1001000110000000 0 1
+#       FAND  0111100000011110 0000010010111000 => 0000000000011000 0 0
+#        FOR  0000101101100000 1001111010101001 => 1001111111101001 0 1
+#       FXOR  1101110111000010 0000111100010010 => 1101001011010000 0 1
+#       FNOT  1011101001111101 0110011001100010 => 0100010110000010 0 0
+#      FMOVB  0101011001100010 0100110101111101 => 0100110101111101 0 0
+#       FSHR  0000000111111110 1010100000011000 => 0101010000001100 0 0
+#       FSHL  0010011110111110 0101000100110101 => 1010001001101010 0 1
+#       FUSR  1011011010101101 0111010000011000 => 0000000000000000 1 0
+#      FMOVA  1001111100100001 0011110100011010 => 1001111100100001 0 1
+#       FINC  0110000010001011 0111000011110001 => 0110000010001100 0 0
+#       FADD  0000010100011101 1101001001011000 => 1101011101110101 0 1
+#       FMUL  1111000101001000 0101101111111100 => 1000000000000000 0 1
+#       FSRA  0111110001000000 0011111001000011 => 0000011111000100 0 0
+#       FSUB  1101110000011010 1010101100111010 => 0011000011100000 0 0
+#       FDEC  0010111101101000 0011110111001010 => 0010111101100111 0 0
+#       FSLA  1001110110100111 1100100101010101 => 0110100111000000 0 0
+#       FAND  0000110101111000 0111000100100101 => 0000000100100000 0 0
+#        FOR  1000111110011100 1111100101111001 => 1111111111111101 0 1
+#       FXOR  0111111100001010 0100111111000010 => 0011000011001000 0 0
+#       FNOT  0010000101110111 0000111011101101 => 1101111010001000 0 1
+#      FMOVB  1000111011001111 1100100110100011 => 1100100110100011 0 1
+#       FSHR  1101010000010001 0011111001100000 => 0001111100110000 0 0
+#       FSHL  0111100011101010 1101111001110110 => 1011110011101100 0 1
+#       FUSR  1100011101010001 0001011000101101 => 0000000000000000 1 0
+# ** Note: $finish    : input/fu_test.sv(47)
+#    Time: 3240 ns  Iteration: 1  Instance: /fu_tb/TEST
+# 1
+# Break in NamedBeginStat test_program at input/fu_test.sv line 47
+# 0
+# -------------------------------------------------------------------------------
+# SIMULATION END (0 assertions failed)
+# -------------------------------------------------------------------------------
+# 0 ps
+# 3402 ns
+# End time: 12:44:52 on Sep 23,2026, Elapsed time: 0:01:35
+# Errors: 0, Warnings: 0

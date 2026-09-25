@@ -1,0 +1,26 @@
+ 
+****************************************
+Report : reference
+Design : muxd
+Version: T-2022.03-SP5-1
+Date   : Tue Sep  8 14:57:43 2026
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+MUX41X1_HVT        saed32hvt_tt1p05v25c
+                                  5.591168      16     89.458687  
+-----------------------------------------------------------------------------
+Total 1 references                                     89.458687
+1

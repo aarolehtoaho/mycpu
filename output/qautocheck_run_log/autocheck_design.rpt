@@ -1,0 +1,115 @@
+
+Questa Version 2022.4_1 5450673 linux_x86_64 22-Nov-2022
+
+-------------------------------------------------------------------------------
+Design Report
+Created Thu Sep 24 11:09:48 2026
+-------------------------------------------------------------------------------
+
+
+Design 'pc'
+===============================================================================
+
+
+---------------------------------------
+Design Summary                    Count
+---------------------------------------
+Clocks                                1
+  User-specified                      0
+  Inferred                            1
+Resets                                1
+  User-specified                      0
+  Inferred                            1
+Control Point Bits                   36
+  DUT Input Bits                     36
+  Cut Point Bits                      0
+  Black Box Output Bits               0
+  Undriven Wire Bits                  0
+  Unresolved RHS Bits                 0
+State Bits                           16
+  Design Register Bits               16
+  Design Latch Bits                   0
+Storage Structures           
+  Counters                            1
+  FSMs                                0
+  RAMs                                0
+Black Boxes                           0
+User-specified Constant Bits          0
+---------------------------------------
+
+Detailed Design Information
+===============================================================================
+
+
+Clocks
+------------------------------------------------------------------------------
+Port                                   Period         Waveform
+------------------------------------------------------------------------------
+clk                      [inferred]       100             0 50 
+------------------------------------------------------------------------------
+
+Resets
+-------
+  rst_n [inferred] (Active Low)
+
+Constants
+------------------
+  <none>
+
+Cut Points
+----------
+  <none>
+
+Black Box Outputs
+-----------------
+  <none>
+
+Undriven Wires
+--------------
+  <none>
+
+Unresolved RHS Bits
+-------------------
+  <none>
+
+Latches
+-------
+  <none>
+
+Counters
+--------
+  pc_r  (16 bits)
+
+FSMs
+----
+  <none>
+
+RAMs
+----
+  <none>
+
+Black Boxes (User-specified)
+----------------------------
+  <none>
+
+Black Boxes (Inferred)
+----------------------
+  <none>
+
+
+Detailed Module Information
+===============================================================================
+
+Module 'pc'
+-------------------------------------------------------------------------------
+Resets:
+   rst_n (Active Low)
+-------------------------------------------------------------------------------
+
+Instance Usage
+===============================================================================
+Count  Module          Location
+-------------------------------------------------------------------------------
+
+
+

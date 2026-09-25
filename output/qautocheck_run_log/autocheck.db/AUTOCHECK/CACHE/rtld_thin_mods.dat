@@ -1,0 +1,49 @@
+>1
+>2
+12
+0:2:pc
+1:4:work
+2:58:/homedir01/alehtoah24/DT2_2026/project/workdir/input/pc.sv
+3:7:pc_regs
+4:2:ba
+5:3:clk
+6:6:ins_in
+7:6:pc_out
+8:4:pc_r
+9:5:ps_in
+10:5:ra_in
+11:5:rst_n
+<2
+>3
+5
+0:121:10 "logic[5:0]" "<zin_internal>" 0 4 1 7 "integer[5:0]" "<zin_internal>" 0 10 32 5 0 7 "logic" "<zin_internal>" 0 0 1 0 0
+1:37:7 "scalar" "<zin_internal>" 0 0 1 0 0
+2:126:10 "scalar[15:0]" "<zin_internal>" 0 4 1 7 "integer[15:0]" "<zin_internal>" 0 10 32 15 0 7 "scalar" "<zin_internal>" 0 0 1 0 0
+3:124:10 "logic[15:0]" "<zin_internal>" 0 4 1 7 "integer[15:0]" "<zin_internal>" 0 10 32 15 0 7 "logic" "<zin_internal>" 0 0 1 0 0
+4:123:10 "scalar[1:0]" "<zin_internal>" 0 4 1 7 "integer[1:0]" "<zin_internal>" 0 10 32 1 0 7 "scalar" "<zin_internal>" 0 0 1 0 0
+<3
+>4
+b1f2l5.38t0C1B3P2S22E34;
+<4
+>5
+b8@4l16knt0;
+@5l7knt1;
+@6l10knt2;
+@7l12knt3;
+@8l15knt3;
+@9l9knt4;
+@10l11knt2;
+@11l8knt1;
+<5
+>6
+b6@5x2t1;
+@11x8t1;
+@9x6t4;
+@6x3t2;
+@10x7t2;
+@7d1x4t3;
+<6
+>7
+c0
+<7
+<1

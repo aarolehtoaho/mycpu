@@ -1,0 +1,4 @@
+QuestaSim-64 vmap 2022.4_1 Lib Mapping Utility 2022.11 Nov 11 2022
+vmap work qautocheck_work 
+Copying /sw/rhel7/siemens/questa_cdc_formal-2022.4_1/linux_x86_64/share/modeltech/linux_x86_64/../modelsim.ini to modelsim.ini
+Modifying modelsim.ini

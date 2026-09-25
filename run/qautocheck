@@ -1,0 +1,27 @@
+#!/bin/csh
+
+set DESIGN_NAME = `scripts/get_variable.tcl DESIGN_NAME >& /dev/null ; cat output/variable`
+if ( $DESIGN_NAME == "") then
+    echo "Error: Variable DESIGN_NAME has not been set in input/0_setup_design.tcl."
+    exit
+endif
+
+source run/setup_env.csh
+
+cd $WORKDIR
+
+if ( -d output/qautocheck_run_log ) then
+    rm -rf output/qautocheck_run_log
+endif
+
+qverify -c -od output/qautocheck_run_log -do scripts/qautocheck.tcl $*
+
+if ( -d output/qautocheck_run_log/autocheck.db ) then
+    qverify output/qautocheck_run_log/autocheck.db
+endif
+
+cd ..
+
+source run/cleanup_env.csh
+
+

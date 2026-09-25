@@ -1,0 +1,2 @@
+-f /homedir01/alehtoah24/DT2_2026/project/workdir/output/qautocheck_run_log/autocheck.db/AUTOCHECK/SEARCH/SIM/vsim_tb_replay_top_modules.arg \
+-voptargs="-assertdebug"

@@ -1,0 +1,48 @@
+#!/bin/csh
+
+set instr = "IOR LDI MOVA MOVB NOT AND OR XOR INC DEC ADD SUB MUL ADI SHR SHL SRA SLA LD ST BRZ BRN JMP IOW"
+
+source run/setup_env.csh
+
+if ( -d reports/istest) then
+    rm -rf reports/istest
+endif
+mkdir reports/istest
+
+echo > reports/istest_log.txt
+
+@ fails = 0
+@ passes = 0
+echo "Instruction Set Test Results `date`" > reports/mycpu_istest_results.txt
+echo "Instruction Set Test Differences `date`" > reports/mycpu_istest_diff.txt
+echo "=============================================================================================" >> reports/mycpu_istest_results.txt
+echo "=============================================================================================" >> reports/mycpu_istest_diff.txt
+foreach i ($instr)
+    echo -n $i
+    run/asm ${i}.asm  >>& reports/istest_log.txt
+    echo -n $i >> reports/mycpu_istest_results.txt
+    echo -n $i > reports/mycpu_istest_diff.txt    
+    run/vsim_rtlsim -c  >>& reports/istest_log.txt
+    cp reports/mycpu_simulation.txt reports/istest/mycpu_simulation.${i}.txt
+    cp reports/mycpu_memory.txt reports/istest/mycpu_memory.${i}.txt    
+    cp reports/mycpu.rtl.simulation_log.txt reports/istest/mycpu.rtl.simulation_log.${i}.txt
+    awk -f scripts/istest.awk < reports/istest/mycpu_simulation.${i}.txt > output/sim_filtered.txt
+    awk -f scripts/istest.awk < reports/refdata/mycpu_simulation.${i}.txt > output/ref_filtered.txt    
+    diff output/sim_filtered.txt output/ref_filtered.txt >> reports/istest/mycpu_istest_diff.${i}.txt
+    if ( $status == 0 ) then
+	echo " PASS" >> reports/mycpu_istest_results.txt
+	echo " PASS"
+	@ passes = $passes + 1
+    else
+	echo " FAIL" >> reports/mycpu_istest_results.txt
+	echo " FAIL"
+		@ fails = $fails + 1
+    endif
+    echo "---------------------------------------------------------------------------------------------" >> reports/mycpu_istest_results.txt
+    echo "---------------------------------------------------------------------------------------------" >> reports/mycpu_istest_diff.txt    
+end
+
+echo "PASSES = ${passes} FAILS = ${fails}" >> reports/mycpu_istest_results.txt
+
+
+

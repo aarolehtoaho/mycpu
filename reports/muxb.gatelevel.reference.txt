@@ -1,0 +1,30 @@
+ 
+****************************************
+Report : reference
+Design : muxb
+Version: T-2022.03-SP5-1
+Date   : Tue Sep  8 12:42:14 2026
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X1_HVT         saed32hvt_tt1p05v25c
+                                  2.033152      13     26.430977  
+AO22X1_HVT         saed32hvt_tt1p05v25c
+                                  2.541440       3      7.624320  
+INVX2_HVT          saed32hvt_tt1p05v25c
+                                  1.524864       1      1.524864  
+-----------------------------------------------------------------------------
+Total 3 references                                     35.580161
+1

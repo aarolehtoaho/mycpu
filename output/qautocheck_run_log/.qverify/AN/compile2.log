@@ -1,0 +1,12 @@
+QuestaSim-64 vlog 2022.4_1 Compiler 2022.11 Nov 11 2022
+Start time: 11:09:45 on Sep 24,2026
+vlog -mfcu input/mycpu_pkg.sv input/pc.sv 
+-- Compiling package mycpu_pkg
+-- Compiling package mycpu_pkg_sv_unit
+-- Importing package mycpu_pkg
+-- Compiling module pc
+
+Top level modules:
+	pc
+End time: 11:09:45 on Sep 24,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

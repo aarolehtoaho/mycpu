@@ -1,0 +1,21 @@
+
+# /homedir01/alehtoah24/DT2_2026/project/workdir/scripts/qautocheck.tcl : 11
+/sw/rhel7/siemens/questa_cdc_formal-2022.4_1/linux_x86_64/share/modeltech/linux_x86_64/vlib qautocheck_work
+
+# /homedir01/alehtoah24/DT2_2026/project/workdir/scripts/qautocheck.tcl : 12
+/sw/rhel7/siemens/questa_cdc_formal-2022.4_1/linux_x86_64/share/modeltech/linux_x86_64/vmap work qautocheck_work
+
+# /homedir01/alehtoah24/DT2_2026/project/workdir/scripts/qautocheck.tcl : 18
+/sw/rhel7/siemens/questa_cdc_formal-2022.4_1/linux_x86_64/share/modeltech/linux_x86_64/vlog -mfcu "input/mycpu_pkg.sv" input/pc.sv
+
+# /homedir01/alehtoah24/DT2_2026/project/workdir/scripts/qautocheck.tcl : 26
+/sw/rhel7/siemens/questa_cdc_formal-2022.4_1/linux_x86_64/bin/qverifyek  -od output/qautocheck_run_log -l .elab.log  -cli -internal -cmd elab -zdb /homedir01/alehtoah24/DT2_2026/project/workdir/output/qautocheck_run_log/autocheck.db/DB/zdb_1 -tool autocheck -d pc
+
+# /homedir01/alehtoah24/DT2_2026/project/workdir/scripts/qautocheck.tcl : 26
+/sw/rhel7/siemens/questa_cdc_formal-2022.4_1/linux_x86_64/bin/qverifyek  -od output/qautocheck_run_log -l .createnl.log  -cli -internal -cmd create_netlist -zdb /homedir01/alehtoah24/DT2_2026/project/workdir/output/qautocheck_run_log/autocheck.db/DB/zdb_1 -tool autocheck -d pc
+
+# /homedir01/alehtoah24/DT2_2026/project/workdir/scripts/qautocheck.tcl : 26
+/sw/rhel7/siemens/questa_cdc_formal-2022.4_1/linux_x86_64/bin/qverifyek  -od output/qautocheck_run_log -l .autocheck_compile.log  -cli -internal -cmd autocheck_compile -zdb /homedir01/alehtoah24/DT2_2026/project/workdir/output/qautocheck_run_log/autocheck.db/DB/zdb_1 -d pc
+
+# /homedir01/alehtoah24/DT2_2026/project/workdir/scripts/qautocheck.tcl : 34
+ -od output/qautocheck_run_log -tool autocheck      -timeout 5m -hd output/qautocheck_run_log/.qverify -import_db output/qautocheck_run_log/autocheck.db/autocheck_compile.db -zdb /homedir01/alehtoah24/DT2_2026/project/workdir/output/qautocheck_run_log/autocheck.db/DB/zdb_3

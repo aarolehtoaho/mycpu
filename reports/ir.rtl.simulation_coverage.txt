@@ -1,0 +1,16 @@
+Recursive Coverage Report Summary Data by instance
+
+=================================================================================
+=== Instance: /ir_tb/DUT
+=== Design Unit: work.ir
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Assertions                       5         5         0   100.00%
+    Branches                         3         3         0   100.00%
+    Statements                       3         3         0   100.00%
+    Toggles                        426       101       325    23.70%
+
+
+Total Coverage By Instance (filtered view): 80.92%
+

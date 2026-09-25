@@ -1,0 +1,23 @@
+#!/bin/csh
+
+set DESIGN_NAME = `scripts/get_variable.tcl DESIGN_NAME >& /dev/null ; cat output/variable`
+if ( $DESIGN_NAME == "") then
+    echo "Error: Variable DESIGN_NAME has not been set in input/0_setup_design.tcl."
+    exit
+endif
+
+source run/setup_env.csh
+
+cd $WORKDIR
+
+rm -rf output/qlint
+
+qverify -c -od output/qlint -do scripts/qlint.tcl $*
+qverify output/qlint/lint.db
+
+cd ..
+ 
+source run/cleanup_env.csh
+
+
+

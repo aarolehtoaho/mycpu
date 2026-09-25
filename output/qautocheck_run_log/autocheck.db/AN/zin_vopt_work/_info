@@ -1,0 +1,26 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 d/homedir01/alehtoah24/DT2_2026/project/workdir
+Tzi_opt_af0_1411892106_1
+!s128 output/qautocheck_run_log/autocheck.db/VISUALIZER/design.bin
+!s110 1790237385
+VU<d1iQ;ER?E]T39bMK7Ro1
+09 2 4 z0in_work pc fast 0
+!s96 mlvalmap
+!s102 +cover=f
+R0
+!s12b OEM100
+!s124 OEM100
+o-suppress 143 -nologo -noclknetalias -nolock -noOptProcessWaits -noinstaliasopt -evalVH2008generics -pslallowseverity -suppress 153 -suppress 3053 -suppress 8884 -suppress 1491 -suppress 8885 -suppress 1127 -suppress 7033 -suppress 3838 -suppress 12003 -suppress 3054 -suppress 2734 -0in_enable_questa_fsm -fsmsamestatetrans -fsmcasedefaultfromtrans -suppress 2071 -suppress 13408 -suppress 2108 -suppress 2250 -nofsmresettrans -fsmskipoperatorcheck -fsmskipresetinsamecase -fsmskiponehotinitvalcheck -fsmignorenonconstassign -fsmignorenonconstconcat -fsmallowsinglebitassign +cover=f -0in_elab +acc=a -mlvalmap -opt=atomicPort=0 -opt=optTaskFormalAcc=0 -opt=removeUnrefEnh2=0 -opt=-optStmt -noStaticExprOpt +designfile+output/qautocheck_run_log/autocheck.db/VISUALIZER/design.bin +convertvhdlgenbracket -vis0infsmnoxstates -vis0infsmstatesline -work work -mixedansiports
+tCvgOpt 0
+nzi_opt_af0_1411892106_1
+OL;O;2022.4_1;75
+R1

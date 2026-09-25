@@ -1,0 +1,20 @@
+>8
+v366
+t14
+c15
+#14 p2330 @pc
+#13 p2184 @zi_oper_38_o3_i16
+#12 p2043 @zi_oper_38_o1_i6
+#11 p1902 @zi_oper_38_o1_i5
+#10 p1768 @zi_assign_o16_i16
+#3 p633 @zi_const_16'b1_o16
+#2 p442 @zi_case_X_2'b0_2'b1_2'b10_2'b11_Y__o5_i2
+#1 p277 @zi_mux_o16_i1_2*i16
+#0 p0 @zi_dff_o16_i16_5*i1_i16_3*i1
+#4 p761 @zi_oper_0_o16_2*i16
+#5 p910 @zi_oper_32_o16_10*i1_i6
+#6 p1211 @zi_oper_24_o1_i1
+#7 p1342 @zi_const_1'b1_o1
+#8 p1463 @zi_oper_16_o1_2*i1
+#9 p1609 @zi_oper_32_o6_2*i3
+<8

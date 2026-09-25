@@ -1,0 +1,10 @@
+#!/bin/csh
+
+if ( $#argv != 1 ) then
+   echo Usage: verror errorcode
+   exit
+endif
+
+source run/setup_env.csh
+
+verror $1

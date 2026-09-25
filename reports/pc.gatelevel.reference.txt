@@ -1,0 +1,48 @@
+ 
+****************************************
+Report : reference
+Design : pc
+Version: T-2022.03-SP5-1
+Date   : Thu Sep 24 11:06:11 2026
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X1_HVT         saed32hvt_tt1p05v25c
+                                  2.033152       6     12.198913  
+AND2X4_HVT         saed32hvt_tt1p05v25c
+                                  2.795584       1      2.795584  
+AO21X1_HVT         saed32hvt_tt1p05v25c
+                                  2.541440       9     22.872960  
+AO22X1_HVT         saed32hvt_tt1p05v25c
+                                  2.541440       9     22.872960  
+AO222X1_HVT        saed32hvt_tt1p05v25c
+                                  3.303872       6     19.823233  
+DFFARX1_HVT        saed32hvt_tt1p05v25c
+                                  7.116032      16    113.856514  n
+FADDX1_HVT         saed32hvt_tt1p05v25c
+                                  4.828736      14     67.602302  r
+HADDX1_HVT         saed32hvt_tt1p05v25c
+                                  3.303872       1      3.303872  r
+INVX0_HVT          saed32hvt_tt1p05v25c
+                                  1.270720       4      5.082880  
+NAND2X0_HVT        saed32hvt_tt1p05v25c
+                                  1.524864       7     10.674048  
+NAND3X0_HVT        saed32hvt_tt1p05v25c
+                                  1.779008       1      1.779008  
+XOR2X1_HVT         saed32hvt_tt1p05v25c
+                                  4.320448       2      8.640896  
+-----------------------------------------------------------------------------
+Total 12 references                                   291.503169
+1

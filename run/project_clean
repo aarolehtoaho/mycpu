@@ -1,0 +1,37 @@
+#!/bin/csh
+
+echo "Killing Questa tools"
+
+ps -f -u ${USER} | awk '$8 ~ /questa/ { print $8 }'
+set jobs = `ps -f -u ${USER} | awk '$8 ~ /questa/ { print $2 }'`
+foreach job ( $jobs )
+    echo "kill -9 ${job}"
+    kill -9 $job
+end
+
+echo "Killing Synopsys tools"
+
+ps -f -u ${USER} | awk '$8 ~ /synopsys/ { print $8 }'
+set jobs = `ps -f -u ${USER} | awk '$8 ~ /synopsys/ { print $2 }'`
+foreach job ( $jobs )
+    echo "kill -9 ${job}"
+    kill -9 $job
+end
+
+
+echo "Killing Cadence tools"
+
+ps -f -u ${USER} | awk '$8 ~ /cadence/ { print $8 }'
+set jobs = `ps -f -u ${USER} | awk '$8 ~ /cadence/ { print $2 }'`
+foreach job ( $jobs )
+    echo "kill -9 ${job}"
+    kill -9 $job
+end
+
+echo -n "Disk usage before cleanup:"
+du -sh .
+/bin/rm -rf  output/* workdir/* workdir/.??*
+echo -n "           after cleanup: "
+du -sh .
+
+

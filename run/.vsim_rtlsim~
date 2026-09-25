@@ -1,0 +1,21 @@
+#!/bin/csh
+
+set DESIGN_NAME = `scripts/get_variable.tcl DESIGN_NAME >& /dev/null ; cat output/variable`
+if ( $DESIGN_NAME == "") then
+    echo "Error: Variable DESIGN_NAME has not been set in input/0_setup_design.tcl."
+    exit
+endif
+
+source run/setup_env.csh
+
+cd $WORKDIR
+
+vsim -do scripts/vsim_rtlsim.tcl $*
+
+cd ..
+
+source run/cleanup_env.csh
+
+
+
+

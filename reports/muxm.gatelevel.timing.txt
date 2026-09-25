@@ -1,0 +1,43 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : muxm
+Version: T-2022.03-SP5-1
+Date   : Tue Sep  8 08:47:52 2026
+****************************************
+
+Operating Conditions: tt1p05v25c   Library: saed32hvt_tt1p05v25c
+Wire Load Model Mode: enclosed
+
+  Startpoint: sel_in (input port)
+  Endpoint: m_out[0] (output port)
+  Path Group: default
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  muxm               ForQA                 saed32hvt_tt1p05v25c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                     0.00       0.00 r
+  sel_in (in)                              0.00       0.00 r
+  U18/Y (INVX2_HVT)                        0.12       0.12 f
+  U19/Y (AO22X1_HVT)                       0.10       0.22 f
+  m_out[0] (out)                           0.00       0.22 f
+  data arrival time                                   0.22
+
+  max_delay                                4.25       4.25
+  output external delay                    0.00       4.25
+  data required time                                  4.25
+  -----------------------------------------------------------
+  data required time                                  4.25
+  data arrival time                                  -0.22
+  -----------------------------------------------------------
+  slack (MET)                                         4.03
+
+
+1

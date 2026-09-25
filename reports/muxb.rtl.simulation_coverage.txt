@@ -1,0 +1,15 @@
+Recursive Coverage Report Summary Data by instance
+
+=================================================================================
+=== Instance: /muxb_tb/DUT
+=== Design Unit: work.muxb
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                         3         3         0   100.00%
+    Statements                       4         4         0   100.00%
+    Toggles                         98        98         0   100.00%
+
+
+Total Coverage By Instance (filtered view): 100.00%
+

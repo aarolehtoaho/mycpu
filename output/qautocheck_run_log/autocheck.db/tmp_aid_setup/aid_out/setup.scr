@@ -1,0 +1,6 @@
+set -e
+cd /homedir01/alehtoah24/DT2_2026/project/workdir
+MODELSIM=/homedir01/alehtoah24/DT2_2026/project/output/qautocheck_run_log/autocheck.db/tmp_aid_setup/aid_out/tmp_modelsim.ini \
+PATH=${HOME_0IN}/share/modeltech/bin:${PATH}
+chmod +x /homedir01/alehtoah24/DT2_2026/project/output/qautocheck_run_log/autocheck.db/tmp_aid_setup/aid_out/questa_compile.scr
+source /homedir01/alehtoah24/DT2_2026/project/output/qautocheck_run_log/autocheck.db/tmp_aid_setup/aid_out/questa_compile.scr 

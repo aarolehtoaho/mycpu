@@ -1,0 +1,63 @@
+Coverage Report by instance with details
+
+=================================================================================
+=== Instance: /ir_tb/DUT/SVA_ir
+=== Design Unit: work.ir_svamod
+=================================================================================
+
+Assertion Coverage:
+    Assertions                       5         5         0   100.00%
+--------------------------------------------------------------------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass     Vacuous    Disable    Attempt     Active Peak Active ATV
+                                                  Count        Count    Count      Count      Count       Count  Count          
+--------------------------------------------------------------------------------------------------------------------------------
+/ir_tb/DUT/SVA_ir/X_il_in
+                     input/ir_svamod.sv(17)             0          3          0          2          5          0           1 off
+/ir_tb/DUT/SVA_ir/X_ins_in
+                     input/ir_svamod.sv(18)             0          3          0          2          5          0           1 off
+/ir_tb/DUT/SVA_ir/X_ins_out
+                     input/ir_svamod.sv(19)             0          3          0          2          5          0           1 off
+/ir_tb/DUT/SVA_ir/X_ir_r
+                     input/ir_svamod.sv(20)             0          3          0          2          5          0           1 off
+/ir_tb/DUT/SVA_ir/R_ir_r
+                     input/ir_svamod.sv(21)             0          1          0          0          1          0           1 off
+
+=================================================================================
+=== Instance: /ir_tb/TEST
+=== Design Unit: work.ir_test
+=================================================================================
+
+Assertion Coverage:
+    Assertions                       2         2         0   100.00%
+--------------------------------------------------------------------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass     Vacuous    Disable    Attempt     Active Peak Active ATV
+                                                  Count        Count    Count      Count      Count       Count  Count          
+--------------------------------------------------------------------------------------------------------------------------------
+/ir_tb/TEST/#ublk#8826068#17/immed__51
+                     input/ir_test.sv(51)               0          1          0          0          1          0           0 off
+/ir_tb/TEST/#ublk#8826068#17/immed__38
+                     input/ir_test.sv(38)               0          1          0          0          1          0           0 off
+
+
+ASSERTION RESULTS:
+--------------------------------------------------------------------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass     Vacuous    Disable    Attempt     Active Peak Active ATV
+                                                  Count        Count    Count      Count      Count       Count  Count          
+--------------------------------------------------------------------------------------------------------------------------------
+/ir_tb/DUT/SVA_ir/X_il_in
+                     input/ir_svamod.sv(17)             0          3          0          2          5          0           1 off
+/ir_tb/DUT/SVA_ir/X_ins_in
+                     input/ir_svamod.sv(18)             0          3          0          2          5          0           1 off
+/ir_tb/DUT/SVA_ir/X_ins_out
+                     input/ir_svamod.sv(19)             0          3          0          2          5          0           1 off
+/ir_tb/DUT/SVA_ir/X_ir_r
+                     input/ir_svamod.sv(20)             0          3          0          2          5          0           1 off
+/ir_tb/DUT/SVA_ir/R_ir_r
+                     input/ir_svamod.sv(21)             0          1          0          0          1          0           1 off
+/ir_tb/TEST/#ublk#8826068#17/immed__51
+                     input/ir_test.sv(51)               0          1          0          0          1          0           0 off
+/ir_tb/TEST/#ublk#8826068#17/immed__38
+                     input/ir_test.sv(38)               0          1          0          0          1          0           0 off
+
+Total Coverage By Instance (filtered view): 100.00%
+

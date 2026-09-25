@@ -1,0 +1,63 @@
+Coverage Report by instance with details
+
+=================================================================================
+=== Instance: /muxm_tb/TEST
+=== Design Unit: work.muxm_test
+=================================================================================
+
+Assertion Coverage:
+    Assertions                       3         3         0   100.00%
+--------------------------------------------------------------------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass     Vacuous    Disable    Attempt     Active Peak Active ATV
+                                                  Count        Count    Count      Count      Count       Count  Count          
+--------------------------------------------------------------------------------------------------------------------------------
+/muxm_tb/TEST/test_program/immed__59
+                     input/muxm_test.sv(59)             0          1          0          0          1          0           0 off
+/muxm_tb/TEST/test_program/immed__42
+                     input/muxm_test.sv(42)             0          1          0          0          1          0           0 off
+/muxm_tb/TEST/test_program/#ublk#255252580#68/immed__78
+                     input/muxm_test.sv(78)             0         20          0          0         20          0           0 off
+
+=================================================================================
+=== Instance: /muxm_tb/SVA_muxm
+=== Design Unit: work.muxm_svamod
+=================================================================================
+
+Assertion Coverage:
+    Assertions                       4         4         0   100.00%
+--------------------------------------------------------------------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass     Vacuous    Disable    Attempt     Active Peak Active ATV
+                                                  Count        Count    Count      Count      Count       Count  Count          
+--------------------------------------------------------------------------------------------------------------------------------
+/muxm_tb/SVA_muxm/X_sel_in
+                     input/muxm_svamod.sv(17)           0         23          0          2         25          0           1 off
+/muxm_tb/SVA_muxm/X_d0_in
+                     input/muxm_svamod.sv(18)           0         23          0          2         25          0           1 off
+/muxm_tb/SVA_muxm/X_d1_in
+                     input/muxm_svamod.sv(19)           0         23          0          2         25          0           1 off
+/muxm_tb/SVA_muxm/X_m_out
+                     input/muxm_svamod.sv(20)           0         23          0          2         25          0           1 off
+
+
+ASSERTION RESULTS:
+--------------------------------------------------------------------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass     Vacuous    Disable    Attempt     Active Peak Active ATV
+                                                  Count        Count    Count      Count      Count       Count  Count          
+--------------------------------------------------------------------------------------------------------------------------------
+/muxm_tb/TEST/test_program/immed__59
+                     input/muxm_test.sv(59)             0          1          0          0          1          0           0 off
+/muxm_tb/TEST/test_program/immed__42
+                     input/muxm_test.sv(42)             0          1          0          0          1          0           0 off
+/muxm_tb/TEST/test_program/#ublk#255252580#68/immed__78
+                     input/muxm_test.sv(78)             0         20          0          0         20          0           0 off
+/muxm_tb/SVA_muxm/X_sel_in
+                     input/muxm_svamod.sv(17)           0         23          0          2         25          0           1 off
+/muxm_tb/SVA_muxm/X_d0_in
+                     input/muxm_svamod.sv(18)           0         23          0          2         25          0           1 off
+/muxm_tb/SVA_muxm/X_d1_in
+                     input/muxm_svamod.sv(19)           0         23          0          2         25          0           1 off
+/muxm_tb/SVA_muxm/X_m_out
+                     input/muxm_svamod.sv(20)           0         23          0          2         25          0           1 off
+
+Total Coverage By Instance (filtered view): 100.00%
+
