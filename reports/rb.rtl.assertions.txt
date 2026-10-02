@@ -1,0 +1,79 @@
+Coverage Report by instance with details
+
+=================================================================================
+=== Instance: /rb_tb/DUT/SVA_rb
+=== Design Unit: work.rb_svamod
+=================================================================================
+
+Assertion Coverage:
+    Assertions                       9         9         0   100.00%
+--------------------------------------------------------------------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass     Vacuous    Disable    Attempt     Active Peak Active ATV
+                                                  Count        Count    Count      Count      Count       Count  Count          
+--------------------------------------------------------------------------------------------------------------------------------
+/rb_tb/DUT/SVA_rb/X_d_in
+                     input/rb_svamod.sv(21)             0         32          0          2         34          0           1 off
+/rb_tb/DUT/SVA_rb/X_rw_in
+                     input/rb_svamod.sv(22)             0         32          0          2         34          0           1 off
+/rb_tb/DUT/SVA_rb/X_rs_in
+                     input/rb_svamod.sv(23)             0         32          0          2         34          0           1 off
+/rb_tb/DUT/SVA_rb/X_a_out
+                     input/rb_svamod.sv(24)             0         32          0          2         34          0           1 off
+/rb_tb/DUT/SVA_rb/X_b_out
+                     input/rb_svamod.sv(25)             0         32          0          2         34          0           1 off
+/rb_tb/DUT/SVA_rb/X_rb_r
+                     input/rb_svamod.sv(26)             0         32          0          2         34          0           1 off
+/rb_tb/DUT/SVA_rb/X_hb_r
+                     input/rb_svamod.sv(27)             0         32          0          2         34          0           1 off
+/rb_tb/DUT/SVA_rb/R_rb_r
+                     input/rb_svamod.sv(28)             0          1          0          0          1          0           1 off
+/rb_tb/DUT/SVA_rb/R_hb_r
+                     input/rb_svamod.sv(29)             0          1          0          0          1          0           1 off
+
+=================================================================================
+=== Instance: /rb_tb/TEST
+=== Design Unit: work.rb_test
+=================================================================================
+
+Assertion Coverage:
+    Assertions                       2         2         0   100.00%
+--------------------------------------------------------------------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass     Vacuous    Disable    Attempt     Active Peak Active ATV
+                                                  Count        Count    Count      Count      Count       Count  Count          
+--------------------------------------------------------------------------------------------------------------------------------
+/rb_tb/TEST/#ublk#143043796#17/#anonblk#143043796#34#4#/#ublk#143043796#34/immed__43
+                     input/rb_test.sv(43)               0         16          0          0         16          0           0 off
+/rb_tb/TEST/#ublk#143043796#17/#anonblk#143043796#54#4#/#ublk#143043796#54/immed__63
+                     input/rb_test.sv(63)               0         16          0          0         16          0           0 off
+
+
+ASSERTION RESULTS:
+--------------------------------------------------------------------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass     Vacuous    Disable    Attempt     Active Peak Active ATV
+                                                  Count        Count    Count      Count      Count       Count  Count          
+--------------------------------------------------------------------------------------------------------------------------------
+/rb_tb/DUT/SVA_rb/X_d_in
+                     input/rb_svamod.sv(21)             0         32          0          2         34          0           1 off
+/rb_tb/DUT/SVA_rb/X_rw_in
+                     input/rb_svamod.sv(22)             0         32          0          2         34          0           1 off
+/rb_tb/DUT/SVA_rb/X_rs_in
+                     input/rb_svamod.sv(23)             0         32          0          2         34          0           1 off
+/rb_tb/DUT/SVA_rb/X_a_out
+                     input/rb_svamod.sv(24)             0         32          0          2         34          0           1 off
+/rb_tb/DUT/SVA_rb/X_b_out
+                     input/rb_svamod.sv(25)             0         32          0          2         34          0           1 off
+/rb_tb/DUT/SVA_rb/X_rb_r
+                     input/rb_svamod.sv(26)             0         32          0          2         34          0           1 off
+/rb_tb/DUT/SVA_rb/X_hb_r
+                     input/rb_svamod.sv(27)             0         32          0          2         34          0           1 off
+/rb_tb/DUT/SVA_rb/R_rb_r
+                     input/rb_svamod.sv(28)             0          1          0          0          1          0           1 off
+/rb_tb/DUT/SVA_rb/R_hb_r
+                     input/rb_svamod.sv(29)             0          1          0          0          1          0           1 off
+/rb_tb/TEST/#ublk#143043796#17/#anonblk#143043796#34#4#/#ublk#143043796#34/immed__43
+                     input/rb_test.sv(43)               0         16          0          0         16          0           0 off
+/rb_tb/TEST/#ublk#143043796#17/#anonblk#143043796#54#4#/#ublk#143043796#54/immed__63
+                     input/rb_test.sv(63)               0         16          0          0         16          0           0 off
+
+Total Coverage By Instance (filtered view): 100.00%
+

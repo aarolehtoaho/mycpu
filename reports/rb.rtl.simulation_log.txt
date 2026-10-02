@@ -1,0 +1,304 @@
+# 0
+# 1
+# QuestaSim-64 vlog 2022.4_1 Compiler 2022.11 Nov 11 2022
+# Start time: 14:26:14 on Sep 30,2026
+# vlog -reportprogress 300 -suppress 13314 "+define+RTL_SIM" "+define+design_top_is_rb" -work work -timescale 1ns/1ps "+cover=bcxefs" input/mycpu_pkg.sv 
+# -- Compiling package mycpu_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 14:26:14 on Sep 30,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2022.4_1 Compiler 2022.11 Nov 11 2022
+# Start time: 14:26:14 on Sep 30,2026
+# vlog -reportprogress 300 -suppress 13314 "+define+RTL_SIM" "+define+design_top_is_rb" -work work -timescale 1ns/1ps "+cover=bcxefs" input/rb_svamod.sv 
+# -- Compiling package rb_svamod_sv_unit
+# -- Importing package mycpu_pkg
+# -- Compiling module rb_svamod
+# 
+# Top level modules:
+# 	rb_svamod
+# End time: 14:26:14 on Sep 30,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0, Suppressed Warnings: 4
+# QuestaSim-64 vlog 2022.4_1 Compiler 2022.11 Nov 11 2022
+# Start time: 14:26:14 on Sep 30,2026
+# vlog -reportprogress 300 -suppress 13314 "+define+RTL_SIM" "+define+design_top_is_rb" -work work -timescale 1ns/1ps "+cover=bcxefs" input/rb.sv 
+# -- Compiling package rb_sv_unit
+# -- Importing package mycpu_pkg
+# -- Compiling module rb
+# 
+# Top level modules:
+# 	rb
+# End time: 14:26:14 on Sep 30,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2022.4_1 Compiler 2022.11 Nov 11 2022
+# Start time: 14:26:14 on Sep 30,2026
+# vlog -reportprogress 300 -suppress 13314 "+define+RTL_SIM" "+define+design_top_is_rb" -work work -timescale 1ns/1ps "+cover=bcxefs" input/rb_test.sv input/rb_tb.sv 
+# ** Warning: input/rb_test.sv(18): (vlog-2244) Variable 'N' is implicitly static. You must either explicitly declare it as static or automatic
+# or remove the initialization in the declaration of variable.
+# -- Compiling package rb_test_sv_unit
+# -- Importing package mycpu_pkg
+# -- Compiling program rb_test
+# ** Warning: input/rb_test.sv(18): (vlog-2244) Variable 'N' is implicitly static. You must either explicitly declare it as static or automatic
+# or remove the initialization in the declaration of variable.
+# -- Compiling package rb_tb_sv_unit
+# -- Compiling module rb_tb
+# 
+# Top level modules:
+# 	rb_tb
+# End time: 14:26:14 on Sep 30,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# Library vendor : Model Technology
+# Maximum unnamed designs : 3
+# Verilog PACKAGE mycpu_pkg
+#     Depends on: X sv_std std 9oUSJO;AeEaW`l:M@^WG92
+#     Compile time: Wed Sep 30 14:26:14 2026
+#     Debug Symbol file exists
+#     DU Coverage Signature: TVkQY06jlT;lYYzPD`J5c2
+#     Verilog version: ?ZUXK[G4@dXJj]zU2@NAd1
+#     Source directory: /homedir01/alehtoah24/DT2_2026/project/workdir
+#     Source modified time: Thu Sep  3 10:01:24 2026
+#     HDL source file: input/mycpu_pkg.sv
+#     Source file: input/mycpu_pkg.sv
+#     Start location: input/mycpu_pkg.sv:1:0
+#     Version string: ?ZUXK[G4@dXJj]zU2@NAd1
+#     Opcode format: 2022.4_1; VLOG SE-64 Object version 75
+#     Optimized Verilog design root: 1
+#     VHDL language standard: 1
+#     Compiled in vopt flow
+#     Compile options: -suppress 13314 -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Full compile options: -suppress 13314 +define+RTL_SIM +define+design_top_is_rb -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Compile defaults: CvgOpt=0
+# MODULE rb
+#     Depends on: X sv_std std 9oUSJO;AeEaW`l:M@^WG92
+#     Depends on: X work mycpu_pkg ?ZUXK[G4@dXJj]zU2@NAd1
+#     Depends on: X work rb_sv_unit KC9<:^;nE7V5nX_2z=7383
+#     Compile time: Wed Sep 30 14:26:14 2026
+#     Version string: Dg1SIo80bB@j0V0VzS_@n1
+#     Optimized Verilog design root: 1
+#     Debug Symbol file exists
+#     DU Coverage Signature: n>N;P>ojog]Xde2ABa`Y_2
+#     Verilog version: aL;2BZ9o_<AFGF`68ghWd1
+#     Source directory: /homedir01/alehtoah24/DT2_2026/project/workdir
+#     Source modified time: Wed Sep 30 13:38:33 2026
+#     HDL source file: input/rb.sv
+#     Source file: input/rb.sv
+#     Start location: input/rb.sv:5:52
+#     Opcode format: 2022.4_1; VLOG SE-64 Object version 75
+#     VHDL language standard: 1
+#     Compiled in vopt flow
+#     Compile options: -suppress 13314 -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Full compile options: -suppress 13314 +define+RTL_SIM +define+design_top_is_rb -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Compile defaults: CvgOpt=0
+# Verilog PACKAGE rb_sv_unit
+#     Depends on: X sv_std std 9oUSJO;AeEaW`l:M@^WG92
+#     Depends on: X work mycpu_pkg ?ZUXK[G4@dXJj]zU2@NAd1
+#     Compile time: Wed Sep 30 14:26:14 2026
+#     Version string: KC9<:^;nE7V5nX_2z=7383
+#     Optimized Verilog design root: 1
+#     Debug Symbol file exists
+#     DU Coverage Signature: bVMmW]mj0IaKTl>XW9dcW0
+#     Verilog version: KC9<:^;nE7V5nX_2z=7383
+#     Source directory: /homedir01/alehtoah24/DT2_2026/project/workdir
+#     Source modified time: Wed Sep 30 13:38:33 2026
+#     HDL source file: input/rb.sv
+#     Source file: input/rb.sv
+#     Source file: input/mycpu.svh
+#     Start location: input/rb.sv:3:0
+#     Opcode format: 2022.4_1; VLOG SE-64 Object version 75
+#     VHDL language standard: 1
+#     Compiled in vopt flow
+#     Compile options: -suppress 13314 -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Full compile options: -suppress 13314 +define+RTL_SIM +define+design_top_is_rb -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Compile defaults: CvgOpt=0
+# MODULE rb_svamod
+#     Depends on: X sv_std std 9oUSJO;AeEaW`l:M@^WG92
+#     Depends on: X work mycpu_pkg ?ZUXK[G4@dXJj]zU2@NAd1
+#     Depends on: X work rb_svamod_sv_unit b7VNXXlLK6MOoDgY1F^bJ3
+#     Compile time: Wed Sep 30 14:26:14 2026
+#     Version string: Dg1SIo80bB@j0V0VzS_@n1
+#     Optimized Verilog design root: 1
+#     Debug Symbol file exists
+#     DU Coverage Signature: Q9hceS`U>1ez>XGA]80`M3
+#     Verilog version: S7HDW0=Y2cGAEgf6`jD1C3
+#     Source directory: /homedir01/alehtoah24/DT2_2026/project/workdir
+#     Source modified time: Mon Aug 31 13:23:29 2026
+#     HDL source file: input/rb_svamod.sv
+#     Source file: input/rb_svamod.sv
+#     Start location: input/rb_svamod.sv:7:80
+#     Opcode format: 2022.4_1; VLOG SE-64 Object version 75
+#     VHDL language standard: 1
+#     Compiled in vopt flow
+#     Compile options: -suppress 13314 -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Full compile options: -suppress 13314 +define+RTL_SIM +define+design_top_is_rb -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Compile defaults: CvgOpt=0
+# Verilog PACKAGE rb_svamod_sv_unit
+#     Depends on: X sv_std std 9oUSJO;AeEaW`l:M@^WG92
+#     Depends on: X work mycpu_pkg ?ZUXK[G4@dXJj]zU2@NAd1
+#     Compile time: Wed Sep 30 14:26:14 2026
+#     Version string: b7VNXXlLK6MOoDgY1F^bJ3
+#     Optimized Verilog design root: 1
+#     Debug Symbol file exists
+#     DU Coverage Signature: TiTlzR]ldJkin<E^l;bH61
+#     Verilog version: b7VNXXlLK6MOoDgY1F^bJ3
+#     Source directory: /homedir01/alehtoah24/DT2_2026/project/workdir
+#     Source modified time: Fri Sep  4 11:32:43 2026
+#     HDL source file: input/rb_svamod.sv
+#     Source file: input/rb_svamod.sv
+#     Source file: input/mycpu.svh
+#     Start location: input/rb_svamod.sv:5:0
+#     Opcode format: 2022.4_1; VLOG SE-64 Object version 75
+#     VHDL language standard: 1
+#     Compiled in vopt flow
+#     Compile options: -suppress 13314 -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Full compile options: -suppress 13314 +define+RTL_SIM +define+design_top_is_rb -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Compile defaults: CvgOpt=0
+# MODULE rb_tb
+#     Depends on: X sv_std std 9oUSJO;AeEaW`l:M@^WG92
+#     Depends on: X work mycpu_pkg ?ZUXK[G4@dXJj]zU2@NAd1
+#     Depends on: X work rb_tb_sv_unit 6aLOV83f@87P2>T`b[Z[O2
+#     Compile time: Wed Sep 30 14:26:14 2026
+#     Version string: Dg1SIo80bB@j0V0VzS_@n1
+#     Optimized Verilog design root: 1
+#     Debug Symbol file exists
+#     DU Coverage Signature: cSA5^gSH6DQ@l8O:McGQQ2
+#     Verilog version: f_==Un@EYJ1Jc6TKn:T7o2
+#     Source directory: /homedir01/alehtoah24/DT2_2026/project/workdir
+#     Source modified time: Mon Aug 31 13:23:29 2026
+#     HDL source file: input/rb_tb.sv
+#     Source file: input/rb_tb.sv
+#     Source file: input/mycpu_svabind.svh
+#     Start location: input/rb_tb.sv:7:91
+#     Opcode format: 2022.4_1; VLOG SE-64 Object version 75
+#     VHDL language standard: 1
+#     Compiled in vopt flow
+#     Compile options: -suppress 13314 -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Full compile options: -suppress 13314 +define+RTL_SIM +define+design_top_is_rb -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Compile defaults: CvgOpt=0
+# Verilog PACKAGE rb_tb_sv_unit
+#     Depends on: X sv_std std 9oUSJO;AeEaW`l:M@^WG92
+#     Depends on: X work mycpu_pkg ?ZUXK[G4@dXJj]zU2@NAd1
+#     Compile time: Wed Sep 30 14:26:14 2026
+#     Version string: 6aLOV83f@87P2>T`b[Z[O2
+#     Optimized Verilog design root: 1
+#     Debug Symbol file exists
+#     DU Coverage Signature: a14MofP]=P[zH:V9Co>gF0
+#     Verilog version: 6aLOV83f@87P2>T`b[Z[O2
+#     Source directory: /homedir01/alehtoah24/DT2_2026/project/workdir
+#     Source modified time: Fri Sep  4 11:32:43 2026
+#     HDL source file: input/rb_tb.sv
+#     Source file: input/rb_tb.sv
+#     Source file: input/mycpu.svh
+#     Start location: input/rb_tb.sv:5:0
+#     Opcode format: 2022.4_1; VLOG SE-64 Object version 75
+#     VHDL language standard: 1
+#     Compiled in vopt flow
+#     Compile options: -suppress 13314 -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Full compile options: -suppress 13314 +define+RTL_SIM +define+design_top_is_rb -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Compile defaults: CvgOpt=0
+# PROGRAM rb_test
+#     Depends on: X sv_std std 9oUSJO;AeEaW`l:M@^WG92
+#     Depends on: X work mycpu_pkg ?ZUXK[G4@dXJj]zU2@NAd1
+#     Depends on: X work rb_test_sv_unit Schhf=PggH[g71Fz_=;hm3
+#     Compile time: Wed Sep 30 14:26:14 2026
+#     Version string: Dg1SIo80bB@j0V0VzS_@n1
+#     Optimized Verilog design root: 1
+#     Debug Symbol file exists
+#     DU Coverage Signature: ;>c;eCAiHkU1XMeR4gBMi3
+#     Verilog version: ghZl=m1WVh?k@6TV^Z6gC3
+#     Source directory: /homedir01/alehtoah24/DT2_2026/project/workdir
+#     Source modified time: Wed Sep 30 14:26:08 2026
+#     HDL source file: input/rb_test.sv
+#     Source file: input/rb_test.sv
+#     Start location: input/rb_test.sv:5:0
+#     Opcode format: 2022.4_1; VLOG SE-64 Object version 75
+#     VHDL language standard: 1
+#     Compiled in vopt flow
+#     Compile options: -suppress 13314 -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Full compile options: -suppress 13314 +define+RTL_SIM +define+design_top_is_rb -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Compile defaults: CvgOpt=0
+# Verilog PACKAGE rb_test_sv_unit
+#     Depends on: X sv_std std 9oUSJO;AeEaW`l:M@^WG92
+#     Depends on: X work mycpu_pkg ?ZUXK[G4@dXJj]zU2@NAd1
+#     Compile time: Wed Sep 30 14:26:14 2026
+#     Version string: Schhf=PggH[g71Fz_=;hm3
+#     Optimized Verilog design root: 1
+#     Debug Symbol file exists
+#     DU Coverage Signature: E?@1i3_TJRY;>OK`S9loF3
+#     Verilog version: Schhf=PggH[g71Fz_=;hm3
+#     Source directory: /homedir01/alehtoah24/DT2_2026/project/workdir
+#     Source modified time: Wed Sep 30 14:26:08 2026
+#     HDL source file: input/rb_test.sv
+#     Source file: input/rb_test.sv
+#     Source file: input/mycpu.svh
+#     Start location: input/rb_test.sv:3:0
+#     Opcode format: 2022.4_1; VLOG SE-64 Object version 75
+#     VHDL language standard: 1
+#     Compiled in vopt flow
+#     Compile options: -suppress 13314 -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Full compile options: -suppress 13314 +define+RTL_SIM +define+design_top_is_rb -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Compile defaults: CvgOpt=0
+# QuestaSim-64 vopt 2022.4_1 Compiler 2022.11 Nov 11 2022
+# Start time: 14:26:14 on Sep 30,2026
+# vopt -reportprogress 300 -work work "+acc" -debugdb "+cover=bcxefs" -suppress 10587 rb_tb -o rb_opt 
+# 
+# Top level modules:
+# 	rb_tb
+# 
+# Analyzing design...
+# -- Loading module rb_tb
+# -- Loading module rb
+# -- Loading program rb_test
+# -- Loading module rb_svamod
+# Optimizing 9 design-units (inlining 0/4 module instances):
+# -- Optimizing package mycpu_pkg(fast)
+# -- Optimizing package rb_tb_sv_unit(fast)
+# -- Optimizing package rb_sv_unit(fast)
+# -- Optimizing package rb_test_sv_unit(fast)
+# -- Optimizing package rb_svamod_sv_unit(fast)
+# -- Optimizing module rb_svamod(fast)
+# -- Processing module rb_svamod(fast) for debug
+# -- Optimizing program rb_test(fast)
+# ** Warning: input/rb_test.sv(18): (vopt-2244) Variable 'N' is implicitly static. You must either explicitly declare it as static or automatic
+# or remove the initialization in the declaration of variable.
+# -- Optimizing module rb(fast)
+# -- Processing module rb(fast) for debug
+# -- Optimizing module rb_tb(fast)
+# -- Processing module rb_tb(fast) for debug
+# Optimized design name is rb_opt
+# End time: 14:26:15 on Sep 30,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 1, Suppressed Warnings: 3
+# vsim -suppress 13314 -work work "+nowarnTSCALE" -t 1ps -msgmode both -debugdb -fsmdebug -assertdebug -coverage rb_opt 
+# Start time: 14:26:15 on Sep 30,2026
+# Loading sv_std.std
+# Loading work.mycpu_pkg(fast)
+# Loading work.rb_tb_sv_unit(fast)
+# Loading work.rb_tb(fast)
+# Loading work.rb_sv_unit(fast)
+# Loading work.rb(fast)
+# Loading work.rb_svamod_sv_unit(fast)
+# Loading work.rb_svamod(fast)
+# Loading work.rb_test_sv_unit(fast)
+# Loading work.rb_test(fast)
+# ** Note: (vsim-8900) Creating design debug database vsim.dbg.
+# 0 ps
+# 1120 ps
+# -------------------------------------------------------------------------------
+# SIMULATION START 09/30/2026:14:26:17 alehtoah24
+# -------------------------------------------------------------------------------
+# ** Info: T1: Reset Test
+#    Time: 0 ps  Scope: rb_tb.TEST File: input/rb_test.sv Line: 21
+# ** Info: T2: Write-Read Test
+#    Time: 40 ns  Scope: rb_tb.TEST File: input/rb_test.sv Line: 29
+# ** Info: T3: Read Test
+#    Time: 360 ns  Scope: rb_tb.TEST File: input/rb_test.sv Line: 48
+# ** Note: $finish    : input/rb_test.sv(67)
+#    Time: 680 ns  Iteration: 1  Instance: /rb_tb/TEST
+# 1
+# Break in Module rb_test at input/rb_test.sv line 67
+# 0
+# -------------------------------------------------------------------------------
+# SIMULATION END (0 assertions failed)
+# -------------------------------------------------------------------------------
+# 0 ps
+# 714 ns

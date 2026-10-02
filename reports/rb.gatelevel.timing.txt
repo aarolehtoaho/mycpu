@@ -1,0 +1,48 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : rb
+Version: T-2022.03-SP5-1
+Date   : Wed Sep 30 14:42:00 2026
+****************************************
+
+Operating Conditions: tt1p05v25c   Library: saed32hvt_tt1p05v25c
+Wire Load Model Mode: enclosed
+
+  Startpoint: hb_r_reg[6][1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: hb_r_reg[6][1]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  rb                 8000                  saed32hvt_tt1p05v25c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  hb_r_reg[6][1]/CLK (DFFARX1_HVT)         0.00       0.00 r
+  hb_r_reg[6][1]/Q (DFFARX1_HVT)           0.18       0.18 r
+  U1152/Y (AO22X1_HVT)                     0.09       0.27 r
+  hb_r_reg[6][1]/D (DFFARX1_HVT)           0.01       0.28 r
+  data arrival time                                   0.28
+
+  clock clk (rise edge)                    4.25       4.25
+  clock network delay (ideal)              0.00       4.25
+  hb_r_reg[6][1]/CLK (DFFARX1_HVT)         0.00       4.25 r
+  library setup time                      -0.08       4.17
+  data required time                                  4.17
+  -----------------------------------------------------------
+  data required time                                  4.17
+  data arrival time                                  -0.28
+  -----------------------------------------------------------
+  slack (MET)                                         3.89
+
+
+1

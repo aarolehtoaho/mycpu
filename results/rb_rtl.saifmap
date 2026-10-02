@@ -1,0 +1,710 @@
+SAIF name mapping file
+created using Synopsys Power Compiler T-2022.03-SP5-1
+design rb
+
+port clk
+oname L:clk
+sname - clk
+port rst_n
+oname L:rst_n
+sname - rst_n
+port d_in[15]
+oname Bs:d_in Bd:15 L:d_in[15]
+port d_in[14]
+oname Bs:d_in Bd:14 L:d_in[14]
+port d_in[13]
+oname Bs:d_in Bd:13 L:d_in[13]
+port d_in[12]
+oname Bs:d_in Bd:12 L:d_in[12]
+port d_in[11]
+oname Bs:d_in Bd:11 L:d_in[11]
+port d_in[10]
+oname Bs:d_in Bd:10 L:d_in[10]
+port d_in[9]
+oname Bs:d_in Bd:9 L:d_in[9]
+port d_in[8]
+oname Bs:d_in Bd:8 L:d_in[8]
+port d_in[7]
+oname Bs:d_in Bd:7 L:d_in[7]
+port d_in[6]
+oname Bs:d_in Bd:6 L:d_in[6]
+port d_in[5]
+oname Bs:d_in Bd:5 L:d_in[5]
+port d_in[4]
+oname Bs:d_in Bd:4 L:d_in[4]
+sname - d_in[4]
+port d_in[3]
+oname Bs:d_in Bd:3 L:d_in[3]
+sname - d_in[3]
+port d_in[2]
+oname Bs:d_in Bd:2 L:d_in[2]
+sname - d_in[2]
+port d_in[1]
+oname Bs:d_in Bd:1 L:d_in[1]
+sname - d_in[1]
+port d_in[0]
+oname Bs:d_in Bd:0 L:d_in[0]
+sname - d_in[0]
+port rw_in
+oname L:rw_in
+sname - rw_in
+port rs_in[11]
+oname Bs:rs_in Bd:11 L:rs_in[11]
+sname - rs_in[11]
+port rs_in[10]
+oname Bs:rs_in Bd:10 L:rs_in[10]
+sname - rs_in[10]
+port rs_in[9]
+oname Bs:rs_in Bd:9 L:rs_in[9]
+sname - rs_in[9]
+port rs_in[8]
+oname Bs:rs_in Bd:8 L:rs_in[8]
+sname - rs_in[8]
+port rs_in[7]
+oname Bs:rs_in Bd:7 L:rs_in[7]
+sname - rs_in[7]
+port rs_in[6]
+oname Bs:rs_in Bd:6 L:rs_in[6]
+sname - rs_in[6]
+port rs_in[5]
+oname Bs:rs_in Bd:5 L:rs_in[5]
+sname - rs_in[5]
+port rs_in[4]
+oname Bs:rs_in Bd:4 L:rs_in[4]
+sname - rs_in[4]
+port rs_in[3]
+oname Bs:rs_in Bd:3 L:rs_in[3]
+sname - rs_in[3]
+port rs_in[2]
+oname Bs:rs_in Bd:2 L:rs_in[2]
+sname - rs_in[2]
+port rs_in[1]
+oname Bs:rs_in Bd:1 L:rs_in[1]
+sname - rs_in[1]
+port rs_in[0]
+oname Bs:rs_in Bd:0 L:rs_in[0]
+sname - rs_in[0]
+port a_out[15]
+oname Bs:a_out Bd:15 L:a_out[15]
+port a_out[14]
+oname Bs:a_out Bd:14 L:a_out[14]
+port a_out[13]
+oname Bs:a_out Bd:13 L:a_out[13]
+port a_out[12]
+oname Bs:a_out Bd:12 L:a_out[12]
+port a_out[11]
+oname Bs:a_out Bd:11 L:a_out[11]
+port a_out[10]
+oname Bs:a_out Bd:10 L:a_out[10]
+port a_out[9]
+oname Bs:a_out Bd:9 L:a_out[9]
+port a_out[8]
+oname Bs:a_out Bd:8 L:a_out[8]
+port a_out[7]
+oname Bs:a_out Bd:7 L:a_out[7]
+port a_out[6]
+oname Bs:a_out Bd:6 L:a_out[6]
+port a_out[5]
+oname Bs:a_out Bd:5 L:a_out[5]
+port a_out[4]
+oname Bs:a_out Bd:4 L:a_out[4]
+sname - a_out[4]
+port a_out[3]
+oname Bs:a_out Bd:3 L:a_out[3]
+sname - a_out[3]
+port a_out[2]
+oname Bs:a_out Bd:2 L:a_out[2]
+sname - a_out[2]
+port a_out[1]
+oname Bs:a_out Bd:1 L:a_out[1]
+sname - a_out[1]
+port a_out[0]
+oname Bs:a_out Bd:0 L:a_out[0]
+sname - a_out[0]
+port b_out[15]
+oname Bs:b_out Bd:15 L:b_out[15]
+port b_out[14]
+oname Bs:b_out Bd:14 L:b_out[14]
+port b_out[13]
+oname Bs:b_out Bd:13 L:b_out[13]
+port b_out[12]
+oname Bs:b_out Bd:12 L:b_out[12]
+port b_out[11]
+oname Bs:b_out Bd:11 L:b_out[11]
+port b_out[10]
+oname Bs:b_out Bd:10 L:b_out[10]
+port b_out[9]
+oname Bs:b_out Bd:9 L:b_out[9]
+port b_out[8]
+oname Bs:b_out Bd:8 L:b_out[8]
+port b_out[7]
+oname Bs:b_out Bd:7 L:b_out[7]
+port b_out[6]
+oname Bs:b_out Bd:6 L:b_out[6]
+port b_out[5]
+oname Bs:b_out Bd:5 L:b_out[5]
+port b_out[4]
+oname Bs:b_out Bd:4 L:b_out[4]
+sname - b_out[4]
+port b_out[3]
+oname Bs:b_out Bd:3 L:b_out[3]
+sname - b_out[3]
+port b_out[2]
+oname Bs:b_out Bd:2 L:b_out[2]
+sname - b_out[2]
+port b_out[1]
+oname Bs:b_out Bd:1 L:b_out[1]
+sname - b_out[1]
+port b_out[0]
+oname Bs:b_out Bd:0 L:b_out[0]
+sname - b_out[0]
+cell hb_r_reg_7__15_
+oname B:hb_r[7][15] Bb:hb_r_reg Bs:hb_r_reg Bd:7 Bd:15 L:hb_r_reg[7][15]
+cell hb_r_reg_7__14_
+oname B:hb_r[7][14] Bb:hb_r_reg Bs:hb_r_reg Bd:7 Bd:14 L:hb_r_reg[7][14]
+cell hb_r_reg_7__13_
+oname B:hb_r[7][13] Bb:hb_r_reg Bs:hb_r_reg Bd:7 Bd:13 L:hb_r_reg[7][13]
+cell hb_r_reg_7__12_
+oname B:hb_r[7][12] Bb:hb_r_reg Bs:hb_r_reg Bd:7 Bd:12 L:hb_r_reg[7][12]
+cell hb_r_reg_7__11_
+oname B:hb_r[7][11] Bb:hb_r_reg Bs:hb_r_reg Bd:7 Bd:11 L:hb_r_reg[7][11]
+cell hb_r_reg_7__10_
+oname B:hb_r[7][10] Bb:hb_r_reg Bs:hb_r_reg Bd:7 Bd:10 L:hb_r_reg[7][10]
+cell hb_r_reg_7__9_
+oname B:hb_r[7][9] Bb:hb_r_reg Bs:hb_r_reg Bd:7 Bd:9 L:hb_r_reg[7][9]
+cell hb_r_reg_7__8_
+oname B:hb_r[7][8] Bb:hb_r_reg Bs:hb_r_reg Bd:7 Bd:8 L:hb_r_reg[7][8]
+cell hb_r_reg_7__7_
+oname B:hb_r[7][7] Bb:hb_r_reg Bs:hb_r_reg Bd:7 Bd:7 L:hb_r_reg[7][7]
+cell hb_r_reg_7__6_
+oname B:hb_r[7][6] Bb:hb_r_reg Bs:hb_r_reg Bd:7 Bd:6 L:hb_r_reg[7][6]
+cell hb_r_reg_7__5_
+oname B:hb_r[7][5] Bb:hb_r_reg Bs:hb_r_reg Bd:7 Bd:5 L:hb_r_reg[7][5]
+cell hb_r_reg_7__4_
+oname B:hb_r[7][4] Bb:hb_r_reg Bs:hb_r_reg Bd:7 Bd:4 L:hb_r_reg[7][4]
+sname - hb_r[7][4]
+cell hb_r_reg_7__3_
+oname B:hb_r[7][3] Bb:hb_r_reg Bs:hb_r_reg Bd:7 Bd:3 L:hb_r_reg[7][3]
+cell hb_r_reg_7__2_
+oname B:hb_r[7][2] Bb:hb_r_reg Bs:hb_r_reg Bd:7 Bd:2 L:hb_r_reg[7][2]
+sname - hb_r[7][2]
+cell hb_r_reg_7__1_
+oname B:hb_r[7][1] Bb:hb_r_reg Bs:hb_r_reg Bd:7 Bd:1 L:hb_r_reg[7][1]
+cell hb_r_reg_7__0_
+oname B:hb_r[7][0] Bb:hb_r_reg Bs:hb_r_reg Bd:7 Bd:0 L:hb_r_reg[7][0]
+sname - hb_r[7][0]
+cell hb_r_reg_6__15_
+oname B:hb_r[6][15] Bb:hb_r_reg Bs:hb_r_reg Bd:6 Bd:15 L:hb_r_reg[6][15]
+cell hb_r_reg_6__14_
+oname B:hb_r[6][14] Bb:hb_r_reg Bs:hb_r_reg Bd:6 Bd:14 L:hb_r_reg[6][14]
+cell hb_r_reg_6__13_
+oname B:hb_r[6][13] Bb:hb_r_reg Bs:hb_r_reg Bd:6 Bd:13 L:hb_r_reg[6][13]
+cell hb_r_reg_6__12_
+oname B:hb_r[6][12] Bb:hb_r_reg Bs:hb_r_reg Bd:6 Bd:12 L:hb_r_reg[6][12]
+cell hb_r_reg_6__11_
+oname B:hb_r[6][11] Bb:hb_r_reg Bs:hb_r_reg Bd:6 Bd:11 L:hb_r_reg[6][11]
+cell hb_r_reg_6__10_
+oname B:hb_r[6][10] Bb:hb_r_reg Bs:hb_r_reg Bd:6 Bd:10 L:hb_r_reg[6][10]
+cell hb_r_reg_6__9_
+oname B:hb_r[6][9] Bb:hb_r_reg Bs:hb_r_reg Bd:6 Bd:9 L:hb_r_reg[6][9]
+cell hb_r_reg_6__8_
+oname B:hb_r[6][8] Bb:hb_r_reg Bs:hb_r_reg Bd:6 Bd:8 L:hb_r_reg[6][8]
+cell hb_r_reg_6__7_
+oname B:hb_r[6][7] Bb:hb_r_reg Bs:hb_r_reg Bd:6 Bd:7 L:hb_r_reg[6][7]
+cell hb_r_reg_6__6_
+oname B:hb_r[6][6] Bb:hb_r_reg Bs:hb_r_reg Bd:6 Bd:6 L:hb_r_reg[6][6]
+cell hb_r_reg_6__5_
+oname B:hb_r[6][5] Bb:hb_r_reg Bs:hb_r_reg Bd:6 Bd:5 L:hb_r_reg[6][5]
+cell hb_r_reg_6__4_
+oname B:hb_r[6][4] Bb:hb_r_reg Bs:hb_r_reg Bd:6 Bd:4 L:hb_r_reg[6][4]
+sname - hb_r[6][4]
+cell hb_r_reg_6__3_
+oname B:hb_r[6][3] Bb:hb_r_reg Bs:hb_r_reg Bd:6 Bd:3 L:hb_r_reg[6][3]
+cell hb_r_reg_6__2_
+oname B:hb_r[6][2] Bb:hb_r_reg Bs:hb_r_reg Bd:6 Bd:2 L:hb_r_reg[6][2]
+sname - hb_r[6][2]
+cell hb_r_reg_6__1_
+oname B:hb_r[6][1] Bb:hb_r_reg Bs:hb_r_reg Bd:6 Bd:1 L:hb_r_reg[6][1]
+cell hb_r_reg_6__0_
+oname B:hb_r[6][0] Bb:hb_r_reg Bs:hb_r_reg Bd:6 Bd:0 L:hb_r_reg[6][0]
+cell hb_r_reg_5__15_
+oname B:hb_r[5][15] Bb:hb_r_reg Bs:hb_r_reg Bd:5 Bd:15 L:hb_r_reg[5][15]
+cell hb_r_reg_5__14_
+oname B:hb_r[5][14] Bb:hb_r_reg Bs:hb_r_reg Bd:5 Bd:14 L:hb_r_reg[5][14]
+cell hb_r_reg_5__13_
+oname B:hb_r[5][13] Bb:hb_r_reg Bs:hb_r_reg Bd:5 Bd:13 L:hb_r_reg[5][13]
+cell hb_r_reg_5__12_
+oname B:hb_r[5][12] Bb:hb_r_reg Bs:hb_r_reg Bd:5 Bd:12 L:hb_r_reg[5][12]
+cell hb_r_reg_5__11_
+oname B:hb_r[5][11] Bb:hb_r_reg Bs:hb_r_reg Bd:5 Bd:11 L:hb_r_reg[5][11]
+cell hb_r_reg_5__10_
+oname B:hb_r[5][10] Bb:hb_r_reg Bs:hb_r_reg Bd:5 Bd:10 L:hb_r_reg[5][10]
+cell hb_r_reg_5__9_
+oname B:hb_r[5][9] Bb:hb_r_reg Bs:hb_r_reg Bd:5 Bd:9 L:hb_r_reg[5][9]
+cell hb_r_reg_5__8_
+oname B:hb_r[5][8] Bb:hb_r_reg Bs:hb_r_reg Bd:5 Bd:8 L:hb_r_reg[5][8]
+cell hb_r_reg_5__7_
+oname B:hb_r[5][7] Bb:hb_r_reg Bs:hb_r_reg Bd:5 Bd:7 L:hb_r_reg[5][7]
+cell hb_r_reg_5__6_
+oname B:hb_r[5][6] Bb:hb_r_reg Bs:hb_r_reg Bd:5 Bd:6 L:hb_r_reg[5][6]
+cell hb_r_reg_5__5_
+oname B:hb_r[5][5] Bb:hb_r_reg Bs:hb_r_reg Bd:5 Bd:5 L:hb_r_reg[5][5]
+cell hb_r_reg_5__4_
+oname B:hb_r[5][4] Bb:hb_r_reg Bs:hb_r_reg Bd:5 Bd:4 L:hb_r_reg[5][4]
+sname - hb_r[5][4]
+cell hb_r_reg_5__3_
+oname B:hb_r[5][3] Bb:hb_r_reg Bs:hb_r_reg Bd:5 Bd:3 L:hb_r_reg[5][3]
+cell hb_r_reg_5__2_
+oname B:hb_r[5][2] Bb:hb_r_reg Bs:hb_r_reg Bd:5 Bd:2 L:hb_r_reg[5][2]
+cell hb_r_reg_5__1_
+oname B:hb_r[5][1] Bb:hb_r_reg Bs:hb_r_reg Bd:5 Bd:1 L:hb_r_reg[5][1]
+sname - hb_r[5][1]
+cell hb_r_reg_5__0_
+oname B:hb_r[5][0] Bb:hb_r_reg Bs:hb_r_reg Bd:5 Bd:0 L:hb_r_reg[5][0]
+sname - hb_r[5][0]
+cell hb_r_reg_4__15_
+oname B:hb_r[4][15] Bb:hb_r_reg Bs:hb_r_reg Bd:4 Bd:15 L:hb_r_reg[4][15]
+cell hb_r_reg_4__14_
+oname B:hb_r[4][14] Bb:hb_r_reg Bs:hb_r_reg Bd:4 Bd:14 L:hb_r_reg[4][14]
+cell hb_r_reg_4__13_
+oname B:hb_r[4][13] Bb:hb_r_reg Bs:hb_r_reg Bd:4 Bd:13 L:hb_r_reg[4][13]
+cell hb_r_reg_4__12_
+oname B:hb_r[4][12] Bb:hb_r_reg Bs:hb_r_reg Bd:4 Bd:12 L:hb_r_reg[4][12]
+cell hb_r_reg_4__11_
+oname B:hb_r[4][11] Bb:hb_r_reg Bs:hb_r_reg Bd:4 Bd:11 L:hb_r_reg[4][11]
+cell hb_r_reg_4__10_
+oname B:hb_r[4][10] Bb:hb_r_reg Bs:hb_r_reg Bd:4 Bd:10 L:hb_r_reg[4][10]
+cell hb_r_reg_4__9_
+oname B:hb_r[4][9] Bb:hb_r_reg Bs:hb_r_reg Bd:4 Bd:9 L:hb_r_reg[4][9]
+cell hb_r_reg_4__8_
+oname B:hb_r[4][8] Bb:hb_r_reg Bs:hb_r_reg Bd:4 Bd:8 L:hb_r_reg[4][8]
+cell hb_r_reg_4__7_
+oname B:hb_r[4][7] Bb:hb_r_reg Bs:hb_r_reg Bd:4 Bd:7 L:hb_r_reg[4][7]
+cell hb_r_reg_4__6_
+oname B:hb_r[4][6] Bb:hb_r_reg Bs:hb_r_reg Bd:4 Bd:6 L:hb_r_reg[4][6]
+cell hb_r_reg_4__5_
+oname B:hb_r[4][5] Bb:hb_r_reg Bs:hb_r_reg Bd:4 Bd:5 L:hb_r_reg[4][5]
+cell hb_r_reg_4__4_
+oname B:hb_r[4][4] Bb:hb_r_reg Bs:hb_r_reg Bd:4 Bd:4 L:hb_r_reg[4][4]
+sname - hb_r[4][4]
+cell hb_r_reg_4__3_
+oname B:hb_r[4][3] Bb:hb_r_reg Bs:hb_r_reg Bd:4 Bd:3 L:hb_r_reg[4][3]
+cell hb_r_reg_4__2_
+oname B:hb_r[4][2] Bb:hb_r_reg Bs:hb_r_reg Bd:4 Bd:2 L:hb_r_reg[4][2]
+cell hb_r_reg_4__1_
+oname B:hb_r[4][1] Bb:hb_r_reg Bs:hb_r_reg Bd:4 Bd:1 L:hb_r_reg[4][1]
+sname - hb_r[4][1]
+cell hb_r_reg_4__0_
+oname B:hb_r[4][0] Bb:hb_r_reg Bs:hb_r_reg Bd:4 Bd:0 L:hb_r_reg[4][0]
+cell hb_r_reg_3__15_
+oname B:hb_r[3][15] Bb:hb_r_reg Bs:hb_r_reg Bd:3 Bd:15 L:hb_r_reg[3][15]
+cell hb_r_reg_3__14_
+oname B:hb_r[3][14] Bb:hb_r_reg Bs:hb_r_reg Bd:3 Bd:14 L:hb_r_reg[3][14]
+cell hb_r_reg_3__13_
+oname B:hb_r[3][13] Bb:hb_r_reg Bs:hb_r_reg Bd:3 Bd:13 L:hb_r_reg[3][13]
+cell hb_r_reg_3__12_
+oname B:hb_r[3][12] Bb:hb_r_reg Bs:hb_r_reg Bd:3 Bd:12 L:hb_r_reg[3][12]
+cell hb_r_reg_3__11_
+oname B:hb_r[3][11] Bb:hb_r_reg Bs:hb_r_reg Bd:3 Bd:11 L:hb_r_reg[3][11]
+cell hb_r_reg_3__10_
+oname B:hb_r[3][10] Bb:hb_r_reg Bs:hb_r_reg Bd:3 Bd:10 L:hb_r_reg[3][10]
+cell hb_r_reg_3__9_
+oname B:hb_r[3][9] Bb:hb_r_reg Bs:hb_r_reg Bd:3 Bd:9 L:hb_r_reg[3][9]
+cell hb_r_reg_3__8_
+oname B:hb_r[3][8] Bb:hb_r_reg Bs:hb_r_reg Bd:3 Bd:8 L:hb_r_reg[3][8]
+cell hb_r_reg_3__7_
+oname B:hb_r[3][7] Bb:hb_r_reg Bs:hb_r_reg Bd:3 Bd:7 L:hb_r_reg[3][7]
+cell hb_r_reg_3__6_
+oname B:hb_r[3][6] Bb:hb_r_reg Bs:hb_r_reg Bd:3 Bd:6 L:hb_r_reg[3][6]
+cell hb_r_reg_3__5_
+oname B:hb_r[3][5] Bb:hb_r_reg Bs:hb_r_reg Bd:3 Bd:5 L:hb_r_reg[3][5]
+cell hb_r_reg_3__4_
+oname B:hb_r[3][4] Bb:hb_r_reg Bs:hb_r_reg Bd:3 Bd:4 L:hb_r_reg[3][4]
+sname - hb_r[3][4]
+cell hb_r_reg_3__3_
+oname B:hb_r[3][3] Bb:hb_r_reg Bs:hb_r_reg Bd:3 Bd:3 L:hb_r_reg[3][3]
+cell hb_r_reg_3__2_
+oname B:hb_r[3][2] Bb:hb_r_reg Bs:hb_r_reg Bd:3 Bd:2 L:hb_r_reg[3][2]
+cell hb_r_reg_3__1_
+oname B:hb_r[3][1] Bb:hb_r_reg Bs:hb_r_reg Bd:3 Bd:1 L:hb_r_reg[3][1]
+cell hb_r_reg_3__0_
+oname B:hb_r[3][0] Bb:hb_r_reg Bs:hb_r_reg Bd:3 Bd:0 L:hb_r_reg[3][0]
+sname - hb_r[3][0]
+cell hb_r_reg_2__15_
+oname B:hb_r[2][15] Bb:hb_r_reg Bs:hb_r_reg Bd:2 Bd:15 L:hb_r_reg[2][15]
+cell hb_r_reg_2__14_
+oname B:hb_r[2][14] Bb:hb_r_reg Bs:hb_r_reg Bd:2 Bd:14 L:hb_r_reg[2][14]
+cell hb_r_reg_2__13_
+oname B:hb_r[2][13] Bb:hb_r_reg Bs:hb_r_reg Bd:2 Bd:13 L:hb_r_reg[2][13]
+cell hb_r_reg_2__12_
+oname B:hb_r[2][12] Bb:hb_r_reg Bs:hb_r_reg Bd:2 Bd:12 L:hb_r_reg[2][12]
+cell hb_r_reg_2__11_
+oname B:hb_r[2][11] Bb:hb_r_reg Bs:hb_r_reg Bd:2 Bd:11 L:hb_r_reg[2][11]
+cell hb_r_reg_2__10_
+oname B:hb_r[2][10] Bb:hb_r_reg Bs:hb_r_reg Bd:2 Bd:10 L:hb_r_reg[2][10]
+cell hb_r_reg_2__9_
+oname B:hb_r[2][9] Bb:hb_r_reg Bs:hb_r_reg Bd:2 Bd:9 L:hb_r_reg[2][9]
+cell hb_r_reg_2__8_
+oname B:hb_r[2][8] Bb:hb_r_reg Bs:hb_r_reg Bd:2 Bd:8 L:hb_r_reg[2][8]
+cell hb_r_reg_2__7_
+oname B:hb_r[2][7] Bb:hb_r_reg Bs:hb_r_reg Bd:2 Bd:7 L:hb_r_reg[2][7]
+cell hb_r_reg_2__6_
+oname B:hb_r[2][6] Bb:hb_r_reg Bs:hb_r_reg Bd:2 Bd:6 L:hb_r_reg[2][6]
+cell hb_r_reg_2__5_
+oname B:hb_r[2][5] Bb:hb_r_reg Bs:hb_r_reg Bd:2 Bd:5 L:hb_r_reg[2][5]
+cell hb_r_reg_2__4_
+oname B:hb_r[2][4] Bb:hb_r_reg Bs:hb_r_reg Bd:2 Bd:4 L:hb_r_reg[2][4]
+sname - hb_r[2][4]
+cell hb_r_reg_2__3_
+oname B:hb_r[2][3] Bb:hb_r_reg Bs:hb_r_reg Bd:2 Bd:3 L:hb_r_reg[2][3]
+cell hb_r_reg_2__2_
+oname B:hb_r[2][2] Bb:hb_r_reg Bs:hb_r_reg Bd:2 Bd:2 L:hb_r_reg[2][2]
+cell hb_r_reg_2__1_
+oname B:hb_r[2][1] Bb:hb_r_reg Bs:hb_r_reg Bd:2 Bd:1 L:hb_r_reg[2][1]
+cell hb_r_reg_2__0_
+oname B:hb_r[2][0] Bb:hb_r_reg Bs:hb_r_reg Bd:2 Bd:0 L:hb_r_reg[2][0]
+cell hb_r_reg_1__15_
+oname B:hb_r[1][15] Bb:hb_r_reg Bs:hb_r_reg Bd:1 Bd:15 L:hb_r_reg[1][15]
+cell hb_r_reg_1__14_
+oname B:hb_r[1][14] Bb:hb_r_reg Bs:hb_r_reg Bd:1 Bd:14 L:hb_r_reg[1][14]
+cell hb_r_reg_1__13_
+oname B:hb_r[1][13] Bb:hb_r_reg Bs:hb_r_reg Bd:1 Bd:13 L:hb_r_reg[1][13]
+cell hb_r_reg_1__12_
+oname B:hb_r[1][12] Bb:hb_r_reg Bs:hb_r_reg Bd:1 Bd:12 L:hb_r_reg[1][12]
+cell hb_r_reg_1__11_
+oname B:hb_r[1][11] Bb:hb_r_reg Bs:hb_r_reg Bd:1 Bd:11 L:hb_r_reg[1][11]
+cell hb_r_reg_1__10_
+oname B:hb_r[1][10] Bb:hb_r_reg Bs:hb_r_reg Bd:1 Bd:10 L:hb_r_reg[1][10]
+cell hb_r_reg_1__9_
+oname B:hb_r[1][9] Bb:hb_r_reg Bs:hb_r_reg Bd:1 Bd:9 L:hb_r_reg[1][9]
+cell hb_r_reg_1__8_
+oname B:hb_r[1][8] Bb:hb_r_reg Bs:hb_r_reg Bd:1 Bd:8 L:hb_r_reg[1][8]
+cell hb_r_reg_1__7_
+oname B:hb_r[1][7] Bb:hb_r_reg Bs:hb_r_reg Bd:1 Bd:7 L:hb_r_reg[1][7]
+cell hb_r_reg_1__6_
+oname B:hb_r[1][6] Bb:hb_r_reg Bs:hb_r_reg Bd:1 Bd:6 L:hb_r_reg[1][6]
+cell hb_r_reg_1__5_
+oname B:hb_r[1][5] Bb:hb_r_reg Bs:hb_r_reg Bd:1 Bd:5 L:hb_r_reg[1][5]
+cell hb_r_reg_1__4_
+oname B:hb_r[1][4] Bb:hb_r_reg Bs:hb_r_reg Bd:1 Bd:4 L:hb_r_reg[1][4]
+cell hb_r_reg_1__3_
+oname B:hb_r[1][3] Bb:hb_r_reg Bs:hb_r_reg Bd:1 Bd:3 L:hb_r_reg[1][3]
+sname - hb_r[1][3]
+cell hb_r_reg_1__2_
+oname B:hb_r[1][2] Bb:hb_r_reg Bs:hb_r_reg Bd:1 Bd:2 L:hb_r_reg[1][2]
+sname - hb_r[1][2]
+cell hb_r_reg_1__1_
+oname B:hb_r[1][1] Bb:hb_r_reg Bs:hb_r_reg Bd:1 Bd:1 L:hb_r_reg[1][1]
+sname - hb_r[1][1]
+cell hb_r_reg_1__0_
+oname B:hb_r[1][0] Bb:hb_r_reg Bs:hb_r_reg Bd:1 Bd:0 L:hb_r_reg[1][0]
+sname - hb_r[1][0]
+cell hb_r_reg_0__15_
+oname B:hb_r[0][15] Bb:hb_r_reg Bs:hb_r_reg Bd:0 Bd:15 L:hb_r_reg[0][15]
+cell hb_r_reg_0__14_
+oname B:hb_r[0][14] Bb:hb_r_reg Bs:hb_r_reg Bd:0 Bd:14 L:hb_r_reg[0][14]
+cell hb_r_reg_0__13_
+oname B:hb_r[0][13] Bb:hb_r_reg Bs:hb_r_reg Bd:0 Bd:13 L:hb_r_reg[0][13]
+cell hb_r_reg_0__12_
+oname B:hb_r[0][12] Bb:hb_r_reg Bs:hb_r_reg Bd:0 Bd:12 L:hb_r_reg[0][12]
+cell hb_r_reg_0__11_
+oname B:hb_r[0][11] Bb:hb_r_reg Bs:hb_r_reg Bd:0 Bd:11 L:hb_r_reg[0][11]
+cell hb_r_reg_0__10_
+oname B:hb_r[0][10] Bb:hb_r_reg Bs:hb_r_reg Bd:0 Bd:10 L:hb_r_reg[0][10]
+cell hb_r_reg_0__9_
+oname B:hb_r[0][9] Bb:hb_r_reg Bs:hb_r_reg Bd:0 Bd:9 L:hb_r_reg[0][9]
+cell hb_r_reg_0__8_
+oname B:hb_r[0][8] Bb:hb_r_reg Bs:hb_r_reg Bd:0 Bd:8 L:hb_r_reg[0][8]
+cell hb_r_reg_0__7_
+oname B:hb_r[0][7] Bb:hb_r_reg Bs:hb_r_reg Bd:0 Bd:7 L:hb_r_reg[0][7]
+cell hb_r_reg_0__6_
+oname B:hb_r[0][6] Bb:hb_r_reg Bs:hb_r_reg Bd:0 Bd:6 L:hb_r_reg[0][6]
+cell hb_r_reg_0__5_
+oname B:hb_r[0][5] Bb:hb_r_reg Bs:hb_r_reg Bd:0 Bd:5 L:hb_r_reg[0][5]
+cell hb_r_reg_0__4_
+oname B:hb_r[0][4] Bb:hb_r_reg Bs:hb_r_reg Bd:0 Bd:4 L:hb_r_reg[0][4]
+cell hb_r_reg_0__3_
+oname B:hb_r[0][3] Bb:hb_r_reg Bs:hb_r_reg Bd:0 Bd:3 L:hb_r_reg[0][3]
+sname - hb_r[0][3]
+cell hb_r_reg_0__2_
+oname B:hb_r[0][2] Bb:hb_r_reg Bs:hb_r_reg Bd:0 Bd:2 L:hb_r_reg[0][2]
+sname - hb_r[0][2]
+cell hb_r_reg_0__1_
+oname B:hb_r[0][1] Bb:hb_r_reg Bs:hb_r_reg Bd:0 Bd:1 L:hb_r_reg[0][1]
+sname - hb_r[0][1]
+cell hb_r_reg_0__0_
+oname B:hb_r[0][0] Bb:hb_r_reg Bs:hb_r_reg Bd:0 Bd:0 L:hb_r_reg[0][0]
+cell rb_r_reg_7__15_
+oname B:rb_r[7][15] Bb:rb_r_reg Bs:rb_r_reg Bd:7 Bd:15 L:rb_r_reg[7][15]
+cell rb_r_reg_7__14_
+oname B:rb_r[7][14] Bb:rb_r_reg Bs:rb_r_reg Bd:7 Bd:14 L:rb_r_reg[7][14]
+cell rb_r_reg_7__13_
+oname B:rb_r[7][13] Bb:rb_r_reg Bs:rb_r_reg Bd:7 Bd:13 L:rb_r_reg[7][13]
+cell rb_r_reg_7__12_
+oname B:rb_r[7][12] Bb:rb_r_reg Bs:rb_r_reg Bd:7 Bd:12 L:rb_r_reg[7][12]
+cell rb_r_reg_7__11_
+oname B:rb_r[7][11] Bb:rb_r_reg Bs:rb_r_reg Bd:7 Bd:11 L:rb_r_reg[7][11]
+cell rb_r_reg_7__10_
+oname B:rb_r[7][10] Bb:rb_r_reg Bs:rb_r_reg Bd:7 Bd:10 L:rb_r_reg[7][10]
+cell rb_r_reg_7__9_
+oname B:rb_r[7][9] Bb:rb_r_reg Bs:rb_r_reg Bd:7 Bd:9 L:rb_r_reg[7][9]
+cell rb_r_reg_7__8_
+oname B:rb_r[7][8] Bb:rb_r_reg Bs:rb_r_reg Bd:7 Bd:8 L:rb_r_reg[7][8]
+cell rb_r_reg_7__7_
+oname B:rb_r[7][7] Bb:rb_r_reg Bs:rb_r_reg Bd:7 Bd:7 L:rb_r_reg[7][7]
+cell rb_r_reg_7__6_
+oname B:rb_r[7][6] Bb:rb_r_reg Bs:rb_r_reg Bd:7 Bd:6 L:rb_r_reg[7][6]
+cell rb_r_reg_7__5_
+oname B:rb_r[7][5] Bb:rb_r_reg Bs:rb_r_reg Bd:7 Bd:5 L:rb_r_reg[7][5]
+cell rb_r_reg_7__4_
+oname B:rb_r[7][4] Bb:rb_r_reg Bs:rb_r_reg Bd:7 Bd:4 L:rb_r_reg[7][4]
+cell rb_r_reg_7__3_
+oname B:rb_r[7][3] Bb:rb_r_reg Bs:rb_r_reg Bd:7 Bd:3 L:rb_r_reg[7][3]
+sname - rb_r[7][3]
+cell rb_r_reg_7__2_
+oname B:rb_r[7][2] Bb:rb_r_reg Bs:rb_r_reg Bd:7 Bd:2 L:rb_r_reg[7][2]
+sname - rb_r[7][2]
+cell rb_r_reg_7__1_
+oname B:rb_r[7][1] Bb:rb_r_reg Bs:rb_r_reg Bd:7 Bd:1 L:rb_r_reg[7][1]
+cell rb_r_reg_7__0_
+oname B:rb_r[7][0] Bb:rb_r_reg Bs:rb_r_reg Bd:7 Bd:0 L:rb_r_reg[7][0]
+sname - rb_r[7][0]
+cell rb_r_reg_6__15_
+oname B:rb_r[6][15] Bb:rb_r_reg Bs:rb_r_reg Bd:6 Bd:15 L:rb_r_reg[6][15]
+cell rb_r_reg_6__14_
+oname B:rb_r[6][14] Bb:rb_r_reg Bs:rb_r_reg Bd:6 Bd:14 L:rb_r_reg[6][14]
+cell rb_r_reg_6__13_
+oname B:rb_r[6][13] Bb:rb_r_reg Bs:rb_r_reg Bd:6 Bd:13 L:rb_r_reg[6][13]
+cell rb_r_reg_6__12_
+oname B:rb_r[6][12] Bb:rb_r_reg Bs:rb_r_reg Bd:6 Bd:12 L:rb_r_reg[6][12]
+cell rb_r_reg_6__11_
+oname B:rb_r[6][11] Bb:rb_r_reg Bs:rb_r_reg Bd:6 Bd:11 L:rb_r_reg[6][11]
+cell rb_r_reg_6__10_
+oname B:rb_r[6][10] Bb:rb_r_reg Bs:rb_r_reg Bd:6 Bd:10 L:rb_r_reg[6][10]
+cell rb_r_reg_6__9_
+oname B:rb_r[6][9] Bb:rb_r_reg Bs:rb_r_reg Bd:6 Bd:9 L:rb_r_reg[6][9]
+cell rb_r_reg_6__8_
+oname B:rb_r[6][8] Bb:rb_r_reg Bs:rb_r_reg Bd:6 Bd:8 L:rb_r_reg[6][8]
+cell rb_r_reg_6__7_
+oname B:rb_r[6][7] Bb:rb_r_reg Bs:rb_r_reg Bd:6 Bd:7 L:rb_r_reg[6][7]
+cell rb_r_reg_6__6_
+oname B:rb_r[6][6] Bb:rb_r_reg Bs:rb_r_reg Bd:6 Bd:6 L:rb_r_reg[6][6]
+cell rb_r_reg_6__5_
+oname B:rb_r[6][5] Bb:rb_r_reg Bs:rb_r_reg Bd:6 Bd:5 L:rb_r_reg[6][5]
+cell rb_r_reg_6__4_
+oname B:rb_r[6][4] Bb:rb_r_reg Bs:rb_r_reg Bd:6 Bd:4 L:rb_r_reg[6][4]
+cell rb_r_reg_6__3_
+oname B:rb_r[6][3] Bb:rb_r_reg Bs:rb_r_reg Bd:6 Bd:3 L:rb_r_reg[6][3]
+sname - rb_r[6][3]
+cell rb_r_reg_6__2_
+oname B:rb_r[6][2] Bb:rb_r_reg Bs:rb_r_reg Bd:6 Bd:2 L:rb_r_reg[6][2]
+sname - rb_r[6][2]
+cell rb_r_reg_6__1_
+oname B:rb_r[6][1] Bb:rb_r_reg Bs:rb_r_reg Bd:6 Bd:1 L:rb_r_reg[6][1]
+cell rb_r_reg_6__0_
+oname B:rb_r[6][0] Bb:rb_r_reg Bs:rb_r_reg Bd:6 Bd:0 L:rb_r_reg[6][0]
+cell rb_r_reg_5__15_
+oname B:rb_r[5][15] Bb:rb_r_reg Bs:rb_r_reg Bd:5 Bd:15 L:rb_r_reg[5][15]
+cell rb_r_reg_5__14_
+oname B:rb_r[5][14] Bb:rb_r_reg Bs:rb_r_reg Bd:5 Bd:14 L:rb_r_reg[5][14]
+cell rb_r_reg_5__13_
+oname B:rb_r[5][13] Bb:rb_r_reg Bs:rb_r_reg Bd:5 Bd:13 L:rb_r_reg[5][13]
+cell rb_r_reg_5__12_
+oname B:rb_r[5][12] Bb:rb_r_reg Bs:rb_r_reg Bd:5 Bd:12 L:rb_r_reg[5][12]
+cell rb_r_reg_5__11_
+oname B:rb_r[5][11] Bb:rb_r_reg Bs:rb_r_reg Bd:5 Bd:11 L:rb_r_reg[5][11]
+cell rb_r_reg_5__10_
+oname B:rb_r[5][10] Bb:rb_r_reg Bs:rb_r_reg Bd:5 Bd:10 L:rb_r_reg[5][10]
+cell rb_r_reg_5__9_
+oname B:rb_r[5][9] Bb:rb_r_reg Bs:rb_r_reg Bd:5 Bd:9 L:rb_r_reg[5][9]
+cell rb_r_reg_5__8_
+oname B:rb_r[5][8] Bb:rb_r_reg Bs:rb_r_reg Bd:5 Bd:8 L:rb_r_reg[5][8]
+cell rb_r_reg_5__7_
+oname B:rb_r[5][7] Bb:rb_r_reg Bs:rb_r_reg Bd:5 Bd:7 L:rb_r_reg[5][7]
+cell rb_r_reg_5__6_
+oname B:rb_r[5][6] Bb:rb_r_reg Bs:rb_r_reg Bd:5 Bd:6 L:rb_r_reg[5][6]
+cell rb_r_reg_5__5_
+oname B:rb_r[5][5] Bb:rb_r_reg Bs:rb_r_reg Bd:5 Bd:5 L:rb_r_reg[5][5]
+cell rb_r_reg_5__4_
+oname B:rb_r[5][4] Bb:rb_r_reg Bs:rb_r_reg Bd:5 Bd:4 L:rb_r_reg[5][4]
+cell rb_r_reg_5__3_
+oname B:rb_r[5][3] Bb:rb_r_reg Bs:rb_r_reg Bd:5 Bd:3 L:rb_r_reg[5][3]
+sname - rb_r[5][3]
+cell rb_r_reg_5__2_
+oname B:rb_r[5][2] Bb:rb_r_reg Bs:rb_r_reg Bd:5 Bd:2 L:rb_r_reg[5][2]
+cell rb_r_reg_5__1_
+oname B:rb_r[5][1] Bb:rb_r_reg Bs:rb_r_reg Bd:5 Bd:1 L:rb_r_reg[5][1]
+sname - rb_r[5][1]
+cell rb_r_reg_5__0_
+oname B:rb_r[5][0] Bb:rb_r_reg Bs:rb_r_reg Bd:5 Bd:0 L:rb_r_reg[5][0]
+sname - rb_r[5][0]
+cell rb_r_reg_4__15_
+oname B:rb_r[4][15] Bb:rb_r_reg Bs:rb_r_reg Bd:4 Bd:15 L:rb_r_reg[4][15]
+cell rb_r_reg_4__14_
+oname B:rb_r[4][14] Bb:rb_r_reg Bs:rb_r_reg Bd:4 Bd:14 L:rb_r_reg[4][14]
+cell rb_r_reg_4__13_
+oname B:rb_r[4][13] Bb:rb_r_reg Bs:rb_r_reg Bd:4 Bd:13 L:rb_r_reg[4][13]
+cell rb_r_reg_4__12_
+oname B:rb_r[4][12] Bb:rb_r_reg Bs:rb_r_reg Bd:4 Bd:12 L:rb_r_reg[4][12]
+cell rb_r_reg_4__11_
+oname B:rb_r[4][11] Bb:rb_r_reg Bs:rb_r_reg Bd:4 Bd:11 L:rb_r_reg[4][11]
+cell rb_r_reg_4__10_
+oname B:rb_r[4][10] Bb:rb_r_reg Bs:rb_r_reg Bd:4 Bd:10 L:rb_r_reg[4][10]
+cell rb_r_reg_4__9_
+oname B:rb_r[4][9] Bb:rb_r_reg Bs:rb_r_reg Bd:4 Bd:9 L:rb_r_reg[4][9]
+cell rb_r_reg_4__8_
+oname B:rb_r[4][8] Bb:rb_r_reg Bs:rb_r_reg Bd:4 Bd:8 L:rb_r_reg[4][8]
+cell rb_r_reg_4__7_
+oname B:rb_r[4][7] Bb:rb_r_reg Bs:rb_r_reg Bd:4 Bd:7 L:rb_r_reg[4][7]
+cell rb_r_reg_4__6_
+oname B:rb_r[4][6] Bb:rb_r_reg Bs:rb_r_reg Bd:4 Bd:6 L:rb_r_reg[4][6]
+cell rb_r_reg_4__5_
+oname B:rb_r[4][5] Bb:rb_r_reg Bs:rb_r_reg Bd:4 Bd:5 L:rb_r_reg[4][5]
+cell rb_r_reg_4__4_
+oname B:rb_r[4][4] Bb:rb_r_reg Bs:rb_r_reg Bd:4 Bd:4 L:rb_r_reg[4][4]
+cell rb_r_reg_4__3_
+oname B:rb_r[4][3] Bb:rb_r_reg Bs:rb_r_reg Bd:4 Bd:3 L:rb_r_reg[4][3]
+sname - rb_r[4][3]
+cell rb_r_reg_4__2_
+oname B:rb_r[4][2] Bb:rb_r_reg Bs:rb_r_reg Bd:4 Bd:2 L:rb_r_reg[4][2]
+cell rb_r_reg_4__1_
+oname B:rb_r[4][1] Bb:rb_r_reg Bs:rb_r_reg Bd:4 Bd:1 L:rb_r_reg[4][1]
+sname - rb_r[4][1]
+cell rb_r_reg_4__0_
+oname B:rb_r[4][0] Bb:rb_r_reg Bs:rb_r_reg Bd:4 Bd:0 L:rb_r_reg[4][0]
+cell rb_r_reg_3__15_
+oname B:rb_r[3][15] Bb:rb_r_reg Bs:rb_r_reg Bd:3 Bd:15 L:rb_r_reg[3][15]
+cell rb_r_reg_3__14_
+oname B:rb_r[3][14] Bb:rb_r_reg Bs:rb_r_reg Bd:3 Bd:14 L:rb_r_reg[3][14]
+cell rb_r_reg_3__13_
+oname B:rb_r[3][13] Bb:rb_r_reg Bs:rb_r_reg Bd:3 Bd:13 L:rb_r_reg[3][13]
+cell rb_r_reg_3__12_
+oname B:rb_r[3][12] Bb:rb_r_reg Bs:rb_r_reg Bd:3 Bd:12 L:rb_r_reg[3][12]
+cell rb_r_reg_3__11_
+oname B:rb_r[3][11] Bb:rb_r_reg Bs:rb_r_reg Bd:3 Bd:11 L:rb_r_reg[3][11]
+cell rb_r_reg_3__10_
+oname B:rb_r[3][10] Bb:rb_r_reg Bs:rb_r_reg Bd:3 Bd:10 L:rb_r_reg[3][10]
+cell rb_r_reg_3__9_
+oname B:rb_r[3][9] Bb:rb_r_reg Bs:rb_r_reg Bd:3 Bd:9 L:rb_r_reg[3][9]
+cell rb_r_reg_3__8_
+oname B:rb_r[3][8] Bb:rb_r_reg Bs:rb_r_reg Bd:3 Bd:8 L:rb_r_reg[3][8]
+cell rb_r_reg_3__7_
+oname B:rb_r[3][7] Bb:rb_r_reg Bs:rb_r_reg Bd:3 Bd:7 L:rb_r_reg[3][7]
+cell rb_r_reg_3__6_
+oname B:rb_r[3][6] Bb:rb_r_reg Bs:rb_r_reg Bd:3 Bd:6 L:rb_r_reg[3][6]
+cell rb_r_reg_3__5_
+oname B:rb_r[3][5] Bb:rb_r_reg Bs:rb_r_reg Bd:3 Bd:5 L:rb_r_reg[3][5]
+cell rb_r_reg_3__4_
+oname B:rb_r[3][4] Bb:rb_r_reg Bs:rb_r_reg Bd:3 Bd:4 L:rb_r_reg[3][4]
+cell rb_r_reg_3__3_
+oname B:rb_r[3][3] Bb:rb_r_reg Bs:rb_r_reg Bd:3 Bd:3 L:rb_r_reg[3][3]
+sname - rb_r[3][3]
+cell rb_r_reg_3__2_
+oname B:rb_r[3][2] Bb:rb_r_reg Bs:rb_r_reg Bd:3 Bd:2 L:rb_r_reg[3][2]
+cell rb_r_reg_3__1_
+oname B:rb_r[3][1] Bb:rb_r_reg Bs:rb_r_reg Bd:3 Bd:1 L:rb_r_reg[3][1]
+cell rb_r_reg_3__0_
+oname B:rb_r[3][0] Bb:rb_r_reg Bs:rb_r_reg Bd:3 Bd:0 L:rb_r_reg[3][0]
+sname - rb_r[3][0]
+cell rb_r_reg_2__15_
+oname B:rb_r[2][15] Bb:rb_r_reg Bs:rb_r_reg Bd:2 Bd:15 L:rb_r_reg[2][15]
+cell rb_r_reg_2__14_
+oname B:rb_r[2][14] Bb:rb_r_reg Bs:rb_r_reg Bd:2 Bd:14 L:rb_r_reg[2][14]
+cell rb_r_reg_2__13_
+oname B:rb_r[2][13] Bb:rb_r_reg Bs:rb_r_reg Bd:2 Bd:13 L:rb_r_reg[2][13]
+cell rb_r_reg_2__12_
+oname B:rb_r[2][12] Bb:rb_r_reg Bs:rb_r_reg Bd:2 Bd:12 L:rb_r_reg[2][12]
+cell rb_r_reg_2__11_
+oname B:rb_r[2][11] Bb:rb_r_reg Bs:rb_r_reg Bd:2 Bd:11 L:rb_r_reg[2][11]
+cell rb_r_reg_2__10_
+oname B:rb_r[2][10] Bb:rb_r_reg Bs:rb_r_reg Bd:2 Bd:10 L:rb_r_reg[2][10]
+cell rb_r_reg_2__9_
+oname B:rb_r[2][9] Bb:rb_r_reg Bs:rb_r_reg Bd:2 Bd:9 L:rb_r_reg[2][9]
+cell rb_r_reg_2__8_
+oname B:rb_r[2][8] Bb:rb_r_reg Bs:rb_r_reg Bd:2 Bd:8 L:rb_r_reg[2][8]
+cell rb_r_reg_2__7_
+oname B:rb_r[2][7] Bb:rb_r_reg Bs:rb_r_reg Bd:2 Bd:7 L:rb_r_reg[2][7]
+cell rb_r_reg_2__6_
+oname B:rb_r[2][6] Bb:rb_r_reg Bs:rb_r_reg Bd:2 Bd:6 L:rb_r_reg[2][6]
+cell rb_r_reg_2__5_
+oname B:rb_r[2][5] Bb:rb_r_reg Bs:rb_r_reg Bd:2 Bd:5 L:rb_r_reg[2][5]
+cell rb_r_reg_2__4_
+oname B:rb_r[2][4] Bb:rb_r_reg Bs:rb_r_reg Bd:2 Bd:4 L:rb_r_reg[2][4]
+cell rb_r_reg_2__3_
+oname B:rb_r[2][3] Bb:rb_r_reg Bs:rb_r_reg Bd:2 Bd:3 L:rb_r_reg[2][3]
+sname - rb_r[2][3]
+cell rb_r_reg_2__2_
+oname B:rb_r[2][2] Bb:rb_r_reg Bs:rb_r_reg Bd:2 Bd:2 L:rb_r_reg[2][2]
+cell rb_r_reg_2__1_
+oname B:rb_r[2][1] Bb:rb_r_reg Bs:rb_r_reg Bd:2 Bd:1 L:rb_r_reg[2][1]
+cell rb_r_reg_2__0_
+oname B:rb_r[2][0] Bb:rb_r_reg Bs:rb_r_reg Bd:2 Bd:0 L:rb_r_reg[2][0]
+cell rb_r_reg_1__15_
+oname B:rb_r[1][15] Bb:rb_r_reg Bs:rb_r_reg Bd:1 Bd:15 L:rb_r_reg[1][15]
+cell rb_r_reg_1__14_
+oname B:rb_r[1][14] Bb:rb_r_reg Bs:rb_r_reg Bd:1 Bd:14 L:rb_r_reg[1][14]
+cell rb_r_reg_1__13_
+oname B:rb_r[1][13] Bb:rb_r_reg Bs:rb_r_reg Bd:1 Bd:13 L:rb_r_reg[1][13]
+cell rb_r_reg_1__12_
+oname B:rb_r[1][12] Bb:rb_r_reg Bs:rb_r_reg Bd:1 Bd:12 L:rb_r_reg[1][12]
+cell rb_r_reg_1__11_
+oname B:rb_r[1][11] Bb:rb_r_reg Bs:rb_r_reg Bd:1 Bd:11 L:rb_r_reg[1][11]
+cell rb_r_reg_1__10_
+oname B:rb_r[1][10] Bb:rb_r_reg Bs:rb_r_reg Bd:1 Bd:10 L:rb_r_reg[1][10]
+cell rb_r_reg_1__9_
+oname B:rb_r[1][9] Bb:rb_r_reg Bs:rb_r_reg Bd:1 Bd:9 L:rb_r_reg[1][9]
+cell rb_r_reg_1__8_
+oname B:rb_r[1][8] Bb:rb_r_reg Bs:rb_r_reg Bd:1 Bd:8 L:rb_r_reg[1][8]
+cell rb_r_reg_1__7_
+oname B:rb_r[1][7] Bb:rb_r_reg Bs:rb_r_reg Bd:1 Bd:7 L:rb_r_reg[1][7]
+cell rb_r_reg_1__6_
+oname B:rb_r[1][6] Bb:rb_r_reg Bs:rb_r_reg Bd:1 Bd:6 L:rb_r_reg[1][6]
+cell rb_r_reg_1__5_
+oname B:rb_r[1][5] Bb:rb_r_reg Bs:rb_r_reg Bd:1 Bd:5 L:rb_r_reg[1][5]
+cell rb_r_reg_1__4_
+oname B:rb_r[1][4] Bb:rb_r_reg Bs:rb_r_reg Bd:1 Bd:4 L:rb_r_reg[1][4]
+cell rb_r_reg_1__3_
+oname B:rb_r[1][3] Bb:rb_r_reg Bs:rb_r_reg Bd:1 Bd:3 L:rb_r_reg[1][3]
+cell rb_r_reg_1__2_
+oname B:rb_r[1][2] Bb:rb_r_reg Bs:rb_r_reg Bd:1 Bd:2 L:rb_r_reg[1][2]
+sname - rb_r[1][2]
+cell rb_r_reg_1__1_
+oname B:rb_r[1][1] Bb:rb_r_reg Bs:rb_r_reg Bd:1 Bd:1 L:rb_r_reg[1][1]
+sname - rb_r[1][1]
+cell rb_r_reg_1__0_
+oname B:rb_r[1][0] Bb:rb_r_reg Bs:rb_r_reg Bd:1 Bd:0 L:rb_r_reg[1][0]
+sname - rb_r[1][0]
+cell rb_r_reg_0__15_
+oname B:rb_r[0][15] Bb:rb_r_reg Bs:rb_r_reg Bd:0 Bd:15 L:rb_r_reg[0][15]
+cell rb_r_reg_0__14_
+oname B:rb_r[0][14] Bb:rb_r_reg Bs:rb_r_reg Bd:0 Bd:14 L:rb_r_reg[0][14]
+cell rb_r_reg_0__13_
+oname B:rb_r[0][13] Bb:rb_r_reg Bs:rb_r_reg Bd:0 Bd:13 L:rb_r_reg[0][13]
+cell rb_r_reg_0__12_
+oname B:rb_r[0][12] Bb:rb_r_reg Bs:rb_r_reg Bd:0 Bd:12 L:rb_r_reg[0][12]
+cell rb_r_reg_0__11_
+oname B:rb_r[0][11] Bb:rb_r_reg Bs:rb_r_reg Bd:0 Bd:11 L:rb_r_reg[0][11]
+cell rb_r_reg_0__10_
+oname B:rb_r[0][10] Bb:rb_r_reg Bs:rb_r_reg Bd:0 Bd:10 L:rb_r_reg[0][10]
+cell rb_r_reg_0__9_
+oname B:rb_r[0][9] Bb:rb_r_reg Bs:rb_r_reg Bd:0 Bd:9 L:rb_r_reg[0][9]
+cell rb_r_reg_0__8_
+oname B:rb_r[0][8] Bb:rb_r_reg Bs:rb_r_reg Bd:0 Bd:8 L:rb_r_reg[0][8]
+cell rb_r_reg_0__7_
+oname B:rb_r[0][7] Bb:rb_r_reg Bs:rb_r_reg Bd:0 Bd:7 L:rb_r_reg[0][7]
+cell rb_r_reg_0__6_
+oname B:rb_r[0][6] Bb:rb_r_reg Bs:rb_r_reg Bd:0 Bd:6 L:rb_r_reg[0][6]
+cell rb_r_reg_0__5_
+oname B:rb_r[0][5] Bb:rb_r_reg Bs:rb_r_reg Bd:0 Bd:5 L:rb_r_reg[0][5]
+cell rb_r_reg_0__4_
+oname B:rb_r[0][4] Bb:rb_r_reg Bs:rb_r_reg Bd:0 Bd:4 L:rb_r_reg[0][4]
+cell rb_r_reg_0__3_
+oname B:rb_r[0][3] Bb:rb_r_reg Bs:rb_r_reg Bd:0 Bd:3 L:rb_r_reg[0][3]
+cell rb_r_reg_0__2_
+oname B:rb_r[0][2] Bb:rb_r_reg Bs:rb_r_reg Bd:0 Bd:2 L:rb_r_reg[0][2]
+sname - rb_r[0][2]
+cell rb_r_reg_0__1_
+oname B:rb_r[0][1] Bb:rb_r_reg Bs:rb_r_reg Bd:0 Bd:1 L:rb_r_reg[0][1]
+sname - rb_r[0][1]
+cell rb_r_reg_0__0_
+oname B:rb_r[0][0] Bb:rb_r_reg Bs:rb_r_reg Bd:0 Bd:0 L:rb_r_reg[0][0]
