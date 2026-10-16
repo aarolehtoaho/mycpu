@@ -65,7 +65,7 @@ module fu
 	    end
          else
             begin
-	       mul = '0;
+	            mul = '0;
                sa = '0;
                sb = '0;
                ab = '0;
@@ -73,15 +73,14 @@ module fu
 
       end : mul_logic
 
-   // usr is determined by a user-defined logic function. In the initial version, usr is always zero
+   // Performs a linear feedback shift register operation
    always_comb
       begin : user_logic
 
          if (fs_in == FUSR)
-            usr = '0;
+            usr = { a_in[14:0], (a_in[15] ^ a_in[13] ^ a_in[12] ^ a_in[10]) };
          else
             usr = '0;
-
       end : user_logic
 
    // Sets the output to a bit-wise OR from alu, mul and usr. Sets negative and zero flags.

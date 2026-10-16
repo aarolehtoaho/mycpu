@@ -1,0 +1,43 @@
+ 
+****************************************
+Report : area
+Design : cu
+Version: T-2022.03-SP5-1
+Date   : Thu Oct 15 15:19:42 2026
+****************************************
+
+Library(s) Used:
+
+    saed32hvt_tt1p05v25c (File: /research/cas/public/DT2_2026/lib/logic_lib/saed32hvt_tt1p05v25c.db)
+
+Number of ports:                           46
+Number of nets:                            84
+Number of cells:                           62
+Number of combinational cells:             58
+Number of sequential cells:                 3
+Number of macros/black boxes:               0
+Number of buf/inv:                         12
+Number of references:                      16
+
+Combinational area:                119.193538
+Buf/Inv area:                       15.248640
+Noncombinational area:              21.348096
+Macro/Black Box area:                0.000000
+Net Interconnect area:              17.335361
+
+Total cell area:                   140.541634
+Total area:                        157.876995
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area          Local cell area
+                                  ------------------  --------------------------- 
+Hierarchical cell                 Absolute   Percent  Combi-    Noncombi-  Black-
+                                  Total      Total    national  national   boxes   Design
+--------------------------------  ---------  -------  --------  ---------  ------  ---------
+cu                                 140.5416    100.0  119.1935    21.3481  0.0000  cu
+--------------------------------  ---------  -------  --------  ---------  ------  ---------
+Total                                                 119.1935    21.3481  0.0000
+
+1

@@ -1,0 +1,135 @@
+Coverage Report by instance with details
+
+=================================================================================
+=== Instance: /cu_tb/DUT/SVA_cu
+=== Design Unit: work.cu_svamod
+=================================================================================
+
+Assertion Coverage:
+    Assertions                      20        19         1    95.00%
+--------------------------------------------------------------------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass     Vacuous    Disable    Attempt     Active Peak Active ATV
+                                                  Count        Count    Count      Count      Count       Count  Count          
+--------------------------------------------------------------------------------------------------------------------------------
+/cu_tb/DUT/SVA_cu/X_ins_in
+                     input/cu_svamod.sv(25)             0       2413          0          1       2414          0           1 off
+/cu_tb/DUT/SVA_cu/X_nz_in
+                     input/cu_svamod.sv(26)             0       2413          0          1       2414          0           1 off
+/cu_tb/DUT/SVA_cu/X_il_out
+                     input/cu_svamod.sv(27)             0       2413          0          1       2414          0           1 off
+/cu_tb/DUT/SVA_cu/X_ps_out
+                     input/cu_svamod.sv(28)             0       2413          0          1       2414          0           1 off
+/cu_tb/DUT/SVA_cu/X_rw_out
+                     input/cu_svamod.sv(29)             0       2413          0          1       2414          0           1 off
+/cu_tb/DUT/SVA_cu/X_rs_out
+                     input/cu_svamod.sv(30)             0       2413          0          1       2414          0           1 off
+/cu_tb/DUT/SVA_cu/X_mx_out
+                     input/cu_svamod.sv(31)             0       2413          0          1       2414          0           1 off
+/cu_tb/DUT/SVA_cu/X_fs_out
+                     input/cu_svamod.sv(32)             0       2413          0          1       2414          0           1 off
+/cu_tb/DUT/SVA_cu/X_wen_out
+                     input/cu_svamod.sv(33)             0       2413          0          1       2414          0           1 off
+/cu_tb/DUT/SVA_cu/X_iom_out
+                     input/cu_svamod.sv(34)             0       2413          0          1       2414          0           1 off
+/cu_tb/DUT/SVA_cu/X_st_r
+                     input/cu_svamod.sv(35)             0       2413          0          1       2414          0           1 off
+/cu_tb/DUT/SVA_cu/X_ns
+                     input/cu_svamod.sv(36)             0       2413          0          1       2414          0           1 off
+/cu_tb/DUT/SVA_cu/R_st_r
+                     input/cu_svamod.sv(37)             0          3          0          0          3          0           1 off
+/cu_tb/DUT/SVA_cu/af_il_fall
+                     input/cu_svamod.sv(48)             0       1204       1209          1       2414          0           1 off
+/cu_tb/DUT/SVA_cu/af_il_rise
+                     input/cu_svamod.sv(57)             0       1151       1262          1       2414          0           2 off
+/cu_tb/DUT/SVA_cu/ar_start
+                     input/cu_svamod.sv(69)             0          3       2410          1       2414          0           1 off
+/cu_tb/DUT/SVA_cu/ar_tofetch
+                     input/cu_svamod.sv(77)             0       1204       1209          1       2414          0           1 off
+/cu_tb/DUT/SVA_cu/ar_toinf
+                     input/cu_svamod.sv(86)             0       1200       1213          1       2414          0           1 off
+/cu_tb/DUT/SVA_cu/ar_tohlt
+                     input/cu_svamod.sv(95)             0          2       2410          1       2414          1           1 off
+/cu_tb/DUT/SVA_cu/ar_hlt
+                     input/cu_svamod.sv(103)            0          0       2411          3       2414          0           1 off
+
+=================================================================================
+=== Instance: /cu_tb/TEST
+=== Design Unit: work.cu_test
+=================================================================================
+
+Assertion Coverage:
+    Assertions                       5         5         0   100.00%
+--------------------------------------------------------------------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass     Vacuous    Disable    Attempt     Active Peak Active ATV
+                                                  Count        Count    Count      Count      Count       Count  Count          
+--------------------------------------------------------------------------------------------------------------------------------
+/cu_tb/TEST/#ublk#179743940#28/immed__174
+                     input/cu_test.sv(174)              0          1          0          0          1          0           0 off
+/cu_tb/TEST/#ublk#179743940#28/immed__163
+                     input/cu_test.sv(163)              0          1          0          0          1          0           0 off
+/cu_tb/TEST/#ublk#179743940#28/immed__151
+                     input/cu_test.sv(151)              0          1          0          0          1          0           0 off
+/cu_tb/TEST/#ublk#179743940#28/immed__149
+                     input/cu_test.sv(149)              0          1          0          0          1          0           0 off
+/cu_tb/TEST/#ublk#179743940#28/immed__137
+                     input/cu_test.sv(137)              0          1          0          0          1          0           0 off
+
+
+ASSERTION RESULTS:
+--------------------------------------------------------------------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass     Vacuous    Disable    Attempt     Active Peak Active ATV
+                                                  Count        Count    Count      Count      Count       Count  Count          
+--------------------------------------------------------------------------------------------------------------------------------
+/cu_tb/DUT/SVA_cu/X_ins_in
+                     input/cu_svamod.sv(25)             0       2413          0          1       2414          0           1 off
+/cu_tb/DUT/SVA_cu/X_nz_in
+                     input/cu_svamod.sv(26)             0       2413          0          1       2414          0           1 off
+/cu_tb/DUT/SVA_cu/X_il_out
+                     input/cu_svamod.sv(27)             0       2413          0          1       2414          0           1 off
+/cu_tb/DUT/SVA_cu/X_ps_out
+                     input/cu_svamod.sv(28)             0       2413          0          1       2414          0           1 off
+/cu_tb/DUT/SVA_cu/X_rw_out
+                     input/cu_svamod.sv(29)             0       2413          0          1       2414          0           1 off
+/cu_tb/DUT/SVA_cu/X_rs_out
+                     input/cu_svamod.sv(30)             0       2413          0          1       2414          0           1 off
+/cu_tb/DUT/SVA_cu/X_mx_out
+                     input/cu_svamod.sv(31)             0       2413          0          1       2414          0           1 off
+/cu_tb/DUT/SVA_cu/X_fs_out
+                     input/cu_svamod.sv(32)             0       2413          0          1       2414          0           1 off
+/cu_tb/DUT/SVA_cu/X_wen_out
+                     input/cu_svamod.sv(33)             0       2413          0          1       2414          0           1 off
+/cu_tb/DUT/SVA_cu/X_iom_out
+                     input/cu_svamod.sv(34)             0       2413          0          1       2414          0           1 off
+/cu_tb/DUT/SVA_cu/X_st_r
+                     input/cu_svamod.sv(35)             0       2413          0          1       2414          0           1 off
+/cu_tb/DUT/SVA_cu/X_ns
+                     input/cu_svamod.sv(36)             0       2413          0          1       2414          0           1 off
+/cu_tb/DUT/SVA_cu/R_st_r
+                     input/cu_svamod.sv(37)             0          3          0          0          3          0           1 off
+/cu_tb/DUT/SVA_cu/af_il_fall
+                     input/cu_svamod.sv(48)             0       1204       1209          1       2414          0           1 off
+/cu_tb/DUT/SVA_cu/af_il_rise
+                     input/cu_svamod.sv(57)             0       1151       1262          1       2414          0           2 off
+/cu_tb/DUT/SVA_cu/ar_start
+                     input/cu_svamod.sv(69)             0          3       2410          1       2414          0           1 off
+/cu_tb/DUT/SVA_cu/ar_tofetch
+                     input/cu_svamod.sv(77)             0       1204       1209          1       2414          0           1 off
+/cu_tb/DUT/SVA_cu/ar_toinf
+                     input/cu_svamod.sv(86)             0       1200       1213          1       2414          0           1 off
+/cu_tb/DUT/SVA_cu/ar_tohlt
+                     input/cu_svamod.sv(95)             0          2       2410          1       2414          1           1 off
+/cu_tb/DUT/SVA_cu/ar_hlt
+                     input/cu_svamod.sv(103)            0          0       2411          3       2414          0           1 off
+/cu_tb/TEST/#ublk#179743940#28/immed__174
+                     input/cu_test.sv(174)              0          1          0          0          1          0           0 off
+/cu_tb/TEST/#ublk#179743940#28/immed__163
+                     input/cu_test.sv(163)              0          1          0          0          1          0           0 off
+/cu_tb/TEST/#ublk#179743940#28/immed__151
+                     input/cu_test.sv(151)              0          1          0          0          1          0           0 off
+/cu_tb/TEST/#ublk#179743940#28/immed__149
+                     input/cu_test.sv(149)              0          1          0          0          1          0           0 off
+/cu_tb/TEST/#ublk#179743940#28/immed__137
+                     input/cu_test.sv(137)              0          1          0          0          1          0           0 off
+
+Total Coverage By Instance (filtered view): 96.00%
+

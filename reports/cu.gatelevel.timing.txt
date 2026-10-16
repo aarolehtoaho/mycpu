@@ -1,0 +1,53 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : cu
+Version: T-2022.03-SP5-1
+Date   : Thu Oct 15 15:19:42 2026
+****************************************
+
+Operating Conditions: tt1p05v25c   Library: saed32hvt_tt1p05v25c
+Wire Load Model Mode: enclosed
+
+  Startpoint: st_r_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: st_r_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cu                 ForQA                 saed32hvt_tt1p05v25c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  st_r_reg[0]/CLK (DFFARX1_HVT)            0.00       0.00 r
+  st_r_reg[0]/Q (DFFARX1_HVT)              0.18       0.18 f
+  U84/Y (OR2X1_HVT)                        0.09       0.27 f
+  U73/Y (INVX0_HVT)                        0.04       0.32 r
+  U74/Y (NAND2X0_HVT)                      0.10       0.41 f
+  U110/Y (OR2X1_HVT)                       0.09       0.50 f
+  U112/Y (INVX0_HVT)                       0.05       0.55 r
+  U122/Y (AO21X1_HVT)                      0.06       0.62 r
+  st_r_reg[0]/D (DFFARX1_HVT)              0.01       0.63 r
+  data arrival time                                   0.63
+
+  clock clk (rise edge)                    4.25       4.25
+  clock network delay (ideal)              0.00       4.25
+  st_r_reg[0]/CLK (DFFARX1_HVT)            0.00       4.25 r
+  library setup time                      -0.07       4.18
+  data required time                                  4.18
+  -----------------------------------------------------------
+  data required time                                  4.18
+  data arrival time                                  -0.63
+  -----------------------------------------------------------
+  slack (MET)                                         3.55
+
+
+1

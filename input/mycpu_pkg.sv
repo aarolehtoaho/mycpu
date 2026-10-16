@@ -68,7 +68,7 @@ package mycpu_pkg;
 			     RST = 6'b000000,
 			     INF = 6'b000001, 
 			     EX0 = 6'b000010, 
-			     HLT = 6'b000100 
+			     HLT = 6'b000100
 			     } cu_state_t;
    
 endpackage

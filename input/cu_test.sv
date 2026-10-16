@@ -128,6 +128,15 @@ program cu_test
 	ins_in[8:0] = 9'b000_000_000;  // To do: Set appropriately for your test case
 	nz_in = 2'b00;                 // To do: Set appropriately for your test case
 
+	// Set inputs
+   ins_in[15:9] = USR;
+   ins_in[8:0] = {3'b011, 3'b001, 3'b000};   // DR, SA, SB
+   nz_in = 2'b00;
+   
+	// Check output
+   assert (ps_out == 2'b00 && il_out == 1'b1 && rw_out == 1'b0 && mx_out[0] == 1'b1 && wen_out == 1'b1 && iom_out == 1'b0)
+      else $error("T5 Cycle 0 outputs incorrect!");
+
 	// Move from cu state INF to state EXO
 	@(posedge clk); 
 	@(negedge clk); 
@@ -136,10 +145,11 @@ program cu_test
 	// Cycle: 1 (state EX0)
 	// ------------------------------------------------------------------------------------------------------------
 	
-	// To do: Set inputs
-
-	// To do: Check output
-
+	// Check output
+   assert (ps_out == 2'b01 && il_out == 1'b0 && rw_out == 1'b1 && mx_out == 4'b0100 && wen_out == 1'b1 && iom_out == 1'b0 && fs_out == FUSR)
+      else $error("T5 Cycle 1: outputs incorrect");
+   assert (rs_out  == {1'b0, 3'b011, 1'b0, 3'b001, 1'b0, 3'b000}) 
+      else $error("T5 Cycle 1: rs_out incorrect");
 
 	// Move to next state
 	@(posedge clk); 
@@ -149,17 +159,19 @@ program cu_test
 	// Cycle: 2 (state ?)
 	// ------------------------------------------------------------------------------------------------------------
 	
-	// To do: Set inputs
-
-	// To do: Check output
-
+	// Check output
+   assert (ps_out == 2'b00 && il_out == 1'b1 && rw_out == 1'b0 && mx_out[0] == 1'b1 && wen_out == 1'b1 && iom_out == 1'b0)
+      else $error("T5 Cycle 2 outputs incorrect!");
 
 	// Move to next state
 	@(posedge clk); 
 	@(negedge clk); 
 
-	// To do: Add test of the test
-
+	// Add test of the test
+   ins_in[15:9] = 7'b1010101;  // Invalid opcode
+	@(posedge clk); 
+	@(negedge clk);
+	assert (rw_out == 1'b0) else $error("Test of the test failed");
 	
 	
 	///////////////////////////////////////////////////////////////////////////////////////////////////////////////

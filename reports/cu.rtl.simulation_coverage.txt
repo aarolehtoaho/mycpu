@@ -1,0 +1,19 @@
+Recursive Coverage Report Summary Data by instance
+
+=================================================================================
+=== Instance: /cu_tb/DUT
+=== Design Unit: work.cu
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Assertions                      20        19         1    95.00%
+    Branches                        38        38         0   100.00%
+    Directives                       7         6         1    85.71%
+    FSM States                       4         4         0   100.00%
+    FSM Transitions                  7         5         2    71.42%
+    Statements                      51        51         0   100.00%
+    Toggles                        258       186        72    72.09%
+
+
+Total Coverage By Instance (filtered view): 89.17%
+

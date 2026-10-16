@@ -3,7 +3,7 @@ AutoCheck Compile Summary
 -------------------------------------------------------------------------------
 Check                     Evaluations         Found        Waived
 -------------------------------------------------------------------------------
-ASSIGN_IMPLICIT_CONSTANT           18             0             0
+ASSIGN_IMPLICIT_CONSTANT           19             0             0
 CASE_DUPLICATE                      1             0             0
 CLK_DELAY                           0             0             0
 CLK_IN_DATA                         0             0             0
@@ -27,7 +27,7 @@ RESET_SYNC_ASYNC                    0             0             0
 SLIST_INCOMPLETE                    8             0             0
 X_ASSIGN_REACHABLE                  0             0             0
 -------------------------------------------------------------------------------
-AC Total                           61             0             0
+AC Total                           62             0             0
 -------------------------------------------------------------------------------
 
 
@@ -152,23 +152,23 @@ Unused autocheck_report Directives
 ----- Detailed Process Statistics -----
 Elapsed Time                       0 s 
 -------- Orchestration Process --------
------ lehmus-cn2.oulu.fi:3247169 ------
+----- lehmus-cn3.oulu.fi:4139347 ------
 CPU Time                           0 s 
 Peak Memory                      0.3 GB
 ---------- Engine Processes -----------
------ lehmus-cn2.oulu.fi:3247196 ------
+----- lehmus-cn3.oulu.fi:4139375 ------
 CPU Time                           0 s 
 Peak Memory                      0.2 GB
 CPU Utilization                    0 % 
------ lehmus-cn2.oulu.fi:3247198 ------
+----- lehmus-cn3.oulu.fi:4139377 ------
 CPU Time                           0 s 
 Peak Memory                      0.2 GB
 CPU Utilization                    0 % 
------ lehmus-cn2.oulu.fi:3247200 ------
+----- lehmus-cn3.oulu.fi:4139379 ------
 CPU Time                           1 s 
 Peak Memory                      0.3 GB
 CPU Utilization                    0 % 
------ lehmus-cn2.oulu.fi:3247201 ------
+----- lehmus-cn3.oulu.fi:4139376 ------
 CPU Time                           0 s 
 Peak Memory                      0.2 GB
 CPU Utilization                    0 % 

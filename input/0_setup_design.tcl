@@ -6,10 +6,10 @@
 #set DESIGN_NAME "muxm"
 #set DESIGN_NAME "muxb"
 #set DESIGN_NAME "muxd"
-#set DESIGN_NAME "fu"
+set DESIGN_NAME "fu"
 #set DESIGN_NAME "ir"
 #set DESIGN_NAME "pc"
-set DESIGN_NAME "rb"
+#set DESIGN_NAME "rb"
 #set DESIGN_NAME "cu"
 
 ####################################################################################################

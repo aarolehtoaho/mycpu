@@ -6,7 +6,7 @@ Coverage Report by instance with details
 =================================================================================
 
 Assertion Coverage:
-    Assertions                      24        24         0   100.00%
+    Assertions                      24        23         1    95.83%
 --------------------------------------------------------------------------------------------------------------------------------
 Name                 File(Line)                   Failure      Pass     Vacuous    Disable    Attempt     Active Peak Active ATV
                                                   Count        Count    Count      Count      Count       Count  Count          
@@ -50,13 +50,13 @@ Name                 File(Line)                   Failure      Pass     Vacuous 
 /fu_tb/SVA_fu/af_fu_shl
                      input/fu_svamod.sv(141)            0         10        150          2        162          0           1 off
 /fu_tb/SVA_fu/af_fu_n_unset
-                     input/fu_svamod.sv(142)            0         92         68          2        162          0           1 off
+                     input/fu_svamod.sv(142)            0         88         72          2        162          0           1 off
 /fu_tb/SVA_fu/af_fu_n_set
-                     input/fu_svamod.sv(143)            0         68         92          2        162          0           1 off
+                     input/fu_svamod.sv(143)            0         72         88          2        162          0           1 off
 /fu_tb/SVA_fu/af_fu_z_unset
-                     input/fu_svamod.sv(144)            0        150         10          2        162          0           1 off
+                     input/fu_svamod.sv(144)            0        160          0          2        162          0           1 off
 /fu_tb/SVA_fu/af_fu_z_set
-                     input/fu_svamod.sv(145)            0         10        150          2        162          0           1 off
+                     input/fu_svamod.sv(145)            0          0        160          2        162          0           0 off
 
 
 ASSERTION RESULTS:
@@ -103,13 +103,13 @@ Name                 File(Line)                   Failure      Pass     Vacuous 
 /fu_tb/SVA_fu/af_fu_shl
                      input/fu_svamod.sv(141)            0         10        150          2        162          0           1 off
 /fu_tb/SVA_fu/af_fu_n_unset
-                     input/fu_svamod.sv(142)            0         92         68          2        162          0           1 off
+                     input/fu_svamod.sv(142)            0         88         72          2        162          0           1 off
 /fu_tb/SVA_fu/af_fu_n_set
-                     input/fu_svamod.sv(143)            0         68         92          2        162          0           1 off
+                     input/fu_svamod.sv(143)            0         72         88          2        162          0           1 off
 /fu_tb/SVA_fu/af_fu_z_unset
-                     input/fu_svamod.sv(144)            0        150         10          2        162          0           1 off
+                     input/fu_svamod.sv(144)            0        160          0          2        162          0           1 off
 /fu_tb/SVA_fu/af_fu_z_set
-                     input/fu_svamod.sv(145)            0         10        150          2        162          0           1 off
+                     input/fu_svamod.sv(145)            0          0        160          2        162          0           0 off
 
-Total Coverage By Instance (filtered view): 100.00%
+Total Coverage By Instance (filtered view): 95.83%
 

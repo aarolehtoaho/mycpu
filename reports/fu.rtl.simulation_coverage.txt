@@ -10,8 +10,8 @@ Recursive Coverage Report Summary Data by instance
     Conditions                       6         5         1    83.33%
     Expressions                      1         1         0   100.00%
     Statements                      36        35         1    97.22%
-    Toggles                        268       172        96    64.17%
+    Toggles                        208       203         5    97.59%
 
 
-Total Coverage By Instance (filtered view): 88.11%
+Total Coverage By Instance (filtered view): 94.79%
 
