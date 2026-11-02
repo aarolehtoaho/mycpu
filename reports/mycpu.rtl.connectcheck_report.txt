@@ -1,7 +1,7 @@
 -------------------------------------------------------------------------------
 Questa PropCheck Version 2022.4_1 5450673 linux_x86_64 22-Nov-2022
 -------------------------------------------------------------------------------
-Report Generated               : Fri Sep  4 11:25:32 2026
+Report Generated               : Mon Oct 26 10:40:05 2026
 -------------------------------------------------------------------------------
 
 Executing Command : formal verify -exclude_cover -group connectcheck  
@@ -96,34 +96,54 @@ LINE_9_CHECK_connect (netlist property)
 -------------------------------------------------------------------------------
 X Registers at Completion of Initialization Sequence
 -------------------------------------------------------------------------------
-  0 registers (100.0% of 0 in sequential fanin of properties)
+  19 registers (100.0% of 19 in sequential fanin of properties)
+-------------------------------------------------------------------------------
+  CU.st_r (File /homedir01/alehtoah24/DT2_2026/project/workdir/input/cu.sv, Line 21) 6'bxxxxxx
+  IR.ir_r (File /homedir01/alehtoah24/DT2_2026/project/workdir/input/ir.sv, Line 14) 16'bxxxxxxxxxxxxxxxx
+  PC.pc_r (File /homedir01/alehtoah24/DT2_2026/project/workdir/input/pc.sv, Line 15) 16'bxxxxxxxxxxxxxxxx
+  RB.hb_r[0] (File /homedir01/alehtoah24/DT2_2026/project/workdir/input/rb.sv, Line 17) 16'bxxxxxxxxxxxxxxxx
+  RB.hb_r[1] (File /homedir01/alehtoah24/DT2_2026/project/workdir/input/rb.sv, Line 17) 16'bxxxxxxxxxxxxxxxx
+  RB.hb_r[2] (File /homedir01/alehtoah24/DT2_2026/project/workdir/input/rb.sv, Line 17) 16'bxxxxxxxxxxxxxxxx
+  RB.hb_r[3] (File /homedir01/alehtoah24/DT2_2026/project/workdir/input/rb.sv, Line 17) 16'bxxxxxxxxxxxxxxxx
+  RB.hb_r[4] (File /homedir01/alehtoah24/DT2_2026/project/workdir/input/rb.sv, Line 17) 16'bxxxxxxxxxxxxxxxx
+  RB.hb_r[5] (File /homedir01/alehtoah24/DT2_2026/project/workdir/input/rb.sv, Line 17) 16'bxxxxxxxxxxxxxxxx
+  RB.hb_r[6] (File /homedir01/alehtoah24/DT2_2026/project/workdir/input/rb.sv, Line 17) 16'bxxxxxxxxxxxxxxxx
+  RB.hb_r[7] (File /homedir01/alehtoah24/DT2_2026/project/workdir/input/rb.sv, Line 17) 16'bxxxxxxxxxxxxxxxx
+  RB.rb_r[0] (File /homedir01/alehtoah24/DT2_2026/project/workdir/input/rb.sv, Line 16) 16'bxxxxxxxxxxxxxxxx
+  RB.rb_r[1] (File /homedir01/alehtoah24/DT2_2026/project/workdir/input/rb.sv, Line 16) 16'bxxxxxxxxxxxxxxxx
+  RB.rb_r[2] (File /homedir01/alehtoah24/DT2_2026/project/workdir/input/rb.sv, Line 16) 16'bxxxxxxxxxxxxxxxx
+  RB.rb_r[3] (File /homedir01/alehtoah24/DT2_2026/project/workdir/input/rb.sv, Line 16) 16'bxxxxxxxxxxxxxxxx
+  RB.rb_r[4] (File /homedir01/alehtoah24/DT2_2026/project/workdir/input/rb.sv, Line 16) 16'bxxxxxxxxxxxxxxxx
+  RB.rb_r[5] (File /homedir01/alehtoah24/DT2_2026/project/workdir/input/rb.sv, Line 16) 16'bxxxxxxxxxxxxxxxx
+  RB.rb_r[6] (File /homedir01/alehtoah24/DT2_2026/project/workdir/input/rb.sv, Line 16) 16'bxxxxxxxxxxxxxxxx
+  RB.rb_r[7] (File /homedir01/alehtoah24/DT2_2026/project/workdir/input/rb.sv, Line 16) 16'bxxxxxxxxxxxxxxxx
 -------------------------------------------------------------------------------
 
 
 -------------------------------------------------------------------------------
 Z Registers at Completion of Initialization Sequence
 -------------------------------------------------------------------------------
-  0 registers (100.0% of 0 in sequential fanin of properties)
+  0 registers (0.0% of 19 in sequential fanin of properties)
 -------------------------------------------------------------------------------
 
 
 ---------------------------------------
 Formal Netlist Statistics         Count
 ---------------------------------------
-Control Point Bits                   68
-  DUT Input Bits                      4
-  Cut Point Bits                     20
+Control Point Bits                  340
+  DUT Input Bits                     34
+  Cut Point Bits                    204
   Black Box Output Bits               0
-  Undriven Wire Bits                 44
-  Modeling Bits                       0
-State Bits                           38
+  Undriven Wire Bits                 38
+  Modeling Bits                      64
+State Bits                          316
   Counter State Bits                  0
   RAM State Bits                      0
-  Register State Bits                 0
+  Register State Bits               278
   Property State Bits                38
-Logic Gates                         680
-  Design Gates                        0
-  Property Gates                    680
+Logic Gates                        4757
+  Design Gates                     4011
+  Property Gates                    746
 ---------------------------------------
 
 
@@ -242,15 +262,15 @@ Engine Performance
 ---------------------- Proofs -------------------------- Waveforms ------------
    Engine |  Safety Liveness Vacuity  Sanity |  Safety Liveness Vacuity  Sanity
 -------------------------------------------------------------------------------
-        0 |      23        0       0       0 |       0        0       0       0
-        7 |      26        0       0       0 |       0        0      23       0
-       10 |       0        0       0       0 |       0        0      26       0
+        0 |      29        0       0       0 |       0        0       0       0
+        7 |      20        0       0       0 |       0        0      19       0
+       10 |       0        0       0       0 |       0        0      30       0
 -------------------------------------------------------------------------------
 
 
 
 --------- Process Statistics ----------
-Elapsed Time                       0 s
+Elapsed Time                       1 s
 Total CPU Time                     1 s
 Total Peak Memory                1.2 GB
 ---------- Engine Processes -----------
@@ -268,25 +288,25 @@ Successful Re-connections          0
 
 
 ----- Detailed Process Statistics -----
-Elapsed Time                       0 s 
+Elapsed Time                       1 s 
 -------- Orchestration Process --------
------ lehmus-cn2.oulu.fi:3556474 ------
+------ lehmus-cn9.oulu.fi:824975 ------
 CPU Time                           0 s 
 Peak Memory                      0.3 GB
 ---------- Engine Processes -----------
------ lehmus-cn2.oulu.fi:3556586 ------
+------ lehmus-cn9.oulu.fi:825083 ------
 CPU Time                           0 s 
 Peak Memory                      0.2 GB
 CPU Utilization                    0 % 
------ lehmus-cn2.oulu.fi:3556588 ------
+------ lehmus-cn9.oulu.fi:825084 ------
 CPU Time                           1 s 
 Peak Memory                      0.3 GB
 CPU Utilization                    0 % 
------ lehmus-cn2.oulu.fi:3556599 ------
+------ lehmus-cn9.oulu.fi:825088 ------
 CPU Time                           0 s 
 Peak Memory                      0.2 GB
 CPU Utilization                    0 % 
------ lehmus-cn2.oulu.fi:3556594 ------
+------ lehmus-cn9.oulu.fi:825092 ------
 CPU Time                           0 s 
 Peak Memory                      0.2 GB
 CPU Utilization                    0 % 

@@ -1,0 +1,1135 @@
+# 0
+# 1
+# QuestaSim-64 vlog 2022.4_1 Compiler 2022.11 Nov 11 2022
+# Start time: 13:29:45 on Oct 26,2026
+# vlog -suppress 13314 "+define+RTL_SIM" "+define+design_top_is_mycpu" -work work -timescale 1ns/1ps "+cover=bcxefs" input/mycpu_pkg.sv 
+# -- Compiling package mycpu_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 13:29:46 on Oct 26,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2022.4_1 Compiler 2022.11 Nov 11 2022
+# Start time: 13:29:46 on Oct 26,2026
+# vlog -suppress 13314 "+define+RTL_SIM" "+define+design_top_is_mycpu" -work work -timescale 1ns/1ps "+cover=bcxefs" input/fu_svamod.sv input/muxm_svamod.sv input/muxd_svamod.sv input/muxb_svamod.sv input/ir_svamod.sv input/pc_svamod.sv input/rb_svamod.sv input/cu_svamod.sv input/mycpu_svamod.sv 
+# -- Compiling package fu_svamod_sv_unit
+# -- Importing package mycpu_pkg
+# -- Compiling module fu_svamod
+# -- Compiling package muxm_svamod_sv_unit
+# -- Compiling module muxm_svamod
+# -- Compiling package muxd_svamod_sv_unit
+# -- Compiling module muxd_svamod
+# -- Compiling package muxb_svamod_sv_unit
+# -- Compiling module muxb_svamod
+# -- Compiling package ir_svamod_sv_unit
+# -- Compiling module ir_svamod
+# -- Compiling package pc_svamod_sv_unit
+# -- Compiling module pc_svamod
+# -- Compiling package rb_svamod_sv_unit
+# -- Compiling module rb_svamod
+# -- Compiling package cu_svamod_sv_unit
+# -- Compiling module cu_svamod
+# -- Compiling package mycpu_svamod_sv_unit
+# -- Compiling module mycpu_svamod
+# 
+# Top level modules:
+# 	fu_svamod
+# 	muxm_svamod
+# 	muxd_svamod
+# 	muxb_svamod
+# 	ir_svamod
+# 	pc_svamod
+# 	rb_svamod
+# 	cu_svamod
+# 	mycpu_svamod
+# End time: 13:29:46 on Oct 26,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0, Suppressed Warnings: 6
+# QuestaSim-64 vlog 2022.4_1 Compiler 2022.11 Nov 11 2022
+# Start time: 13:29:46 on Oct 26,2026
+# vlog -suppress 13314 "+define+RTL_SIM" "+define+design_top_is_mycpu" -work work -timescale 1ns/1ps "+cover=bcxefs" input/fu.sv input/muxm.sv input/muxd.sv input/muxb.sv input/ir.sv input/pc.sv input/rb.sv input/cu.sv input/mycpu.sv 
+# -- Compiling package fu_sv_unit
+# -- Importing package mycpu_pkg
+# -- Compiling module fu
+# -- Compiling package muxm_sv_unit
+# -- Compiling module muxm
+# -- Compiling package muxd_sv_unit
+# -- Compiling module muxd
+# -- Compiling package muxb_sv_unit
+# -- Compiling module muxb
+# -- Compiling package ir_sv_unit
+# -- Compiling module ir
+# -- Compiling package pc_sv_unit
+# -- Compiling module pc
+# -- Compiling package rb_sv_unit
+# -- Compiling module rb
+# -- Compiling package cu_sv_unit
+# -- Compiling module cu
+# -- Compiling package mycpu_sv_unit
+# -- Compiling module mycpu
+# 
+# Top level modules:
+# 	mycpu
+# End time: 13:29:46 on Oct 26,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0, Suppressed Warnings: 2
+# QuestaSim-64 vlog 2022.4_1 Compiler 2022.11 Nov 11 2022
+# Start time: 13:29:46 on Oct 26,2026
+# vlog -suppress 13314 "+define+RTL_SIM" "+define+design_top_is_mycpu" -work work -timescale 1ns/1ps "+cover=bcxefs" input/mycpu_tb.sv input/mycpu_test.sv 
+# -- Compiling package mycpu_tb_sv_unit
+# -- Importing package mycpu_pkg
+# -- Compiling module mycpu_tb
+# -- Compiling package mycpu_test_sv_unit
+# -- Compiling program mycpu_test
+# 
+# Top level modules:
+# 	mycpu_tb
+# End time: 13:29:46 on Oct 26,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Library vendor : Model Technology
+# Maximum unnamed designs : 3
+# MODULE cu
+#     Depends on: X sv_std std 9oUSJO;AeEaW`l:M@^WG92
+#     Depends on: X work mycpu_pkg ^jHG[aUKV4=]h4IEQ:ggI3
+#     Depends on: X work cu_sv_unit :2PTC>=h49Gl_A3GETLRX1
+#     Compile time: Mon Oct 26 13:29:46 2026
+#     Version string: Dg1SIo80bB@j0V0VzS_@n1
+#     Optimized Verilog design root: 1
+#     Debug Symbol file exists
+#     DU Coverage Signature: IXSC:J<NQn6Z<SA3FfnzT3
+#     Verilog version: MSe@o@gjl9B1NA71e4C`c2
+#     Source directory: /homedir01/alehtoah24/DT2_2026/project/workdir
+#     Source modified time: Thu Oct 15 13:24:33 2026
+#     HDL source file: input/cu.sv
+#     Source file: input/cu.sv
+#     Start location: input/cu.sv:5:135
+#     Opcode format: 2022.4_1; VLOG SE-64 Object version 75
+#     VHDL language standard: 1
+#     Compiled in vopt flow
+#     Compile options: -suppress 13314 -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Full compile options: -suppress 13314 +define+RTL_SIM +define+design_top_is_mycpu -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Compile defaults: CvgOpt=0
+# Verilog PACKAGE cu_sv_unit
+#     Depends on: X sv_std std 9oUSJO;AeEaW`l:M@^WG92
+#     Depends on: X work mycpu_pkg ^jHG[aUKV4=]h4IEQ:ggI3
+#     Compile time: Mon Oct 26 13:29:46 2026
+#     Version string: :2PTC>=h49Gl_A3GETLRX1
+#     Optimized Verilog design root: 1
+#     Debug Symbol file exists
+#     DU Coverage Signature: fHlID=YVLoUfebWl5GXHX2
+#     Verilog version: :2PTC>=h49Gl_A3GETLRX1
+#     Source directory: /homedir01/alehtoah24/DT2_2026/project/workdir
+#     Source modified time: Mon Oct 26 11:26:50 2026
+#     HDL source file: input/cu.sv
+#     Source file: input/cu.sv
+#     Source file: input/mycpu.svh
+#     Start location: input/cu.sv:3:0
+#     Opcode format: 2022.4_1; VLOG SE-64 Object version 75
+#     VHDL language standard: 1
+#     Compiled in vopt flow
+#     Compile options: -suppress 13314 -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Full compile options: -suppress 13314 +define+RTL_SIM +define+design_top_is_mycpu -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Compile defaults: CvgOpt=0
+# MODULE cu_svamod
+#     Depends on: X sv_std std 9oUSJO;AeEaW`l:M@^WG92
+#     Depends on: X work mycpu_pkg ^jHG[aUKV4=]h4IEQ:ggI3
+#     Depends on: X work cu_svamod_sv_unit ]a;V`^2g^1`DDog2?1]om1
+#     Compile time: Mon Oct 26 13:29:46 2026
+#     Version string: Dg1SIo80bB@j0V0VzS_@n1
+#     Optimized Verilog design root: 1
+#     Debug Symbol file exists
+#     DU Coverage Signature: SH4:OEz^DN2C[W^GKdfPl1
+#     Verilog version: 21JFi5BkQZzn0HYzYXQFG1
+#     Source directory: /homedir01/alehtoah24/DT2_2026/project/workdir
+#     Source modified time: Mon Aug 31 13:23:29 2026
+#     HDL source file: input/cu_svamod.sv
+#     Source file: input/cu_svamod.sv
+#     Start location: input/cu_svamod.sv:7:100
+#     Opcode format: 2022.4_1; VLOG SE-64 Object version 75
+#     VHDL language standard: 1
+#     Compiled in vopt flow
+#     Compile options: -suppress 13314 -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Full compile options: -suppress 13314 +define+RTL_SIM +define+design_top_is_mycpu -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Compile defaults: CvgOpt=0
+# Verilog PACKAGE cu_svamod_sv_unit
+#     Depends on: X sv_std std 9oUSJO;AeEaW`l:M@^WG92
+#     Depends on: X work mycpu_pkg ^jHG[aUKV4=]h4IEQ:ggI3
+#     Compile time: Mon Oct 26 13:29:46 2026
+#     Version string: ]a;V`^2g^1`DDog2?1]om1
+#     Optimized Verilog design root: 1
+#     Debug Symbol file exists
+#     DU Coverage Signature: I?jRF?Foz[4mP0hhK`=Jz0
+#     Verilog version: ]a;V`^2g^1`DDog2?1]om1
+#     Source directory: /homedir01/alehtoah24/DT2_2026/project/workdir
+#     Source modified time: Mon Oct 26 11:26:50 2026
+#     HDL source file: input/cu_svamod.sv
+#     Source file: input/cu_svamod.sv
+#     Source file: input/mycpu.svh
+#     Start location: input/cu_svamod.sv:5:0
+#     Opcode format: 2022.4_1; VLOG SE-64 Object version 75
+#     VHDL language standard: 1
+#     Compiled in vopt flow
+#     Compile options: -suppress 13314 -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Full compile options: -suppress 13314 +define+RTL_SIM +define+design_top_is_mycpu -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Compile defaults: CvgOpt=0
+# MODULE fu
+#     Depends on: X sv_std std 9oUSJO;AeEaW`l:M@^WG92
+#     Depends on: X work mycpu_pkg ^jHG[aUKV4=]h4IEQ:ggI3
+#     Depends on: X work fu_sv_unit :Z;BzzhRzQR;Re==jY<CM1
+#     Compile time: Mon Oct 26 13:29:46 2026
+#     Version string: Dg1SIo80bB@j0V0VzS_@n1
+#     Optimized Verilog design root: 1
+#     Debug Symbol file exists
+#     DU Coverage Signature: DoN93O?XV^F`?dWR[jU?O3
+#     Verilog version: QTI0WSW[J?Llc13C7UFE@0
+#     Source directory: /homedir01/alehtoah24/DT2_2026/project/workdir
+#     Source modified time: Thu Oct 15 13:07:34 2026
+#     HDL source file: input/fu.sv
+#     Source file: input/fu.sv
+#     Start location: input/fu.sv:5:93
+#     Opcode format: 2022.4_1; VLOG SE-64 Object version 75
+#     VHDL language standard: 1
+#     Compiled in vopt flow
+#     Compile options: -suppress 13314 -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Full compile options: -suppress 13314 +define+RTL_SIM +define+design_top_is_mycpu -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Compile defaults: CvgOpt=0
+# Verilog PACKAGE fu_sv_unit
+#     Depends on: X sv_std std 9oUSJO;AeEaW`l:M@^WG92
+#     Depends on: X work mycpu_pkg ^jHG[aUKV4=]h4IEQ:ggI3
+#     Compile time: Mon Oct 26 13:29:46 2026
+#     Version string: :Z;BzzhRzQR;Re==jY<CM1
+#     Optimized Verilog design root: 1
+#     Debug Symbol file exists
+#     DU Coverage Signature: [P[[kB0;lWUKRV?cdNmOT3
+#     Verilog version: :Z;BzzhRzQR;Re==jY<CM1
+#     Source directory: /homedir01/alehtoah24/DT2_2026/project/workdir
+#     Source modified time: Mon Oct 26 11:26:50 2026
+#     HDL source file: input/fu.sv
+#     Source file: input/fu.sv
+#     Source file: input/mycpu.svh
+#     Start location: input/fu.sv:3:0
+#     Opcode format: 2022.4_1; VLOG SE-64 Object version 75
+#     VHDL language standard: 1
+#     Compiled in vopt flow
+#     Compile options: -suppress 13314 -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Full compile options: -suppress 13314 +define+RTL_SIM +define+design_top_is_mycpu -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Compile defaults: CvgOpt=0
+# MODULE fu_svamod
+#     Depends on: X sv_std std 9oUSJO;AeEaW`l:M@^WG92
+#     Depends on: X work mycpu_pkg ^jHG[aUKV4=]h4IEQ:ggI3
+#     Depends on: X work fu_svamod_sv_unit KO2:A`>zKd7WVV:bLgVn:2
+#     Compile time: Mon Oct 26 13:29:46 2026
+#     Version string: Dg1SIo80bB@j0V0VzS_@n1
+#     Optimized Verilog design root: 1
+#     Debug Symbol file exists
+#     DU Coverage Signature: UQYjAUbYd@OoFhjh7KJ@P3
+#     Verilog version: 4@d=5JBYb;ZZLDg:;UVaF1
+#     Source directory: /homedir01/alehtoah24/DT2_2026/project/workdir
+#     Source modified time: Mon Aug 31 13:23:29 2026
+#     HDL source file: input/fu_svamod.sv
+#     Source file: input/fu_svamod.sv
+#     Start location: input/fu_svamod.sv:7:141
+#     Opcode format: 2022.4_1; VLOG SE-64 Object version 75
+#     VHDL language standard: 1
+#     Compiled in vopt flow
+#     Compile options: -suppress 13314 -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Full compile options: -suppress 13314 +define+RTL_SIM +define+design_top_is_mycpu -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Compile defaults: CvgOpt=0
+# Verilog PACKAGE fu_svamod_sv_unit
+#     Depends on: X sv_std std 9oUSJO;AeEaW`l:M@^WG92
+#     Depends on: X work mycpu_pkg ^jHG[aUKV4=]h4IEQ:ggI3
+#     Compile time: Mon Oct 26 13:29:46 2026
+#     Version string: KO2:A`>zKd7WVV:bLgVn:2
+#     Optimized Verilog design root: 1
+#     Debug Symbol file exists
+#     DU Coverage Signature: ShL5R:MkNM<K_dKEaPH?F1
+#     Verilog version: KO2:A`>zKd7WVV:bLgVn:2
+#     Source directory: /homedir01/alehtoah24/DT2_2026/project/workdir
+#     Source modified time: Mon Oct 26 11:26:50 2026
+#     HDL source file: input/fu_svamod.sv
+#     Source file: input/fu_svamod.sv
+#     Source file: input/mycpu.svh
+#     Start location: input/fu_svamod.sv:5:0
+#     Opcode format: 2022.4_1; VLOG SE-64 Object version 75
+#     VHDL language standard: 1
+#     Compiled in vopt flow
+#     Compile options: -suppress 13314 -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Full compile options: -suppress 13314 +define+RTL_SIM +define+design_top_is_mycpu -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Compile defaults: CvgOpt=0
+# MODULE ir
+#     Depends on: X sv_std std 9oUSJO;AeEaW`l:M@^WG92
+#     Depends on: X work mycpu_pkg ^jHG[aUKV4=]h4IEQ:ggI3
+#     Depends on: X work ir_sv_unit 8X[ZbMmNe13Q[mz0@Dz2L2
+#     Compile time: Mon Oct 26 13:29:46 2026
+#     Version string: Dg1SIo80bB@j0V0VzS_@n1
+#     Optimized Verilog design root: 1
+#     Debug Symbol file exists
+#     DU Coverage Signature: AGT^CzkFGU[]AojVPV?5Q3
+#     Verilog version: LEI3_4NPAfQ=^6?@PUTA42
+#     Source directory: /homedir01/alehtoah24/DT2_2026/project/workdir
+#     Source modified time: Wed Sep 23 14:37:21 2026
+#     HDL source file: input/ir.sv
+#     Source file: input/ir.sv
+#     Start location: input/ir.sv:5:25
+#     Opcode format: 2022.4_1; VLOG SE-64 Object version 75
+#     VHDL language standard: 1
+#     Compiled in vopt flow
+#     Compile options: -suppress 13314 -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Full compile options: -suppress 13314 +define+RTL_SIM +define+design_top_is_mycpu -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Compile defaults: CvgOpt=0
+# Verilog PACKAGE ir_sv_unit
+#     Depends on: X sv_std std 9oUSJO;AeEaW`l:M@^WG92
+#     Depends on: X work mycpu_pkg ^jHG[aUKV4=]h4IEQ:ggI3
+#     Compile time: Mon Oct 26 13:29:46 2026
+#     Version string: 8X[ZbMmNe13Q[mz0@Dz2L2
+#     Optimized Verilog design root: 1
+#     Debug Symbol file exists
+#     DU Coverage Signature: 75oJVe8f4=lRa9oZTPE?S1
+#     Verilog version: 8X[ZbMmNe13Q[mz0@Dz2L2
+#     Source directory: /homedir01/alehtoah24/DT2_2026/project/workdir
+#     Source modified time: Mon Oct 26 11:26:50 2026
+#     HDL source file: input/ir.sv
+#     Source file: input/ir.sv
+#     Source file: input/mycpu.svh
+#     Start location: input/ir.sv:3:0
+#     Opcode format: 2022.4_1; VLOG SE-64 Object version 75
+#     VHDL language standard: 1
+#     Compiled in vopt flow
+#     Compile options: -suppress 13314 -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Full compile options: -suppress 13314 +define+RTL_SIM +define+design_top_is_mycpu -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Compile defaults: CvgOpt=0
+# MODULE ir_svamod
+#     Depends on: X sv_std std 9oUSJO;AeEaW`l:M@^WG92
+#     Depends on: X work mycpu_pkg ^jHG[aUKV4=]h4IEQ:ggI3
+#     Depends on: X work ir_svamod_sv_unit k]JQz0b5XYWH1G0NJ4MhZ2
+#     Compile time: Mon Oct 26 13:29:46 2026
+#     Version string: Dg1SIo80bB@j0V0VzS_@n1
+#     Optimized Verilog design root: 1
+#     Debug Symbol file exists
+#     DU Coverage Signature: Fj6kHFdgacAcJ0;XiRLQC1
+#     Verilog version: gH<VZ@SZJ3d8ZAzkn0L:=3
+#     Source directory: /homedir01/alehtoah24/DT2_2026/project/workdir
+#     Source modified time: Mon Aug 31 13:23:29 2026
+#     HDL source file: input/ir_svamod.sv
+#     Source file: input/ir_svamod.sv
+#     Start location: input/ir_svamod.sv:7:37
+#     Opcode format: 2022.4_1; VLOG SE-64 Object version 75
+#     VHDL language standard: 1
+#     Compiled in vopt flow
+#     Compile options: -suppress 13314 -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Full compile options: -suppress 13314 +define+RTL_SIM +define+design_top_is_mycpu -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Compile defaults: CvgOpt=0
+# Verilog PACKAGE ir_svamod_sv_unit
+#     Depends on: X sv_std std 9oUSJO;AeEaW`l:M@^WG92
+#     Depends on: X work mycpu_pkg ^jHG[aUKV4=]h4IEQ:ggI3
+#     Compile time: Mon Oct 26 13:29:46 2026
+#     Version string: k]JQz0b5XYWH1G0NJ4MhZ2
+#     Optimized Verilog design root: 1
+#     Debug Symbol file exists
+#     DU Coverage Signature: []c??]C[?[S:jaGC_d4IZ1
+#     Verilog version: k]JQz0b5XYWH1G0NJ4MhZ2
+#     Source directory: /homedir01/alehtoah24/DT2_2026/project/workdir
+#     Source modified time: Mon Oct 26 11:26:50 2026
+#     HDL source file: input/ir_svamod.sv
+#     Source file: input/ir_svamod.sv
+#     Source file: input/mycpu.svh
+#     Start location: input/ir_svamod.sv:5:0
+#     Opcode format: 2022.4_1; VLOG SE-64 Object version 75
+#     VHDL language standard: 1
+#     Compiled in vopt flow
+#     Compile options: -suppress 13314 -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Full compile options: -suppress 13314 +define+RTL_SIM +define+design_top_is_mycpu -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Compile defaults: CvgOpt=0
+# MODULE muxb
+#     Depends on: X sv_std std 9oUSJO;AeEaW`l:M@^WG92
+#     Depends on: X work mycpu_pkg ^jHG[aUKV4=]h4IEQ:ggI3
+#     Depends on: X work muxb_sv_unit DB5eMC`9FdzKDGU>aYl<M0
+#     Compile time: Mon Oct 26 13:29:46 2026
+#     Version string: Dg1SIo80bB@j0V0VzS_@n1
+#     Optimized Verilog design root: 1
+#     Debug Symbol file exists
+#     DU Coverage Signature: [7W:RgIO1SZ5^IK04h@o33
+#     Verilog version: 3S6WDd=`NDXRJ;YO9H3@d0
+#     Source directory: /homedir01/alehtoah24/DT2_2026/project/workdir
+#     Source modified time: Tue Sep  8 11:45:21 2026
+#     HDL source file: input/muxb.sv
+#     Source file: input/muxb.sv
+#     Start location: input/muxb.sv:5:21
+#     Opcode format: 2022.4_1; VLOG SE-64 Object version 75
+#     VHDL language standard: 1
+#     Compiled in vopt flow
+#     Compile options: -suppress 13314 -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Full compile options: -suppress 13314 +define+RTL_SIM +define+design_top_is_mycpu -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Compile defaults: CvgOpt=0
+# Verilog PACKAGE muxb_sv_unit
+#     Depends on: X sv_std std 9oUSJO;AeEaW`l:M@^WG92
+#     Depends on: X work mycpu_pkg ^jHG[aUKV4=]h4IEQ:ggI3
+#     Compile time: Mon Oct 26 13:29:46 2026
+#     Version string: DB5eMC`9FdzKDGU>aYl<M0
+#     Optimized Verilog design root: 1
+#     Debug Symbol file exists
+#     DU Coverage Signature: ?1GBVIOXJYYRDAeW=McZ:2
+#     Verilog version: DB5eMC`9FdzKDGU>aYl<M0
+#     Source directory: /homedir01/alehtoah24/DT2_2026/project/workdir
+#     Source modified time: Mon Oct 26 11:26:50 2026
+#     HDL source file: input/muxb.sv
+#     Source file: input/muxb.sv
+#     Source file: input/mycpu.svh
+#     Start location: input/muxb.sv:3:0
+#     Opcode format: 2022.4_1; VLOG SE-64 Object version 75
+#     VHDL language standard: 1
+#     Compiled in vopt flow
+#     Compile options: -suppress 13314 -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Full compile options: -suppress 13314 +define+RTL_SIM +define+design_top_is_mycpu -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Compile defaults: CvgOpt=0
+# MODULE muxb_svamod
+#     Depends on: X sv_std std 9oUSJO;AeEaW`l:M@^WG92
+#     Depends on: X work mycpu_pkg ^jHG[aUKV4=]h4IEQ:ggI3
+#     Depends on: X work muxb_svamod_sv_unit `jlcehMS>2jX]FVR[3QNX1
+#     Compile time: Mon Oct 26 13:29:46 2026
+#     Version string: Dg1SIo80bB@j0V0VzS_@n1
+#     Optimized Verilog design root: 1
+#     Debug Symbol file exists
+#     DU Coverage Signature: 79MKTLmGW@NcZcfXQ>GJ70
+#     Verilog version: ^M9bhzVO47@a0=D;V?D<O2
+#     Source directory: /homedir01/alehtoah24/DT2_2026/project/workdir
+#     Source modified time: Mon Aug 31 13:23:29 2026
+#     HDL source file: input/muxb_svamod.sv
+#     Source file: input/muxb_svamod.sv
+#     Start location: input/muxb_svamod.sv:7:17
+#     Opcode format: 2022.4_1; VLOG SE-64 Object version 75
+#     VHDL language standard: 1
+#     Compiled in vopt flow
+#     Compile options: -suppress 13314 -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Full compile options: -suppress 13314 +define+RTL_SIM +define+design_top_is_mycpu -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Compile defaults: CvgOpt=0
+# Verilog PACKAGE muxb_svamod_sv_unit
+#     Depends on: X sv_std std 9oUSJO;AeEaW`l:M@^WG92
+#     Depends on: X work mycpu_pkg ^jHG[aUKV4=]h4IEQ:ggI3
+#     Compile time: Mon Oct 26 13:29:46 2026
+#     Version string: `jlcehMS>2jX]FVR[3QNX1
+#     Optimized Verilog design root: 1
+#     Debug Symbol file exists
+#     DU Coverage Signature: >NXJ_[zO5Fc=zDGXfSLI<3
+#     Verilog version: `jlcehMS>2jX]FVR[3QNX1
+#     Source directory: /homedir01/alehtoah24/DT2_2026/project/workdir
+#     Source modified time: Mon Oct 26 11:26:50 2026
+#     HDL source file: input/muxb_svamod.sv
+#     Source file: input/muxb_svamod.sv
+#     Source file: input/mycpu.svh
+#     Start location: input/muxb_svamod.sv:5:0
+#     Opcode format: 2022.4_1; VLOG SE-64 Object version 75
+#     VHDL language standard: 1
+#     Compiled in vopt flow
+#     Compile options: -suppress 13314 -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Full compile options: -suppress 13314 +define+RTL_SIM +define+design_top_is_mycpu -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Compile defaults: CvgOpt=0
+# MODULE muxd
+#     Depends on: X sv_std std 9oUSJO;AeEaW`l:M@^WG92
+#     Depends on: X work mycpu_pkg ^jHG[aUKV4=]h4IEQ:ggI3
+#     Depends on: X work muxd_sv_unit ?PGl4G_D_njHF2f6;[=V73
+#     Compile time: Mon Oct 26 13:29:46 2026
+#     Version string: Dg1SIo80bB@j0V0VzS_@n1
+#     Optimized Verilog design root: 1
+#     Debug Symbol file exists
+#     DU Coverage Signature: UZH>en^UQEURRUNdW4JQM3
+#     Verilog version: gmJ]GlX2j]jE1LM5102VD0
+#     Source directory: /homedir01/alehtoah24/DT2_2026/project/workdir
+#     Source modified time: Tue Sep  8 14:06:14 2026
+#     HDL source file: input/muxd.sv
+#     Source file: input/muxd.sv
+#     Start location: input/muxd.sv:5:16
+#     Opcode format: 2022.4_1; VLOG SE-64 Object version 75
+#     VHDL language standard: 1
+#     Compiled in vopt flow
+#     Compile options: -suppress 13314 -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Full compile options: -suppress 13314 +define+RTL_SIM +define+design_top_is_mycpu -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Compile defaults: CvgOpt=0
+# Verilog PACKAGE muxd_sv_unit
+#     Depends on: X sv_std std 9oUSJO;AeEaW`l:M@^WG92
+#     Depends on: X work mycpu_pkg ^jHG[aUKV4=]h4IEQ:ggI3
+#     Compile time: Mon Oct 26 13:29:46 2026
+#     Version string: ?PGl4G_D_njHF2f6;[=V73
+#     Optimized Verilog design root: 1
+#     Debug Symbol file exists
+#     DU Coverage Signature: @6i^;I3e`Aj=eKWC<o8gm1
+#     Verilog version: ?PGl4G_D_njHF2f6;[=V73
+#     Source directory: /homedir01/alehtoah24/DT2_2026/project/workdir
+#     Source modified time: Mon Oct 26 11:26:50 2026
+#     HDL source file: input/muxd.sv
+#     Source file: input/muxd.sv
+#     Source file: input/mycpu.svh
+#     Start location: input/muxd.sv:3:0
+#     Opcode format: 2022.4_1; VLOG SE-64 Object version 75
+#     VHDL language standard: 1
+#     Compiled in vopt flow
+#     Compile options: -suppress 13314 -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Full compile options: -suppress 13314 +define+RTL_SIM +define+design_top_is_mycpu -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Compile defaults: CvgOpt=0
+# MODULE muxd_svamod
+#     Depends on: X sv_std std 9oUSJO;AeEaW`l:M@^WG92
+#     Depends on: X work mycpu_pkg ^jHG[aUKV4=]h4IEQ:ggI3
+#     Depends on: X work muxd_svamod_sv_unit =XY=nSmW@_D2Qah2_:Yml0
+#     Compile time: Mon Oct 26 13:29:46 2026
+#     Version string: Dg1SIo80bB@j0V0VzS_@n1
+#     Optimized Verilog design root: 1
+#     Debug Symbol file exists
+#     DU Coverage Signature: Y[]PEF8ai96T3SREhY=>Z1
+#     Verilog version: iCP^4zbZmoCE3^88kFDeX2
+#     Source directory: /homedir01/alehtoah24/DT2_2026/project/workdir
+#     Source modified time: Mon Aug 31 13:23:29 2026
+#     HDL source file: input/muxd_svamod.sv
+#     Source file: input/muxd_svamod.sv
+#     Start location: input/muxd_svamod.sv:7:15
+#     Opcode format: 2022.4_1; VLOG SE-64 Object version 75
+#     VHDL language standard: 1
+#     Compiled in vopt flow
+#     Compile options: -suppress 13314 -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Full compile options: -suppress 13314 +define+RTL_SIM +define+design_top_is_mycpu -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Compile defaults: CvgOpt=0
+# Verilog PACKAGE muxd_svamod_sv_unit
+#     Depends on: X sv_std std 9oUSJO;AeEaW`l:M@^WG92
+#     Depends on: X work mycpu_pkg ^jHG[aUKV4=]h4IEQ:ggI3
+#     Compile time: Mon Oct 26 13:29:46 2026
+#     Version string: =XY=nSmW@_D2Qah2_:Yml0
+#     Optimized Verilog design root: 1
+#     Debug Symbol file exists
+#     DU Coverage Signature: 92;@`jgdM[m;f?QVOjfJD3
+#     Verilog version: =XY=nSmW@_D2Qah2_:Yml0
+#     Source directory: /homedir01/alehtoah24/DT2_2026/project/workdir
+#     Source modified time: Mon Oct 26 11:26:50 2026
+#     HDL source file: input/muxd_svamod.sv
+#     Source file: input/muxd_svamod.sv
+#     Source file: input/mycpu.svh
+#     Start location: input/muxd_svamod.sv:5:0
+#     Opcode format: 2022.4_1; VLOG SE-64 Object version 75
+#     VHDL language standard: 1
+#     Compiled in vopt flow
+#     Compile options: -suppress 13314 -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Full compile options: -suppress 13314 +define+RTL_SIM +define+design_top_is_mycpu -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Compile defaults: CvgOpt=0
+# MODULE muxm
+#     Depends on: X sv_std std 9oUSJO;AeEaW`l:M@^WG92
+#     Depends on: X work mycpu_pkg ^jHG[aUKV4=]h4IEQ:ggI3
+#     Depends on: X work muxm_sv_unit mlFEMLHo`lO4d16>N@02I2
+#     Compile time: Mon Oct 26 13:29:46 2026
+#     Version string: Dg1SIo80bB@j0V0VzS_@n1
+#     Optimized Verilog design root: 1
+#     Debug Symbol file exists
+#     DU Coverage Signature: nfX;^GaPeOM7TWhGQeK]13
+#     Verilog version: ;;78CL8n^_7K9gbE4RAn20
+#     Source directory: /homedir01/alehtoah24/DT2_2026/project/workdir
+#     Source modified time: Tue Sep  8 08:45:50 2026
+#     HDL source file: input/muxm.sv
+#     Source file: input/muxm.sv
+#     Start location: input/muxm.sv:5:16
+#     Opcode format: 2022.4_1; VLOG SE-64 Object version 75
+#     VHDL language standard: 1
+#     Compiled in vopt flow
+#     Compile options: -suppress 13314 -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Full compile options: -suppress 13314 +define+RTL_SIM +define+design_top_is_mycpu -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Compile defaults: CvgOpt=0
+# Verilog PACKAGE muxm_sv_unit
+#     Depends on: X sv_std std 9oUSJO;AeEaW`l:M@^WG92
+#     Depends on: X work mycpu_pkg ^jHG[aUKV4=]h4IEQ:ggI3
+#     Compile time: Mon Oct 26 13:29:46 2026
+#     Version string: mlFEMLHo`lO4d16>N@02I2
+#     Optimized Verilog design root: 1
+#     Debug Symbol file exists
+#     DU Coverage Signature: EZFo]1OL8J<4<j9KGQbDR3
+#     Verilog version: mlFEMLHo`lO4d16>N@02I2
+#     Source directory: /homedir01/alehtoah24/DT2_2026/project/workdir
+#     Source modified time: Mon Oct 26 11:26:50 2026
+#     HDL source file: input/muxm.sv
+#     Source file: input/muxm.sv
+#     Source file: input/mycpu.svh
+#     Start location: input/muxm.sv:3:0
+#     Opcode format: 2022.4_1; VLOG SE-64 Object version 75
+#     VHDL language standard: 1
+#     Compiled in vopt flow
+#     Compile options: -suppress 13314 -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Full compile options: -suppress 13314 +define+RTL_SIM +define+design_top_is_mycpu -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Compile defaults: CvgOpt=0
+# MODULE muxm_svamod
+#     Depends on: X sv_std std 9oUSJO;AeEaW`l:M@^WG92
+#     Depends on: X work mycpu_pkg ^jHG[aUKV4=]h4IEQ:ggI3
+#     Depends on: X work muxm_svamod_sv_unit T;HG`A8z;6=K:b<6`?7M91
+#     Compile time: Mon Oct 26 13:29:46 2026
+#     Version string: Dg1SIo80bB@j0V0VzS_@n1
+#     Optimized Verilog design root: 1
+#     Debug Symbol file exists
+#     DU Coverage Signature: 2hchQPloY;jK[8lh@d;T21
+#     Verilog version: ZeN3TNXYicDmB<Uz85eK20
+#     Source directory: /homedir01/alehtoah24/DT2_2026/project/workdir
+#     Source modified time: Mon Aug 31 13:23:29 2026
+#     HDL source file: input/muxm_svamod.sv
+#     Source file: input/muxm_svamod.sv
+#     Start location: input/muxm_svamod.sv:7:17
+#     Opcode format: 2022.4_1; VLOG SE-64 Object version 75
+#     VHDL language standard: 1
+#     Compiled in vopt flow
+#     Compile options: -suppress 13314 -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Full compile options: -suppress 13314 +define+RTL_SIM +define+design_top_is_mycpu -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Compile defaults: CvgOpt=0
+# Verilog PACKAGE muxm_svamod_sv_unit
+#     Depends on: X sv_std std 9oUSJO;AeEaW`l:M@^WG92
+#     Depends on: X work mycpu_pkg ^jHG[aUKV4=]h4IEQ:ggI3
+#     Compile time: Mon Oct 26 13:29:46 2026
+#     Version string: T;HG`A8z;6=K:b<6`?7M91
+#     Optimized Verilog design root: 1
+#     Debug Symbol file exists
+#     DU Coverage Signature: DjPW?n3AK77i8nf[SP0Bh0
+#     Verilog version: T;HG`A8z;6=K:b<6`?7M91
+#     Source directory: /homedir01/alehtoah24/DT2_2026/project/workdir
+#     Source modified time: Mon Oct 26 11:26:50 2026
+#     HDL source file: input/muxm_svamod.sv
+#     Source file: input/muxm_svamod.sv
+#     Source file: input/mycpu.svh
+#     Start location: input/muxm_svamod.sv:5:0
+#     Opcode format: 2022.4_1; VLOG SE-64 Object version 75
+#     VHDL language standard: 1
+#     Compiled in vopt flow
+#     Compile options: -suppress 13314 -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Full compile options: -suppress 13314 +define+RTL_SIM +define+design_top_is_mycpu -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Compile defaults: CvgOpt=0
+# MODULE mycpu
+#     Depends on: X sv_std std 9oUSJO;AeEaW`l:M@^WG92
+#     Depends on: X work mycpu_pkg ^jHG[aUKV4=]h4IEQ:ggI3
+#     Depends on: X work mycpu_sv_unit ^b[=`iQQ7DHNRX@HGQfc[0
+#     Compile time: Mon Oct 26 13:29:46 2026
+#     Version string: Dg1SIo80bB@j0V0VzS_@n1
+#     Optimized Verilog design root: 1
+#     Debug Symbol file exists
+#     DU Coverage Signature: e@XU91Kl8eKVdLajHgkmF2
+#     Verilog version: ^`OcAk<::c<`SSPKdfgkW2
+#     Source directory: /homedir01/alehtoah24/DT2_2026/project/workdir
+#     Source modified time: Thu Sep  3 13:02:19 2026
+#     HDL source file: input/mycpu.sv
+#     Source file: input/mycpu.sv
+#     Start location: input/mycpu.sv:5:43
+#     Opcode format: 2022.4_1; VLOG SE-64 Object version 75
+#     VHDL language standard: 1
+#     Compiled in vopt flow
+#     Compile options: -suppress 13314 -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Full compile options: -suppress 13314 +define+RTL_SIM +define+design_top_is_mycpu -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Compile defaults: CvgOpt=0
+# Verilog PACKAGE mycpu_pkg
+#     Depends on: X sv_std std 9oUSJO;AeEaW`l:M@^WG92
+#     Compile time: Mon Oct 26 13:29:46 2026
+#     Debug Symbol file exists
+#     DU Coverage Signature: bKB`mdZg[6:HgLjc^SXlM1
+#     Verilog version: ^jHG[aUKV4=]h4IEQ:ggI3
+#     Source directory: /homedir01/alehtoah24/DT2_2026/project/workdir
+#     Source modified time: Mon Oct 26 11:44:46 2026
+#     HDL source file: input/mycpu_pkg.sv
+#     Source file: input/mycpu_pkg.sv
+#     Start location: input/mycpu_pkg.sv:1:0
+#     Version string: ^jHG[aUKV4=]h4IEQ:ggI3
+#     Opcode format: 2022.4_1; VLOG SE-64 Object version 75
+#     Optimized Verilog design root: 1
+#     VHDL language standard: 1
+#     Compiled in vopt flow
+#     Compile options: -suppress 13314 -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Full compile options: -suppress 13314 +define+RTL_SIM +define+design_top_is_mycpu -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Compile defaults: CvgOpt=0
+# Verilog PACKAGE mycpu_sv_unit
+#     Depends on: X sv_std std 9oUSJO;AeEaW`l:M@^WG92
+#     Depends on: X work mycpu_pkg ^jHG[aUKV4=]h4IEQ:ggI3
+#     Compile time: Mon Oct 26 13:29:46 2026
+#     Version string: ^b[=`iQQ7DHNRX@HGQfc[0
+#     Optimized Verilog design root: 1
+#     Debug Symbol file exists
+#     DU Coverage Signature: ]O[;98gnTF`><n9J5DmO82
+#     Verilog version: ^b[=`iQQ7DHNRX@HGQfc[0
+#     Source directory: /homedir01/alehtoah24/DT2_2026/project/workdir
+#     Source modified time: Mon Oct 26 11:26:50 2026
+#     HDL source file: input/mycpu.sv
+#     Source file: input/mycpu.sv
+#     Source file: input/mycpu.svh
+#     Start location: input/mycpu.sv:3:0
+#     Opcode format: 2022.4_1; VLOG SE-64 Object version 75
+#     VHDL language standard: 1
+#     Compiled in vopt flow
+#     Compile options: -suppress 13314 -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Full compile options: -suppress 13314 +define+RTL_SIM +define+design_top_is_mycpu -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Compile defaults: CvgOpt=0
+# MODULE mycpu_svamod
+#     Depends on: X sv_std std 9oUSJO;AeEaW`l:M@^WG92
+#     Depends on: X work mycpu_pkg ^jHG[aUKV4=]h4IEQ:ggI3
+#     Depends on: X work mycpu_svamod_sv_unit XRnOGSZ::>V2N5Qo_BW]62
+#     Compile time: Mon Oct 26 13:29:46 2026
+#     Version string: Dg1SIo80bB@j0V0VzS_@n1
+#     Optimized Verilog design root: 1
+#     Debug Symbol file exists
+#     DU Coverage Signature: c7V4Le[L3c>0eiMGSg?=^3
+#     Verilog version: ;<5Oj=5AWlTYTSPcSGof71
+#     Source directory: /homedir01/alehtoah24/DT2_2026/project/workdir
+#     Source modified time: Mon Aug 31 13:23:29 2026
+#     HDL source file: input/mycpu_svamod.sv
+#     Source file: input/mycpu_svamod.sv
+#     Start location: input/mycpu_svamod.sv:7:58
+#     Opcode format: 2022.4_1; VLOG SE-64 Object version 75
+#     VHDL language standard: 1
+#     Compiled in vopt flow
+#     Compile options: -suppress 13314 -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Full compile options: -suppress 13314 +define+RTL_SIM +define+design_top_is_mycpu -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Compile defaults: CvgOpt=0
+# Verilog PACKAGE mycpu_svamod_sv_unit
+#     Depends on: X sv_std std 9oUSJO;AeEaW`l:M@^WG92
+#     Depends on: X work mycpu_pkg ^jHG[aUKV4=]h4IEQ:ggI3
+#     Compile time: Mon Oct 26 13:29:46 2026
+#     Version string: XRnOGSZ::>V2N5Qo_BW]62
+#     Optimized Verilog design root: 1
+#     Debug Symbol file exists
+#     DU Coverage Signature: F<VFaK`baSKOddDT^Hc[k1
+#     Verilog version: XRnOGSZ::>V2N5Qo_BW]62
+#     Source directory: /homedir01/alehtoah24/DT2_2026/project/workdir
+#     Source modified time: Mon Oct 26 11:26:50 2026
+#     HDL source file: input/mycpu_svamod.sv
+#     Source file: input/mycpu_svamod.sv
+#     Source file: input/mycpu.svh
+#     Start location: input/mycpu_svamod.sv:5:0
+#     Opcode format: 2022.4_1; VLOG SE-64 Object version 75
+#     VHDL language standard: 1
+#     Compiled in vopt flow
+#     Compile options: -suppress 13314 -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Full compile options: -suppress 13314 +define+RTL_SIM +define+design_top_is_mycpu -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Compile defaults: CvgOpt=0
+# MODULE mycpu_tb
+#     Depends on: X sv_std std 9oUSJO;AeEaW`l:M@^WG92
+#     Depends on: X work mycpu_pkg ^jHG[aUKV4=]h4IEQ:ggI3
+#     Depends on: X work mycpu_tb_sv_unit IQ7RbS^Z^?X;hj4>YXUN?3
+#     Compile time: Mon Oct 26 13:29:46 2026
+#     Version string: Dg1SIo80bB@j0V0VzS_@n1
+#     Optimized Verilog design root: 1
+#     Debug Symbol file exists
+#     DU Coverage Signature: gN6VmSd=;01?6NSW`2o@g1
+#     Verilog version: 6NB^ecJW8M?5gGZZ6J:X73
+#     Source directory: /homedir01/alehtoah24/DT2_2026/project/workdir
+#     Source modified time: Mon Aug 31 13:23:29 2026
+#     HDL source file: input/mycpu_tb.sv
+#     Source file: input/mycpu_tb.sv
+#     Source file: input/mycpu_svabind.svh
+#     Start location: input/mycpu_tb.sv:7:230
+#     Opcode format: 2022.4_1; VLOG SE-64 Object version 75
+#     VHDL language standard: 1
+#     Compiled in vopt flow
+#     Compile options: -suppress 13314 -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Full compile options: -suppress 13314 +define+RTL_SIM +define+design_top_is_mycpu -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Compile defaults: CvgOpt=0
+# Verilog PACKAGE mycpu_tb_sv_unit
+#     Depends on: X sv_std std 9oUSJO;AeEaW`l:M@^WG92
+#     Depends on: X work mycpu_pkg ^jHG[aUKV4=]h4IEQ:ggI3
+#     Compile time: Mon Oct 26 13:29:46 2026
+#     Version string: IQ7RbS^Z^?X;hj4>YXUN?3
+#     Optimized Verilog design root: 1
+#     Debug Symbol file exists
+#     DU Coverage Signature: 4i_>==mc?LgE9:Zo6i7lJ2
+#     Verilog version: IQ7RbS^Z^?X;hj4>YXUN?3
+#     Source directory: /homedir01/alehtoah24/DT2_2026/project/workdir
+#     Source modified time: Mon Oct 26 11:26:50 2026
+#     HDL source file: input/mycpu_tb.sv
+#     Source file: input/mycpu_tb.sv
+#     Source file: input/mycpu.svh
+#     Start location: input/mycpu_tb.sv:5:0
+#     Opcode format: 2022.4_1; VLOG SE-64 Object version 75
+#     VHDL language standard: 1
+#     Compiled in vopt flow
+#     Compile options: -suppress 13314 -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Full compile options: -suppress 13314 +define+RTL_SIM +define+design_top_is_mycpu -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Compile defaults: CvgOpt=0
+# PROGRAM mycpu_test
+#     Depends on: X sv_std std 9oUSJO;AeEaW`l:M@^WG92
+#     Depends on: X work mycpu_pkg ^jHG[aUKV4=]h4IEQ:ggI3
+#     Depends on: X work mycpu_test_sv_unit MaR3gKKjiN`6FmVDzA@L01
+#     Compile time: Mon Oct 26 13:29:46 2026
+#     Version string: Dg1SIo80bB@j0V0VzS_@n1
+#     Optimized Verilog design root: 1
+#     Debug Symbol file exists
+#     DU Coverage Signature: g:Oh?PiC3ceGAM5RaA_Ko3
+#     Verilog version: TUKh4^WzAIRT?dQiVFl:]1
+#     Source directory: /homedir01/alehtoah24/DT2_2026/project/workdir
+#     Source modified time: Mon Oct 26 13:29:44 2026
+#     HDL source file: input/mycpu_test.sv
+#     Source file: input/mycpu_test.sv
+#     Source file: input/machinecode.inc
+#     Start location: input/mycpu_test.sv:9:0
+#     Opcode format: 2022.4_1; VLOG SE-64 Object version 75
+#     VHDL language standard: 1
+#     Compiled in vopt flow
+#     Compile options: -suppress 13314 -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Full compile options: -suppress 13314 +define+RTL_SIM +define+design_top_is_mycpu -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Compile defaults: CvgOpt=0
+# Verilog PACKAGE mycpu_test_sv_unit
+#     Depends on: X sv_std std 9oUSJO;AeEaW`l:M@^WG92
+#     Depends on: X work mycpu_pkg ^jHG[aUKV4=]h4IEQ:ggI3
+#     Compile time: Mon Oct 26 13:29:46 2026
+#     Version string: MaR3gKKjiN`6FmVDzA@L01
+#     Optimized Verilog design root: 1
+#     Debug Symbol file exists
+#     DU Coverage Signature: j>EeUi8B?zH_=N7mRTL0e3
+#     Verilog version: MaR3gKKjiN`6FmVDzA@L01
+#     Source directory: /homedir01/alehtoah24/DT2_2026/project/workdir
+#     Source modified time: Mon Oct 26 11:26:50 2026
+#     HDL source file: input/mycpu_test.sv
+#     Source file: input/mycpu_test.sv
+#     Source file: input/mycpu.svh
+#     Start location: input/mycpu_test.sv:7:0
+#     Opcode format: 2022.4_1; VLOG SE-64 Object version 75
+#     VHDL language standard: 1
+#     Compiled in vopt flow
+#     Compile options: -suppress 13314 -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Full compile options: -suppress 13314 +define+RTL_SIM +define+design_top_is_mycpu -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Compile defaults: CvgOpt=0
+# MODULE pc
+#     Depends on: X sv_std std 9oUSJO;AeEaW`l:M@^WG92
+#     Depends on: X work mycpu_pkg ^jHG[aUKV4=]h4IEQ:ggI3
+#     Depends on: X work pc_sv_unit 0[6FM?W;gPLR0`?LfQX3X2
+#     Compile time: Mon Oct 26 13:29:46 2026
+#     Version string: Dg1SIo80bB@j0V0VzS_@n1
+#     Optimized Verilog design root: 1
+#     Debug Symbol file exists
+#     DU Coverage Signature: [kiag1KY>Wg6S;ijD95M]2
+#     Verilog version: gccL[Doz[o5GkS_P_GG3A0
+#     Source directory: /homedir01/alehtoah24/DT2_2026/project/workdir
+#     Source modified time: Thu Sep 24 11:04:10 2026
+#     HDL source file: input/pc.sv
+#     Source file: input/pc.sv
+#     Start location: input/pc.sv:5:34
+#     Opcode format: 2022.4_1; VLOG SE-64 Object version 75
+#     VHDL language standard: 1
+#     Compiled in vopt flow
+#     Compile options: -suppress 13314 -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Full compile options: -suppress 13314 +define+RTL_SIM +define+design_top_is_mycpu -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Compile defaults: CvgOpt=0
+# Verilog PACKAGE pc_sv_unit
+#     Depends on: X sv_std std 9oUSJO;AeEaW`l:M@^WG92
+#     Depends on: X work mycpu_pkg ^jHG[aUKV4=]h4IEQ:ggI3
+#     Compile time: Mon Oct 26 13:29:46 2026
+#     Version string: 0[6FM?W;gPLR0`?LfQX3X2
+#     Optimized Verilog design root: 1
+#     Debug Symbol file exists
+#     DU Coverage Signature: HiDlH8C<g?K^@DoAB?jNQ0
+#     Verilog version: 0[6FM?W;gPLR0`?LfQX3X2
+#     Source directory: /homedir01/alehtoah24/DT2_2026/project/workdir
+#     Source modified time: Mon Oct 26 11:26:50 2026
+#     HDL source file: input/pc.sv
+#     Source file: input/pc.sv
+#     Source file: input/mycpu.svh
+#     Start location: input/pc.sv:3:0
+#     Opcode format: 2022.4_1; VLOG SE-64 Object version 75
+#     VHDL language standard: 1
+#     Compiled in vopt flow
+#     Compile options: -suppress 13314 -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Full compile options: -suppress 13314 +define+RTL_SIM +define+design_top_is_mycpu -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Compile defaults: CvgOpt=0
+# MODULE pc_svamod
+#     Depends on: X sv_std std 9oUSJO;AeEaW`l:M@^WG92
+#     Depends on: X work mycpu_pkg ^jHG[aUKV4=]h4IEQ:ggI3
+#     Depends on: X work pc_svamod_sv_unit aGI`XS`6T`1`>Zk@0U=8Z0
+#     Compile time: Mon Oct 26 13:29:46 2026
+#     Version string: Dg1SIo80bB@j0V0VzS_@n1
+#     Optimized Verilog design root: 1
+#     Debug Symbol file exists
+#     DU Coverage Signature: >>5mde`fUB<ZZkh8P5QhX0
+#     Verilog version: ?USUC__d=J66bfE_?M0Q12
+#     Source directory: /homedir01/alehtoah24/DT2_2026/project/workdir
+#     Source modified time: Mon Aug 31 13:23:29 2026
+#     HDL source file: input/pc_svamod.sv
+#     Source file: input/pc_svamod.sv
+#     Start location: input/pc_svamod.sv:7:55
+#     Opcode format: 2022.4_1; VLOG SE-64 Object version 75
+#     VHDL language standard: 1
+#     Compiled in vopt flow
+#     Compile options: -suppress 13314 -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Full compile options: -suppress 13314 +define+RTL_SIM +define+design_top_is_mycpu -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Compile defaults: CvgOpt=0
+# Verilog PACKAGE pc_svamod_sv_unit
+#     Depends on: X sv_std std 9oUSJO;AeEaW`l:M@^WG92
+#     Depends on: X work mycpu_pkg ^jHG[aUKV4=]h4IEQ:ggI3
+#     Compile time: Mon Oct 26 13:29:46 2026
+#     Version string: aGI`XS`6T`1`>Zk@0U=8Z0
+#     Optimized Verilog design root: 1
+#     Debug Symbol file exists
+#     DU Coverage Signature: SO4_5Ma70P2RZH3B_>7>^1
+#     Verilog version: aGI`XS`6T`1`>Zk@0U=8Z0
+#     Source directory: /homedir01/alehtoah24/DT2_2026/project/workdir
+#     Source modified time: Mon Oct 26 11:26:50 2026
+#     HDL source file: input/pc_svamod.sv
+#     Source file: input/pc_svamod.sv
+#     Source file: input/mycpu.svh
+#     Start location: input/pc_svamod.sv:5:0
+#     Opcode format: 2022.4_1; VLOG SE-64 Object version 75
+#     VHDL language standard: 1
+#     Compiled in vopt flow
+#     Compile options: -suppress 13314 -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Full compile options: -suppress 13314 +define+RTL_SIM +define+design_top_is_mycpu -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Compile defaults: CvgOpt=0
+# MODULE rb
+#     Depends on: X sv_std std 9oUSJO;AeEaW`l:M@^WG92
+#     Depends on: X work mycpu_pkg ^jHG[aUKV4=]h4IEQ:ggI3
+#     Depends on: X work rb_sv_unit 4Sbhj7YD3H]JD38[[fXbW1
+#     Compile time: Mon Oct 26 13:29:46 2026
+#     Version string: Dg1SIo80bB@j0V0VzS_@n1
+#     Optimized Verilog design root: 1
+#     Debug Symbol file exists
+#     DU Coverage Signature: n>N;P>ojog]Xde2ABa`Y_2
+#     Verilog version: mz4?KlXEVWc8`R>`802JS3
+#     Source directory: /homedir01/alehtoah24/DT2_2026/project/workdir
+#     Source modified time: Wed Sep 30 13:38:33 2026
+#     HDL source file: input/rb.sv
+#     Source file: input/rb.sv
+#     Start location: input/rb.sv:5:52
+#     Opcode format: 2022.4_1; VLOG SE-64 Object version 75
+#     VHDL language standard: 1
+#     Compiled in vopt flow
+#     Compile options: -suppress 13314 -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Full compile options: -suppress 13314 +define+RTL_SIM +define+design_top_is_mycpu -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Compile defaults: CvgOpt=0
+# Verilog PACKAGE rb_sv_unit
+#     Depends on: X sv_std std 9oUSJO;AeEaW`l:M@^WG92
+#     Depends on: X work mycpu_pkg ^jHG[aUKV4=]h4IEQ:ggI3
+#     Compile time: Mon Oct 26 13:29:46 2026
+#     Version string: 4Sbhj7YD3H]JD38[[fXbW1
+#     Optimized Verilog design root: 1
+#     Debug Symbol file exists
+#     DU Coverage Signature: [CAK;ec<THlS>Wm`jNzW<1
+#     Verilog version: 4Sbhj7YD3H]JD38[[fXbW1
+#     Source directory: /homedir01/alehtoah24/DT2_2026/project/workdir
+#     Source modified time: Mon Oct 26 11:26:50 2026
+#     HDL source file: input/rb.sv
+#     Source file: input/rb.sv
+#     Source file: input/mycpu.svh
+#     Start location: input/rb.sv:3:0
+#     Opcode format: 2022.4_1; VLOG SE-64 Object version 75
+#     VHDL language standard: 1
+#     Compiled in vopt flow
+#     Compile options: -suppress 13314 -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Full compile options: -suppress 13314 +define+RTL_SIM +define+design_top_is_mycpu -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Compile defaults: CvgOpt=0
+# MODULE rb_svamod
+#     Depends on: X sv_std std 9oUSJO;AeEaW`l:M@^WG92
+#     Depends on: X work mycpu_pkg ^jHG[aUKV4=]h4IEQ:ggI3
+#     Depends on: X work rb_svamod_sv_unit 0@L3eY?o74?W8_`H<kChz3
+#     Compile time: Mon Oct 26 13:29:46 2026
+#     Version string: Dg1SIo80bB@j0V0VzS_@n1
+#     Optimized Verilog design root: 1
+#     Debug Symbol file exists
+#     DU Coverage Signature: Q9hceS`U>1ez>XGA]80`M3
+#     Verilog version: [z77ANG1jNM1l1@8GU=DF3
+#     Source directory: /homedir01/alehtoah24/DT2_2026/project/workdir
+#     Source modified time: Mon Aug 31 13:23:29 2026
+#     HDL source file: input/rb_svamod.sv
+#     Source file: input/rb_svamod.sv
+#     Start location: input/rb_svamod.sv:7:80
+#     Opcode format: 2022.4_1; VLOG SE-64 Object version 75
+#     VHDL language standard: 1
+#     Compiled in vopt flow
+#     Compile options: -suppress 13314 -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Full compile options: -suppress 13314 +define+RTL_SIM +define+design_top_is_mycpu -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Compile defaults: CvgOpt=0
+# Verilog PACKAGE rb_svamod_sv_unit
+#     Depends on: X sv_std std 9oUSJO;AeEaW`l:M@^WG92
+#     Depends on: X work mycpu_pkg ^jHG[aUKV4=]h4IEQ:ggI3
+#     Compile time: Mon Oct 26 13:29:46 2026
+#     Version string: 0@L3eY?o74?W8_`H<kChz3
+#     Optimized Verilog design root: 1
+#     Debug Symbol file exists
+#     DU Coverage Signature: `IJ3IPU]@6YbWE8;KNKo93
+#     Verilog version: 0@L3eY?o74?W8_`H<kChz3
+#     Source directory: /homedir01/alehtoah24/DT2_2026/project/workdir
+#     Source modified time: Mon Oct 26 11:26:50 2026
+#     HDL source file: input/rb_svamod.sv
+#     Source file: input/rb_svamod.sv
+#     Source file: input/mycpu.svh
+#     Start location: input/rb_svamod.sv:5:0
+#     Opcode format: 2022.4_1; VLOG SE-64 Object version 75
+#     VHDL language standard: 1
+#     Compiled in vopt flow
+#     Compile options: -suppress 13314 -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Full compile options: -suppress 13314 +define+RTL_SIM +define+design_top_is_mycpu -work work -timescale 1ns/1ps +cover=bcxefs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+#     Compile defaults: CvgOpt=0
+# QuestaSim-64 vopt 2022.4_1 Compiler 2022.11 Nov 11 2022
+# Start time: 13:29:46 on Oct 26,2026
+# vopt -work work "+acc" -debugdb "+cover=bcxefs" -suppress 10587 mycpu_tb -o mycpu_opt 
+# 
+# Top level modules:
+# 	mycpu_tb
+# 
+# Analyzing design...
+# -- Loading module mycpu_tb
+# -- Loading module mycpu
+# -- Loading module cu
+# -- Loading module ir
+# -- Loading module pc
+# -- Loading module fu
+# -- Loading module rb
+# -- Loading module muxm
+# -- Loading module muxb
+# -- Loading module muxd
+# -- Loading program mycpu_test
+# -- Loading module mycpu_svamod
+# -- Loading module fu_svamod
+# -- Loading module muxm_svamod
+# -- Loading module muxb_svamod
+# -- Loading module muxd_svamod
+# -- Loading module rb_svamod
+# -- Loading module ir_svamod
+# -- Loading module cu_svamod
+# -- Loading module pc_svamod
+# Optimizing 41 design-units (inlining 0/20 module instances):
+# -- Optimizing package muxb_svamod_sv_unit(fast)
+# -- Optimizing package muxd_svamod_sv_unit(fast)
+# -- Optimizing package rb_svamod_sv_unit(fast)
+# -- Optimizing package ir_svamod_sv_unit(fast)
+# -- Optimizing package cu_svamod_sv_unit(fast)
+# -- Optimizing package pc_svamod_sv_unit(fast)
+# -- Optimizing package mycpu_tb_sv_unit(fast)
+# -- Optimizing package mycpu_sv_unit(fast)
+# -- Optimizing package cu_sv_unit(fast)
+# -- Optimizing package ir_sv_unit(fast)
+# -- Optimizing package pc_sv_unit(fast)
+# -- Optimizing package fu_sv_unit(fast)
+# -- Optimizing package rb_sv_unit(fast)
+# -- Optimizing package muxm_sv_unit(fast)
+# -- Optimizing package muxb_sv_unit(fast)
+# -- Optimizing package muxd_sv_unit(fast)
+# -- Optimizing package mycpu_test_sv_unit(fast)
+# -- Optimizing package mycpu_svamod_sv_unit(fast)
+# -- Optimizing package fu_svamod_sv_unit(fast)
+# -- Optimizing package muxm_svamod_sv_unit(fast)
+# -- Optimizing module pc(fast)
+# -- Processing module pc(fast) for debug
+# -- Optimizing module muxb(fast)
+# -- Processing module muxb(fast) for debug
+# -- Optimizing module muxd(fast)
+# -- Processing module muxd(fast) for debug
+# -- Optimizing module ir(fast)
+# -- Processing module ir(fast) for debug
+# -- Optimizing module muxm(fast)
+# -- Processing module muxm(fast) for debug
+# -- Optimizing package mycpu_pkg(fast)
+# -- Optimizing module fu_svamod(fast)
+# -- Processing module fu_svamod(fast) for debug
+# -- Optimizing module cu_svamod(fast)
+# -- Processing module cu_svamod(fast) for debug
+# -- Optimizing module rb_svamod(fast)
+# -- Processing module rb_svamod(fast) for debug
+# -- Optimizing module mycpu_svamod(fast)
+# -- Processing module mycpu_svamod(fast) for debug
+# -- Optimizing module pc_svamod(fast)
+# -- Processing module pc_svamod(fast) for debug
+# -- Optimizing module mycpu_tb(fast)
+# -- Processing module mycpu_tb(fast) for debug
+# -- Optimizing program mycpu_test(fast)
+# -- Optimizing module ir_svamod(fast)
+# -- Processing module ir_svamod(fast) for debug
+# -- Optimizing module fu(fast)
+# -- Processing module fu(fast) for debug
+# -- Optimizing module cu(fast)
+# -- Processing module cu(fast) for debug
+# ** Note: (vopt-143) Recognized 1 FSM in module "cu(fast)".
+# -- Optimizing module rb(fast)
+# -- Processing module rb(fast) for debug
+# -- Optimizing module mycpu(fast)
+# -- Processing module mycpu(fast) for debug
+# -- Optimizing module muxm_svamod(fast)
+# -- Processing module muxm_svamod(fast) for debug
+# -- Optimizing module muxb_svamod(fast)
+# -- Processing module muxb_svamod(fast) for debug
+# -- Optimizing module muxd_svamod(fast)
+# -- Processing module muxd_svamod(fast) for debug
+# Optimized design name is mycpu_opt
+# End time: 13:29:47 on Oct 26,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0, Suppressed Warnings: 5
+# vsim -suppress 13314 -work work "+nowarnTSCALE" -t 1ps -msgmode both -debugdb -fsmdebug -assertdebug -coverage mycpu_opt 
+# Start time: 13:29:47 on Oct 26,2026
+# //  Questa Sim-64
+# //  Version 2022.4_1 linux_x86_64 Nov 11 2022
+# //
+# //  Copyright 1991-2022 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.mycpu_pkg(fast)
+# Loading work.mycpu_tb_sv_unit(fast)
+# Loading work.mycpu_tb(fast)
+# Loading work.mycpu_sv_unit(fast)
+# Loading work.mycpu(fast)
+# Loading work.cu_sv_unit(fast)
+# Loading work.cu(fast)
+# Loading work.cu_svamod_sv_unit(fast)
+# Loading work.cu_svamod(fast)
+# Loading work.ir_sv_unit(fast)
+# Loading work.ir(fast)
+# Loading work.ir_svamod_sv_unit(fast)
+# Loading work.ir_svamod(fast)
+# Loading work.pc_sv_unit(fast)
+# Loading work.pc(fast)
+# Loading work.pc_svamod_sv_unit(fast)
+# Loading work.pc_svamod(fast)
+# Loading work.fu_sv_unit(fast)
+# Loading work.fu(fast)
+# Loading work.rb_sv_unit(fast)
+# Loading work.rb(fast)
+# Loading work.rb_svamod_sv_unit(fast)
+# Loading work.rb_svamod(fast)
+# Loading work.muxm_sv_unit(fast)
+# Loading work.muxm(fast)
+# Loading work.muxb_sv_unit(fast)
+# Loading work.muxb(fast)
+# Loading work.muxd_sv_unit(fast)
+# Loading work.muxd(fast)
+# Loading work.muxd_svamod_sv_unit(fast)
+# Loading work.muxd_svamod(fast)
+# Loading work.muxb_svamod_sv_unit(fast)
+# Loading work.muxb_svamod(fast)
+# Loading work.muxm_svamod_sv_unit(fast)
+# Loading work.muxm_svamod(fast)
+# Loading work.fu_svamod_sv_unit(fast)
+# Loading work.fu_svamod(fast)
+# Loading work.mycpu_svamod_sv_unit(fast)
+# Loading work.mycpu_svamod(fast)
+# Loading work.mycpu_test_sv_unit(fast)
+# Loading work.mycpu_test(fast)
+# ** Note: (vsim-8900) Creating design debug database vsim.dbg.
+# wave activecursor not supported in batch mode
+# configure wave not supported in batch mode
+# configure wave not supported in batch mode
+# configure wave not supported in batch mode
+# configure wave not supported in batch mode
+# configure wave not supported in batch mode
+# configure wave not supported in batch mode
+# configure wave not supported in batch mode
+# configure wave not supported in batch mode
+# configure wave not supported in batch mode
+# configure wave not supported in batch mode
+# configure wave not supported in batch mode
+# configure wave not supported in batch mode
+# configure wave not supported in batch mode
+# wave zoomfull not supported in batch mode
+# -------------------------------------------------------------------------------
+# SIMULATION START 10/26/2026:13:29:48 alehtoah24
+# -------------------------------------------------------------------------------
+# ** Info: T1: RESET
+#    Time: 0 ps  Scope: mycpu_tb.TEST.test_program File: input/mycpu_test.sv Line: 61
+# Info: Code size =           2 instructions
+# ** Info: T2: PROGRAM EXECUTION
+#    Time: 20 ns  Scope: mycpu_tb.TEST.test_program File: input/mycpu_test.sv Line: 88
+# ** Note: $finish    : input/mycpu_tb.sv(171)
+#    Time: 80 ns  Iteration: 1  Region: /mycpu_tb/REPORTER
+# Break in VlGenerateBlock REPORTER at input/mycpu_tb.sv line 171
+# Stopped at input/mycpu_tb.sv line 171
+# 0
+# -------------------------------------------------------------------------------
+# SIMULATION END (0 assertions failed)
+# -------------------------------------------------------------------------------
+# wave zoomfull not supported in batch mode
+# End time: 13:29:48 on Oct 26,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0

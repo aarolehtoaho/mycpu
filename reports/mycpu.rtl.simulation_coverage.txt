@@ -1,0 +1,24 @@
+Recursive Coverage Report Summary Data by instance
+
+=================================================================================
+=== Instance: /mycpu_tb/DUT
+=== Design Unit: work.mycpu
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Assertions                     101       100         1    99.00%
+    Branches                        89        84         5    94.38%
+    Conditions                       7         4         3    57.14%
+    Covergroups                      3        na        na    75.00%
+        Coverpoints/Crosses          5        na        na        na
+            Covergroup Bins         88        64        24    72.72%
+    Directives                      13        12         1    92.30%
+    Expressions                      1         1         0   100.00%
+    FSM States                       4         4         0   100.00%
+    FSM Transitions                  7         4         3    57.14%
+    Statements                     121       117         4    96.69%
+    Toggles                       5418      2680      2738    49.46%
+
+
+Total Coverage By Instance (filtered view): 82.11%
+

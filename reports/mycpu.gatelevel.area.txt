@@ -1,0 +1,51 @@
+ 
+****************************************
+Report : area
+Design : mycpu
+Version: T-2022.03-SP5-1
+Date   : Tue Oct 27 14:41:44 2026
+****************************************
+
+Library(s) Used:
+
+    saed32hvt_tt1p05v25c (File: /research/cas/public/DT2_2026/lib/logic_lib/saed32hvt_tt1p05v25c.db)
+
+Number of ports:                          482
+Number of nets:                          3188
+Number of cells:                         2612
+Number of combinational cells:           2440
+Number of sequential cells:               163
+Number of macros/black boxes:               0
+Number of buf/inv:                        372
+Number of references:                      11
+
+Combinational area:               5902.240245
+Buf/Inv area:                      532.939975
+Noncombinational area:            1162.962965
+Macro/Black Box area:                0.000000
+Net Interconnect area:            1484.378661
+
+Total cell area:                  7065.203210
+Total area:                       8549.581871
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area          Local cell area
+                                  ------------------  ---------------------------- 
+Hierarchical cell                 Absolute   Percent  Combi-     Noncombi-  Black-
+                                  Total      Total    national   national   boxes   Design
+--------------------------------  ---------  -------  ---------  ---------  ------  ---------
+mycpu                             7065.2032    100.0    27.4476     0.0000  0.0000  mycpu
+CU                                 176.1218      2.5   154.7737    21.3481  0.0000  cu
+FU                                3846.4694     54.4  3846.4694     0.0000  0.0000  fu
+IR                                 195.9450      2.8    79.0388   116.9062  0.0000  ir
+MUXB                                50.0664      0.7    50.0664     0.0000  0.0000  muxb
+MUXD                                90.4753      1.3    90.4753     0.0000  0.0000  muxd_N3
+MUXM                                43.9669      0.6    43.9669     0.0000  0.0000  muxm
+PC                                 548.6969      7.8   434.8404   113.8565  0.0000  pc
+RB                                2086.0140     29.5  1175.1619   910.8521  0.0000  rb
+--------------------------------  ---------  -------  ---------  ---------  ------  ---------
+Total                                                 5902.2402  1162.9630  0.0000
+
+1

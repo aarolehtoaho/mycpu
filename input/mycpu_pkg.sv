@@ -5,7 +5,7 @@ package mycpu_pkg;
    localparam real CLK_PERIOD = 10.0;
 
    // To do:  Define the last 4 digits of your student number
-   localparam int  unsigned mynumber[4] = { 4, 3, 9, 5 };
+   localparam int  unsigned mynumber[4] = { 7, 3, 9, 5 };
    
 `endif
    

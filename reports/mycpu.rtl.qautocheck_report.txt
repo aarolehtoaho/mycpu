@@ -1,0 +1,342 @@
+
+AutoCheck Compile Summary
+-------------------------------------------------------------------------------
+Check                     Evaluations         Found        Waived
+-------------------------------------------------------------------------------
+ASSIGN_IMPLICIT_CONSTANT           36             0             0
+CASE_DUPLICATE                      6             0             0
+CLK_DELAY                           5             0             0
+CLK_IN_DATA                        76             0             0
+COMBO_LOOP                         52             0             0
+DECLARATION_UNDRIVEN               22             0             0
+DECLARATION_UNUSED                 22             0             0
+DECLARATION_UNUSED_UNDRIVEN         0             0             0
+FUNCTION_INCOMPLETE_ASSIGN          0             0             0
+INDEX_UNREACHABLE                 256             0             0
+LATCH_INFERRED                     24             0             0
+LOGIC_UNDRIVEN                     22             0             0
+LOGIC_UNUSED                       16             0             0
+PORT_UNDRIVEN                      54             0             0
+PORT_UNUSED                        54             0             0
+REG_MIXED_ASSIGNS                  43             0             0
+REG_NO_RESET                       19             0             0
+REG_RACE                            0             0             0
+REG_VARIABLE_ARESET                38             0             0
+RESET_HIGH_LOW                      1             0             0
+RESET_SYNC_ASYNC                    1             0             0
+SLIST_INCOMPLETE                   24             0             0
+X_ASSIGN_REACHABLE                  0             0             0
+-------------------------------------------------------------------------------
+AC Total                          771             0             0
+-------------------------------------------------------------------------------
+
+
+AutoCheck Verify Summary
+-------------------------------------------------------------------------------
+Check                     Evaluations         Found        Waived
+-------------------------------------------------------------------------------
+ARITH_OVERFLOW_SUB                  1             0             0
+ARITH_OVERFLOW_VAL                  8             6             0
+ARITH_ZERO_DIV                      0             0             0
+ARITH_ZERO_MOD                      0             0             0
+BLOCK_UNREACHABLE                  64             4             0
+BUS_MULTIPLY_DRIVEN                 0             0             0
+BUS_UNDRIVEN                        0             0             0
+BUS_VALUE_CONFLICT                  0             0             0
+CASE_DEFAULT                        3             1             0
+CASE_FULL                           0             0             0
+CASE_PARALLEL                       0             0             0
+FSM_DEADLOCK_STATE                  4             1             0
+FSM_LOCKOUT_STATE                   4             0             0
+FSM_STUCK_BIT                       6             3             0
+FSM_UNREACHABLE_STATE               4             0             0
+FSM_UNREACHABLE_TRANS               5             0             0
+INDEX_ILLEGAL                       7             0             0
+INIT_X_OPTIMISM                     5             0             0
+INIT_X_PESSIMISM                    0             0             0
+INIT_X_UNRESOLVED                   0             0             0
+INIT_X_UNRESOLVED_MEM               0             0             0
+ONE_COLD                            0             0             0
+ONE_HOT                             0             0             0
+REG_MULTIPLY_DRIVEN                 0             0             0
+REG_STUCK_AT                       18             8             0
+REG_TOGGLE_VIOLATION                0             0             0
+-------------------------------------------------------------------------------
+AC Total                          129            23             0
+-------------------------------------------------------------------------------
+
+
+-----------------------------------------------------------
+AutoCheck Details
+-----------------------------------------------------------
+
+Type      : ARITH_OVERFLOW_VAL
+Severity  : Caution
+Status    : Uninspected
+Module    : fu
+Name      : alu
+Instance  : FU
+Location  : /homedir01/alehtoah24/DT2_2026/project/workdir/input/fu.sv:28
+Assignment Width: 16
+Waveform Distance: 4
+
+Type      : ARITH_OVERFLOW_VAL
+Severity  : Caution
+Status    : Uninspected
+Module    : fu
+Name      : alu
+Instance  : FU
+Location  : /homedir01/alehtoah24/DT2_2026/project/workdir/input/fu.sv:29
+Assignment Width: 16
+Waveform Distance: 4
+
+Type      : ARITH_OVERFLOW_VAL
+Severity  : Caution
+Status    : Uninspected
+Module    : fu
+Name      : alu
+Instance  : FU
+Location  : /homedir01/alehtoah24/DT2_2026/project/workdir/input/fu.sv:31
+Assignment Width: 16
+Waveform Distance: 4
+
+Type      : ARITH_OVERFLOW_VAL
+Severity  : Caution
+Status    : Uninspected
+Module    : fu
+Name      : alu
+Instance  : FU
+Location  : /homedir01/alehtoah24/DT2_2026/project/workdir/input/fu.sv:32
+Assignment Width: 16
+Waveform Distance: 3
+
+Type      : ARITH_OVERFLOW_VAL
+Severity  : Caution
+Status    : Uninspected
+Module    : pc
+Name      : pc_r
+Instance  : PC
+Location  : /homedir01/alehtoah24/DT2_2026/project/workdir/input/pc.sv:29
+Assignment Width: 16
+Waveform Distance: 5
+
+Type      : ARITH_OVERFLOW_VAL
+Severity  : Caution
+Status    : Uninspected
+Module    : pc
+Name      : pc_r
+Instance  : PC
+Location  : /homedir01/alehtoah24/DT2_2026/project/workdir/input/pc.sv:30
+Assignment Width: 16
+Waveform Distance: 5
+
+Type      : BLOCK_UNREACHABLE
+Severity  : Caution
+Status    : Uninspected
+Module    : muxd
+Location  : /homedir01/alehtoah24/DT2_2026/project/workdir/input/muxd.sv:16
+
+Type      : BLOCK_UNREACHABLE
+Severity  : Caution
+Status    : Uninspected
+Module    : rb
+Location  : /homedir01/alehtoah24/DT2_2026/project/workdir/input/rb.sv:32
+
+Type      : BLOCK_UNREACHABLE
+Severity  : Caution
+Status    : Uninspected
+Module    : rb
+Location  : /homedir01/alehtoah24/DT2_2026/project/workdir/input/rb.sv:43
+
+Type      : BLOCK_UNREACHABLE
+Severity  : Caution
+Status    : Uninspected
+Module    : rb
+Location  : /homedir01/alehtoah24/DT2_2026/project/workdir/input/rb.sv:52
+
+Type      : CASE_DEFAULT
+Severity  : Violation
+Status    : Uninspected
+Module    : cu
+Case Control: opcode
+Instance  : CU
+Location  : /homedir01/alehtoah24/DT2_2026/project/workdir/input/cu.sv:118
+Waveform Distance: 3
+
+Type      : FSM_DEADLOCK_STATE
+Severity  : Caution
+Status    : Uninspected
+Module    : cu
+Instance  : CU
+FSM       : st_r
+Deadend State: HLT
+Location  : /homedir01/alehtoah24/DT2_2026/project/workdir/input/cu.sv:121
+Waveform Distance: 4
+
+Type      : FSM_STUCK_BIT
+Severity  : Caution
+Status    : Uninspected
+Module    : cu
+Instance  : CU
+FSM       : st_r[3]
+Value     : 1'b0
+Location  : /homedir01/alehtoah24/DT2_2026/project/workdir/input/cu.sv:40
+
+Type      : FSM_STUCK_BIT
+Severity  : Caution
+Status    : Uninspected
+Module    : cu
+Instance  : CU
+FSM       : st_r[4]
+Value     : 1'b0
+Location  : /homedir01/alehtoah24/DT2_2026/project/workdir/input/cu.sv:40
+
+Type      : FSM_STUCK_BIT
+Severity  : Caution
+Status    : Uninspected
+Module    : cu
+Instance  : CU
+FSM       : st_r[5]
+Value     : 1'b0
+Location  : /homedir01/alehtoah24/DT2_2026/project/workdir/input/cu.sv:40
+
+Type      : REG_STUCK_AT
+Severity  : Caution
+Status    : Uninspected
+Module    : rb
+Signal    : hb_r[0]
+Instance  : RB
+Value     : 16'b0000000000000000
+Location  : /homedir01/alehtoah24/DT2_2026/project/workdir/input/rb.sv:17
+
+Type      : REG_STUCK_AT
+Severity  : Caution
+Status    : Uninspected
+Module    : rb
+Signal    : hb_r[1]
+Instance  : RB
+Value     : 16'b0000000000000000
+Location  : /homedir01/alehtoah24/DT2_2026/project/workdir/input/rb.sv:17
+
+Type      : REG_STUCK_AT
+Severity  : Caution
+Status    : Uninspected
+Module    : rb
+Signal    : hb_r[2]
+Instance  : RB
+Value     : 16'b0000000000000000
+Location  : /homedir01/alehtoah24/DT2_2026/project/workdir/input/rb.sv:17
+
+Type      : REG_STUCK_AT
+Severity  : Caution
+Status    : Uninspected
+Module    : rb
+Signal    : hb_r[3]
+Instance  : RB
+Value     : 16'b0000000000000000
+Location  : /homedir01/alehtoah24/DT2_2026/project/workdir/input/rb.sv:17
+
+Type      : REG_STUCK_AT
+Severity  : Caution
+Status    : Uninspected
+Module    : rb
+Signal    : hb_r[4]
+Instance  : RB
+Value     : 16'b0000000000000000
+Location  : /homedir01/alehtoah24/DT2_2026/project/workdir/input/rb.sv:17
+
+Type      : REG_STUCK_AT
+Severity  : Caution
+Status    : Uninspected
+Module    : rb
+Signal    : hb_r[5]
+Instance  : RB
+Value     : 16'b0000000000000000
+Location  : /homedir01/alehtoah24/DT2_2026/project/workdir/input/rb.sv:17
+
+Type      : REG_STUCK_AT
+Severity  : Caution
+Status    : Uninspected
+Module    : rb
+Signal    : hb_r[6]
+Instance  : RB
+Value     : 16'b0000000000000000
+Location  : /homedir01/alehtoah24/DT2_2026/project/workdir/input/rb.sv:17
+
+Type      : REG_STUCK_AT
+Severity  : Caution
+Status    : Uninspected
+Module    : rb
+Signal    : hb_r[7]
+Instance  : RB
+Value     : 16'b0000000000000000
+Location  : /homedir01/alehtoah24/DT2_2026/project/workdir/input/rb.sv:17
+
+-----------------------------------------------------------
+
+-------------------------------------------------------------------------------
+CPU Time per Check Type
+-------------------------------------------------------------------------------
+ %   Seconds    Check
+-------------------------------------------------------------------------------
+ 0.0%      0    ARITH_OVERFLOW_SUB
+ 0.0%      0    ARITH_OVERFLOW_VAL
+ 0.0%      0    ARITH_ZERO_DIV
+ 0.0%      0    ARITH_ZERO_MOD
+19.4%      2    BLOCK_UNREACHABLE
+ 0.0%      0    BUS_MULTIPLY_DRIVEN
+ 0.0%      0    BUS_UNDRIVEN
+ 0.0%      0    BUS_VALUE_CONFLICT
+ 0.0%      0    CASE_DEFAULT
+ 0.0%      0    CASE_FULL
+ 0.0%      0    CASE_PARALLEL
+17.8%      1    FSM_DEADLOCK_STATE
+62.0%      6    FSM_LOCKOUT_STATE
+ 0.0%      0    FSM_STUCK_BIT
+ 0.0%      0    FSM_UNREACHABLE_STATE
+ 0.0%      0    FSM_UNREACHABLE_TRANS
+ 0.0%      0    INDEX_ILLEGAL
+ 0.0%      0    INIT_X_OPTIMISM
+ 0.0%      0    INIT_X_PESSIMISM
+ 0.0%      0    INIT_X_UNRESOLVED
+ 0.0%      0    INIT_X_UNRESOLVED_MEM
+ 0.0%      0    ONE_COLD
+ 0.0%      0    ONE_HOT
+ 0.0%      0    REG_MULTIPLY_DRIVEN
+ 0.7%      0    REG_STUCK_AT
+ 0.0%      0    REG_TOGGLE_VIOLATION
+-------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------
+Unused autocheck_report Directives
+-------------------------------------------------------------------------------
+<none>
+-------------------------------------------------------------------------------
+
+
+
+----- Detailed Process Statistics -----
+Elapsed Time                       5 s 
+-------- Orchestration Process --------
+------ lehmus-cn9.oulu.fi:825386 ------
+CPU Time                           0 s 
+Peak Memory                      0.3 GB
+---------- Engine Processes -----------
+------ lehmus-cn9.oulu.fi:825410 ------
+CPU Time                           2 s 
+Peak Memory                      0.2 GB
+CPU Utilization                   40 % 
+------ lehmus-cn9.oulu.fi:825412 ------
+CPU Time                           2 s 
+Peak Memory                      0.2 GB
+CPU Utilization                   40 % 
+------ lehmus-cn9.oulu.fi:825414 ------
+CPU Time                           5 s 
+Peak Memory                      0.3 GB
+CPU Utilization                  100 % 
+------ lehmus-cn9.oulu.fi:825422 ------
+CPU Time                           2 s 
+Peak Memory                      0.2 GB
+CPU Utilization                   40 % 
+---------------------------------------
+

@@ -1,0 +1,125 @@
+Warning: There are 10 switching activity information conflicts. (PWR-19)
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: The derived toggle rate value (0.481928) for the clock net 'clk' conflicts with the annotated value (0.200000). Using the annotated value. (PWR-12)
+Warning: Design has unannotated primary inputs. (PWR-414)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : mycpu
+Version: T-2022.03-SP5-1
+Date   : Tue Oct 27 14:41:45 2026
+****************************************
+
+
+Library(s) Used:
+
+    saed32hvt_tt1p05v25c (File: /research/cas/public/DT2_2026/lib/logic_lib/saed32hvt_tt1p05v25c.db)
+
+
+Operating Conditions: tt1p05v25c   Library: saed32hvt_tt1p05v25c
+Wire Load Model Mode: enclosed
+
+Design        Wire Load Model            Library
+------------------------------------------------
+mycpu                  8000              saed32hvt_tt1p05v25c
+cu                     ForQA             saed32hvt_tt1p05v25c
+ir                     ForQA             saed32hvt_tt1p05v25c
+pc                     8000              saed32hvt_tt1p05v25c
+fu                     8000              saed32hvt_tt1p05v25c
+rb                     8000              saed32hvt_tt1p05v25c
+muxm                   ForQA             saed32hvt_tt1p05v25c
+muxb                   ForQA             saed32hvt_tt1p05v25c
+muxd_N3                ForQA             saed32hvt_tt1p05v25c
+
+
+Global Operating Voltage = 1.05 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+Attributes
+----------
+i - Including register clock pin internal power
+
+
+  Cell Internal Power  = 138.4096 uW   (90%)
+  Net Switching Power  =  15.1512 uW   (10%)
+                         ---------
+Total Dynamic Power    = 153.5608 uW  (100%)
+
+Cell Leakage Power     =  22.5200 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network    112.0588            0.0000            0.0000          112.0588  (  63.64%)  i
+register           2.1575            0.7457        5.9246e+06            8.8279  (   5.01%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational     24.1933           14.4054        1.6595e+07           55.1941  (  31.35%)
+--------------------------------------------------------------------------------------------------
+Total            138.4096 uW        15.1512 uW     2.2520e+07 pW       176.0807 uW
+1
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort low
+Design : mycpu
+Version: T-2022.03-SP5-1
+Date   : Tue Oct 27 14:41:45 2026
+****************************************
+
+
+Library(s) Used:
+
+    saed32hvt_tt1p05v25c (File: /research/cas/public/DT2_2026/lib/logic_lib/saed32hvt_tt1p05v25c.db)
+
+
+Operating Conditions: tt1p05v25c   Library: saed32hvt_tt1p05v25c
+Wire Load Model Mode: enclosed
+
+Design        Wire Load Model            Library
+------------------------------------------------
+mycpu                  8000              saed32hvt_tt1p05v25c
+cu                     ForQA             saed32hvt_tt1p05v25c
+ir                     ForQA             saed32hvt_tt1p05v25c
+pc                     8000              saed32hvt_tt1p05v25c
+fu                     8000              saed32hvt_tt1p05v25c
+rb                     8000              saed32hvt_tt1p05v25c
+muxm                   ForQA             saed32hvt_tt1p05v25c
+muxb                   ForQA             saed32hvt_tt1p05v25c
+muxd_N3                ForQA             saed32hvt_tt1p05v25c
+
+
+Global Operating Voltage = 1.05 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+mycpu                                    15.151  138.410 2.25e+07  176.081 100.0
+  MUXD (muxd_N3)                          1.829    1.042 3.14e+05    3.186   1.8
+  MUXB (muxb)                             0.735    0.429 4.01e+05    1.564   0.9
+  MUXM (muxm)                             0.540    0.778 1.55e+05    1.473   0.8
+  RB (rb)                                 1.478   89.094 7.87e+06   98.439  55.9
+  FU (fu)                                 7.130   17.127 1.06e+07   34.864  19.8
+  PC (pc)                                 0.659   12.274 1.69e+06   14.624   8.3
+  IR (ir)                                 1.102   13.510 8.00e+05   15.411   8.8
+  CU (cu)                                 1.329    3.951 5.39e+05    5.819   3.3
+1

@@ -1,0 +1,523 @@
+Coverage Report by instance with details
+
+=================================================================================
+=== Instance: /mycpu_tb/DUT/CU/SVA_cu
+=== Design Unit: work.cu_svamod
+=================================================================================
+
+Assertion Coverage:
+    Assertions                      20        19         1    95.00%
+--------------------------------------------------------------------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass     Vacuous    Disable    Attempt     Active Peak Active ATV
+                                                  Count        Count    Count      Count      Count       Count  Count          
+--------------------------------------------------------------------------------------------------------------------------------
+/mycpu_tb/DUT/CU/SVA_cu/X_ins_in
+                     input/cu_svamod.sv(25)             0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/CU/SVA_cu/X_nz_in
+                     input/cu_svamod.sv(26)             0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/CU/SVA_cu/X_il_out
+                     input/cu_svamod.sv(27)             0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/CU/SVA_cu/X_ps_out
+                     input/cu_svamod.sv(28)             0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/CU/SVA_cu/X_rw_out
+                     input/cu_svamod.sv(29)             0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/CU/SVA_cu/X_rs_out
+                     input/cu_svamod.sv(30)             0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/CU/SVA_cu/X_mx_out
+                     input/cu_svamod.sv(31)             0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/CU/SVA_cu/X_fs_out
+                     input/cu_svamod.sv(32)             0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/CU/SVA_cu/X_wen_out
+                     input/cu_svamod.sv(33)             0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/CU/SVA_cu/X_iom_out
+                     input/cu_svamod.sv(34)             0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/CU/SVA_cu/X_st_r
+                     input/cu_svamod.sv(35)             0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/CU/SVA_cu/X_ns
+                     input/cu_svamod.sv(36)             0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/CU/SVA_cu/R_st_r
+                     input/cu_svamod.sv(37)             0          1          0          0          1          0           1 off
+/mycpu_tb/DUT/CU/SVA_cu/af_il_fall
+                     input/cu_svamod.sv(48)             0        424        426          2        852          0           1 off
+/mycpu_tb/DUT/CU/SVA_cu/af_il_rise
+                     input/cu_svamod.sv(57)             0        418        432          2        852          0           2 off
+/mycpu_tb/DUT/CU/SVA_cu/ar_start
+                     input/cu_svamod.sv(69)             0          1        849          2        852          0           1 off
+/mycpu_tb/DUT/CU/SVA_cu/ar_tofetch
+                     input/cu_svamod.sv(77)             0        424        426          2        852          0           1 off
+/mycpu_tb/DUT/CU/SVA_cu/ar_toinf
+                     input/cu_svamod.sv(86)             0        422        428          2        852          0           1 off
+/mycpu_tb/DUT/CU/SVA_cu/ar_tohlt
+                     input/cu_svamod.sv(95)             0          1        849          2        852          0           1 off
+/mycpu_tb/DUT/CU/SVA_cu/ar_hlt
+                     input/cu_svamod.sv(103)            0          0        849          2        852          1           1 off
+
+=================================================================================
+=== Instance: /mycpu_tb/DUT/IR/SVA_ir
+=== Design Unit: work.ir_svamod
+=================================================================================
+
+Assertion Coverage:
+    Assertions                       7         7         0   100.00%
+--------------------------------------------------------------------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass     Vacuous    Disable    Attempt     Active Peak Active ATV
+                                                  Count        Count    Count      Count      Count       Count  Count          
+--------------------------------------------------------------------------------------------------------------------------------
+/mycpu_tb/DUT/IR/SVA_ir/X_il_in
+                     input/ir_svamod.sv(17)             0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/IR/SVA_ir/X_ins_in
+                     input/ir_svamod.sv(18)             0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/IR/SVA_ir/X_ins_out
+                     input/ir_svamod.sv(19)             0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/IR/SVA_ir/X_ir_r
+                     input/ir_svamod.sv(20)             0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/IR/SVA_ir/R_ir_r
+                     input/ir_svamod.sv(21)             0          1          0          0          1          0           1 off
+/mycpu_tb/DUT/IR/SVA_ir/af_ins_load
+                     input/ir_svamod.sv(30)             0        424        426          2        852          0           1 off
+/mycpu_tb/DUT/IR/SVA_ir/af_ins_hold
+                     input/ir_svamod.sv(38)             0        425        424          2        852          1           2 off
+
+=================================================================================
+=== Instance: /mycpu_tb/DUT/PC/SVA_pc
+=== Design Unit: work.pc_svamod
+=================================================================================
+
+Assertion Coverage:
+    Assertions                      10        10         0   100.00%
+--------------------------------------------------------------------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass     Vacuous    Disable    Attempt     Active Peak Active ATV
+                                                  Count        Count    Count      Count      Count       Count  Count          
+--------------------------------------------------------------------------------------------------------------------------------
+/mycpu_tb/DUT/PC/SVA_pc/X_ps_in
+                     input/pc_svamod.sv(18)             0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/PC/SVA_pc/X_ins_in
+                     input/pc_svamod.sv(19)             0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/PC/SVA_pc/X_ra_in
+                     input/pc_svamod.sv(20)             0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/PC/SVA_pc/X_pc_out
+                     input/pc_svamod.sv(21)             0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/PC/SVA_pc/X_pc_r
+                     input/pc_svamod.sv(22)             0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/PC/SVA_pc/R_pc_r
+                     input/pc_svamod.sv(23)             0          1          0          0          1          0           1 off
+/mycpu_tb/DUT/PC/SVA_pc/af_pc_nop
+                     input/pc_svamod.sv(32)             0        426        423          2        852          1           2 off
+/mycpu_tb/DUT/PC/SVA_pc/af_pc_inc
+                     input/pc_svamod.sv(40)             0        420        430          2        852          0           1 off
+/mycpu_tb/DUT/PC/SVA_pc/af_pc_bra
+                     input/pc_svamod.sv(48)             0          2        848          2        852          0           1 off
+/mycpu_tb/DUT/PC/SVA_pc/af_pc_jmp
+                     input/pc_svamod.sv(56)             0          1        849          2        852          0           1 off
+
+=================================================================================
+=== Instance: /mycpu_tb/DUT/RB/SVA_rb
+=== Design Unit: work.rb_svamod
+=================================================================================
+
+Assertion Coverage:
+    Assertions                       9         9         0   100.00%
+--------------------------------------------------------------------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass     Vacuous    Disable    Attempt     Active Peak Active ATV
+                                                  Count        Count    Count      Count      Count       Count  Count          
+--------------------------------------------------------------------------------------------------------------------------------
+/mycpu_tb/DUT/RB/SVA_rb/X_d_in
+                     input/rb_svamod.sv(21)             0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/RB/SVA_rb/X_rw_in
+                     input/rb_svamod.sv(22)             0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/RB/SVA_rb/X_rs_in
+                     input/rb_svamod.sv(23)             0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/RB/SVA_rb/X_a_out
+                     input/rb_svamod.sv(24)             0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/RB/SVA_rb/X_b_out
+                     input/rb_svamod.sv(25)             0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/RB/SVA_rb/X_rb_r
+                     input/rb_svamod.sv(26)             0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/RB/SVA_rb/X_hb_r
+                     input/rb_svamod.sv(27)             0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/RB/SVA_rb/R_rb_r
+                     input/rb_svamod.sv(28)             0          1          0          0          1          0           1 off
+/mycpu_tb/DUT/RB/SVA_rb/R_hb_r
+                     input/rb_svamod.sv(29)             0          1          0          0          1          0           1 off
+
+=================================================================================
+=== Instance: /mycpu_tb/DUT/SVA_MUXD
+=== Design Unit: work.muxd_svamod
+=================================================================================
+
+Assertion Coverage:
+    Assertions                       3         3         0   100.00%
+--------------------------------------------------------------------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass     Vacuous    Disable    Attempt     Active Peak Active ATV
+                                                  Count        Count    Count      Count      Count       Count  Count          
+--------------------------------------------------------------------------------------------------------------------------------
+/mycpu_tb/DUT/SVA_MUXD/X_sel_in
+                     input/muxd_svamod.sv(17)           0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/SVA_MUXD/X_d_in
+                     input/muxd_svamod.sv(18)           0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/SVA_MUXD/X_m_out
+                     input/muxd_svamod.sv(19)           0        850          0          2        852          0           1 off
+
+=================================================================================
+=== Instance: /mycpu_tb/DUT/SVA_MUXB
+=== Design Unit: work.muxb_svamod
+=================================================================================
+
+Assertion Coverage:
+    Assertions                       4         4         0   100.00%
+--------------------------------------------------------------------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass     Vacuous    Disable    Attempt     Active Peak Active ATV
+                                                  Count        Count    Count      Count      Count       Count  Count          
+--------------------------------------------------------------------------------------------------------------------------------
+/mycpu_tb/DUT/SVA_MUXB/X_sel_in
+                     input/muxb_svamod.sv(17)           0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/SVA_MUXB/X_d0_in
+                     input/muxb_svamod.sv(18)           0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/SVA_MUXB/X_d1_in
+                     input/muxb_svamod.sv(19)           0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/SVA_MUXB/X_m_out
+                     input/muxb_svamod.sv(20)           0        850          0          2        852          0           1 off
+
+=================================================================================
+=== Instance: /mycpu_tb/DUT/SVA_MUXM
+=== Design Unit: work.muxm_svamod
+=================================================================================
+
+Assertion Coverage:
+    Assertions                       4         4         0   100.00%
+--------------------------------------------------------------------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass     Vacuous    Disable    Attempt     Active Peak Active ATV
+                                                  Count        Count    Count      Count      Count       Count  Count          
+--------------------------------------------------------------------------------------------------------------------------------
+/mycpu_tb/DUT/SVA_MUXM/X_sel_in
+                     input/muxm_svamod.sv(17)           0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/SVA_MUXM/X_d0_in
+                     input/muxm_svamod.sv(18)           0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/SVA_MUXM/X_d1_in
+                     input/muxm_svamod.sv(19)           0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/SVA_MUXM/X_m_out
+                     input/muxm_svamod.sv(20)           0        850          0          2        852          0           1 off
+
+=================================================================================
+=== Instance: /mycpu_tb/DUT/SVA_FU
+=== Design Unit: work.fu_svamod
+=================================================================================
+
+Assertion Coverage:
+    Assertions                      24        24         0   100.00%
+--------------------------------------------------------------------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass     Vacuous    Disable    Attempt     Active Peak Active ATV
+                                                  Count        Count    Count      Count      Count       Count  Count          
+--------------------------------------------------------------------------------------------------------------------------------
+/mycpu_tb/DUT/SVA_FU/X_a_in
+                     input/fu_svamod.sv(18)             0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/SVA_FU/X_b_in
+                     input/fu_svamod.sv(19)             0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/SVA_FU/X_fs_in
+                     input/fu_svamod.sv(20)             0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/SVA_FU/X_f_out
+                     input/fu_svamod.sv(21)             0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/SVA_FU/X_nz_out
+                     input/fu_svamod.sv(22)             0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/SVA_FU/af_fu_mova
+                     input/fu_svamod.sv(127)            0         32        818          2        852          0           1 off
+/mycpu_tb/DUT/SVA_FU/af_fu_inc
+                     input/fu_svamod.sv(128)            0        240        610          2        852          0           1 off
+/mycpu_tb/DUT/SVA_FU/af_fu_add
+                     input/fu_svamod.sv(129)            0         28        822          2        852          0           1 off
+/mycpu_tb/DUT/SVA_FU/af_fu_mul
+                     input/fu_svamod.sv(130)            0         20        832          0        852          0           1 off
+/mycpu_tb/DUT/SVA_FU/af_fu_sra
+                     input/fu_svamod.sv(131)            0          2        848          2        852          0           1 off
+/mycpu_tb/DUT/SVA_FU/af_fu_sub
+                     input/fu_svamod.sv(132)            0         16        834          2        852          0           1 off
+/mycpu_tb/DUT/SVA_FU/af_fu_dec
+                     input/fu_svamod.sv(133)            0         16        834          2        852          0           1 off
+/mycpu_tb/DUT/SVA_FU/af_fu_sla
+                     input/fu_svamod.sv(134)            0          2        848          2        852          0           1 off
+/mycpu_tb/DUT/SVA_FU/af_fu_and
+                     input/fu_svamod.sv(135)            0          4        846          2        852          0           1 off
+/mycpu_tb/DUT/SVA_FU/af_fu_or
+                     input/fu_svamod.sv(136)            0          4        846          2        852          0           1 off
+/mycpu_tb/DUT/SVA_FU/af_fu_xor
+                     input/fu_svamod.sv(137)            0         12        838          2        852          0           1 off
+/mycpu_tb/DUT/SVA_FU/af_fu_not
+                     input/fu_svamod.sv(138)            0         22        828          2        852          0           1 off
+/mycpu_tb/DUT/SVA_FU/af_fu_movb
+                     input/fu_svamod.sv(139)            0        436        414          2        852          0           1 off
+/mycpu_tb/DUT/SVA_FU/af_fu_shr
+                     input/fu_svamod.sv(140)            0          6        844          2        852          0           1 off
+/mycpu_tb/DUT/SVA_FU/af_fu_shl
+                     input/fu_svamod.sv(141)            0          6        844          2        852          0           1 off
+/mycpu_tb/DUT/SVA_FU/af_fu_n_unset
+                     input/fu_svamod.sv(142)            0        813         37          2        852          0           1 off
+/mycpu_tb/DUT/SVA_FU/af_fu_n_set
+                     input/fu_svamod.sv(143)            0         37        813          2        852          0           1 off
+/mycpu_tb/DUT/SVA_FU/af_fu_z_unset
+                     input/fu_svamod.sv(144)            0        431        419          2        852          0           1 off
+/mycpu_tb/DUT/SVA_FU/af_fu_z_set
+                     input/fu_svamod.sv(145)            0        419        431          2        852          0           1 off
+
+=================================================================================
+=== Instance: /mycpu_tb/DUT/SVA_mycpu
+=== Design Unit: work.mycpu_svamod
+=================================================================================
+
+Assertion Coverage:
+    Assertions                      20        20         0   100.00%
+--------------------------------------------------------------------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass     Vacuous    Disable    Attempt     Active Peak Active ATV
+                                                  Count        Count    Count      Count      Count       Count  Count          
+--------------------------------------------------------------------------------------------------------------------------------
+/mycpu_tb/DUT/SVA_mycpu/X_a_out
+                     input/mycpu_svamod.sv(34)          0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/SVA_mycpu/X_d_in
+                     input/mycpu_svamod.sv(35)          0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/SVA_mycpu/X_d_out
+                     input/mycpu_svamod.sv(36)          0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/SVA_mycpu/X_io_in
+                     input/mycpu_svamod.sv(37)          0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/SVA_mycpu/X_wen_out
+                     input/mycpu_svamod.sv(38)          0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/SVA_mycpu/X_iom_out
+                     input/mycpu_svamod.sv(39)          0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/SVA_mycpu/X_ps
+                     input/mycpu_svamod.sv(40)          0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/SVA_mycpu/X_il
+                     input/mycpu_svamod.sv(41)          0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/SVA_mycpu/X_mx
+                     input/mycpu_svamod.sv(42)          0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/SVA_mycpu/X_rw
+                     input/mycpu_svamod.sv(43)          0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/SVA_mycpu/X_rs
+                     input/mycpu_svamod.sv(44)          0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/SVA_mycpu/X_fs
+                     input/mycpu_svamod.sv(45)          0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/SVA_mycpu/X_pca
+                     input/mycpu_svamod.sv(46)          0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/SVA_mycpu/X_ins
+                     input/mycpu_svamod.sv(47)          0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/SVA_mycpu/X_abus
+                     input/mycpu_svamod.sv(48)          0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/SVA_mycpu/X_bdat
+                     input/mycpu_svamod.sv(49)          0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/SVA_mycpu/X_fbus
+                     input/mycpu_svamod.sv(50)          0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/SVA_mycpu/X_nz
+                     input/mycpu_svamod.sv(51)          0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/SVA_mycpu/X_dbus
+                     input/mycpu_svamod.sv(52)          0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/SVA_mycpu/X_bbus
+                     input/mycpu_svamod.sv(53)          0        850          0          2        852          0           1 off
+
+
+ASSERTION RESULTS:
+--------------------------------------------------------------------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass     Vacuous    Disable    Attempt     Active Peak Active ATV
+                                                  Count        Count    Count      Count      Count       Count  Count          
+--------------------------------------------------------------------------------------------------------------------------------
+/mycpu_tb/DUT/CU/SVA_cu/X_ins_in
+                     input/cu_svamod.sv(25)             0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/CU/SVA_cu/X_nz_in
+                     input/cu_svamod.sv(26)             0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/CU/SVA_cu/X_il_out
+                     input/cu_svamod.sv(27)             0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/CU/SVA_cu/X_ps_out
+                     input/cu_svamod.sv(28)             0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/CU/SVA_cu/X_rw_out
+                     input/cu_svamod.sv(29)             0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/CU/SVA_cu/X_rs_out
+                     input/cu_svamod.sv(30)             0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/CU/SVA_cu/X_mx_out
+                     input/cu_svamod.sv(31)             0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/CU/SVA_cu/X_fs_out
+                     input/cu_svamod.sv(32)             0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/CU/SVA_cu/X_wen_out
+                     input/cu_svamod.sv(33)             0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/CU/SVA_cu/X_iom_out
+                     input/cu_svamod.sv(34)             0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/CU/SVA_cu/X_st_r
+                     input/cu_svamod.sv(35)             0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/CU/SVA_cu/X_ns
+                     input/cu_svamod.sv(36)             0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/CU/SVA_cu/R_st_r
+                     input/cu_svamod.sv(37)             0          1          0          0          1          0           1 off
+/mycpu_tb/DUT/CU/SVA_cu/af_il_fall
+                     input/cu_svamod.sv(48)             0        424        426          2        852          0           1 off
+/mycpu_tb/DUT/CU/SVA_cu/af_il_rise
+                     input/cu_svamod.sv(57)             0        418        432          2        852          0           2 off
+/mycpu_tb/DUT/CU/SVA_cu/ar_start
+                     input/cu_svamod.sv(69)             0          1        849          2        852          0           1 off
+/mycpu_tb/DUT/CU/SVA_cu/ar_tofetch
+                     input/cu_svamod.sv(77)             0        424        426          2        852          0           1 off
+/mycpu_tb/DUT/CU/SVA_cu/ar_toinf
+                     input/cu_svamod.sv(86)             0        422        428          2        852          0           1 off
+/mycpu_tb/DUT/CU/SVA_cu/ar_tohlt
+                     input/cu_svamod.sv(95)             0          1        849          2        852          0           1 off
+/mycpu_tb/DUT/CU/SVA_cu/ar_hlt
+                     input/cu_svamod.sv(103)            0          0        849          2        852          1           1 off
+/mycpu_tb/DUT/IR/SVA_ir/X_il_in
+                     input/ir_svamod.sv(17)             0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/IR/SVA_ir/X_ins_in
+                     input/ir_svamod.sv(18)             0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/IR/SVA_ir/X_ins_out
+                     input/ir_svamod.sv(19)             0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/IR/SVA_ir/X_ir_r
+                     input/ir_svamod.sv(20)             0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/IR/SVA_ir/R_ir_r
+                     input/ir_svamod.sv(21)             0          1          0          0          1          0           1 off
+/mycpu_tb/DUT/IR/SVA_ir/af_ins_load
+                     input/ir_svamod.sv(30)             0        424        426          2        852          0           1 off
+/mycpu_tb/DUT/IR/SVA_ir/af_ins_hold
+                     input/ir_svamod.sv(38)             0        425        424          2        852          1           2 off
+/mycpu_tb/DUT/PC/SVA_pc/X_ps_in
+                     input/pc_svamod.sv(18)             0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/PC/SVA_pc/X_ins_in
+                     input/pc_svamod.sv(19)             0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/PC/SVA_pc/X_ra_in
+                     input/pc_svamod.sv(20)             0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/PC/SVA_pc/X_pc_out
+                     input/pc_svamod.sv(21)             0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/PC/SVA_pc/X_pc_r
+                     input/pc_svamod.sv(22)             0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/PC/SVA_pc/R_pc_r
+                     input/pc_svamod.sv(23)             0          1          0          0          1          0           1 off
+/mycpu_tb/DUT/PC/SVA_pc/af_pc_nop
+                     input/pc_svamod.sv(32)             0        426        423          2        852          1           2 off
+/mycpu_tb/DUT/PC/SVA_pc/af_pc_inc
+                     input/pc_svamod.sv(40)             0        420        430          2        852          0           1 off
+/mycpu_tb/DUT/PC/SVA_pc/af_pc_bra
+                     input/pc_svamod.sv(48)             0          2        848          2        852          0           1 off
+/mycpu_tb/DUT/PC/SVA_pc/af_pc_jmp
+                     input/pc_svamod.sv(56)             0          1        849          2        852          0           1 off
+/mycpu_tb/DUT/RB/SVA_rb/X_d_in
+                     input/rb_svamod.sv(21)             0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/RB/SVA_rb/X_rw_in
+                     input/rb_svamod.sv(22)             0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/RB/SVA_rb/X_rs_in
+                     input/rb_svamod.sv(23)             0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/RB/SVA_rb/X_a_out
+                     input/rb_svamod.sv(24)             0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/RB/SVA_rb/X_b_out
+                     input/rb_svamod.sv(25)             0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/RB/SVA_rb/X_rb_r
+                     input/rb_svamod.sv(26)             0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/RB/SVA_rb/X_hb_r
+                     input/rb_svamod.sv(27)             0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/RB/SVA_rb/R_rb_r
+                     input/rb_svamod.sv(28)             0          1          0          0          1          0           1 off
+/mycpu_tb/DUT/RB/SVA_rb/R_hb_r
+                     input/rb_svamod.sv(29)             0          1          0          0          1          0           1 off
+/mycpu_tb/DUT/SVA_MUXD/X_sel_in
+                     input/muxd_svamod.sv(17)           0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/SVA_MUXD/X_d_in
+                     input/muxd_svamod.sv(18)           0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/SVA_MUXD/X_m_out
+                     input/muxd_svamod.sv(19)           0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/SVA_MUXB/X_sel_in
+                     input/muxb_svamod.sv(17)           0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/SVA_MUXB/X_d0_in
+                     input/muxb_svamod.sv(18)           0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/SVA_MUXB/X_d1_in
+                     input/muxb_svamod.sv(19)           0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/SVA_MUXB/X_m_out
+                     input/muxb_svamod.sv(20)           0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/SVA_MUXM/X_sel_in
+                     input/muxm_svamod.sv(17)           0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/SVA_MUXM/X_d0_in
+                     input/muxm_svamod.sv(18)           0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/SVA_MUXM/X_d1_in
+                     input/muxm_svamod.sv(19)           0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/SVA_MUXM/X_m_out
+                     input/muxm_svamod.sv(20)           0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/SVA_FU/X_a_in
+                     input/fu_svamod.sv(18)             0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/SVA_FU/X_b_in
+                     input/fu_svamod.sv(19)             0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/SVA_FU/X_fs_in
+                     input/fu_svamod.sv(20)             0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/SVA_FU/X_f_out
+                     input/fu_svamod.sv(21)             0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/SVA_FU/X_nz_out
+                     input/fu_svamod.sv(22)             0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/SVA_FU/af_fu_mova
+                     input/fu_svamod.sv(127)            0         32        818          2        852          0           1 off
+/mycpu_tb/DUT/SVA_FU/af_fu_inc
+                     input/fu_svamod.sv(128)            0        240        610          2        852          0           1 off
+/mycpu_tb/DUT/SVA_FU/af_fu_add
+                     input/fu_svamod.sv(129)            0         28        822          2        852          0           1 off
+/mycpu_tb/DUT/SVA_FU/af_fu_mul
+                     input/fu_svamod.sv(130)            0         20        832          0        852          0           1 off
+/mycpu_tb/DUT/SVA_FU/af_fu_sra
+                     input/fu_svamod.sv(131)            0          2        848          2        852          0           1 off
+/mycpu_tb/DUT/SVA_FU/af_fu_sub
+                     input/fu_svamod.sv(132)            0         16        834          2        852          0           1 off
+/mycpu_tb/DUT/SVA_FU/af_fu_dec
+                     input/fu_svamod.sv(133)            0         16        834          2        852          0           1 off
+/mycpu_tb/DUT/SVA_FU/af_fu_sla
+                     input/fu_svamod.sv(134)            0          2        848          2        852          0           1 off
+/mycpu_tb/DUT/SVA_FU/af_fu_and
+                     input/fu_svamod.sv(135)            0          4        846          2        852          0           1 off
+/mycpu_tb/DUT/SVA_FU/af_fu_or
+                     input/fu_svamod.sv(136)            0          4        846          2        852          0           1 off
+/mycpu_tb/DUT/SVA_FU/af_fu_xor
+                     input/fu_svamod.sv(137)            0         12        838          2        852          0           1 off
+/mycpu_tb/DUT/SVA_FU/af_fu_not
+                     input/fu_svamod.sv(138)            0         22        828          2        852          0           1 off
+/mycpu_tb/DUT/SVA_FU/af_fu_movb
+                     input/fu_svamod.sv(139)            0        436        414          2        852          0           1 off
+/mycpu_tb/DUT/SVA_FU/af_fu_shr
+                     input/fu_svamod.sv(140)            0          6        844          2        852          0           1 off
+/mycpu_tb/DUT/SVA_FU/af_fu_shl
+                     input/fu_svamod.sv(141)            0          6        844          2        852          0           1 off
+/mycpu_tb/DUT/SVA_FU/af_fu_n_unset
+                     input/fu_svamod.sv(142)            0        813         37          2        852          0           1 off
+/mycpu_tb/DUT/SVA_FU/af_fu_n_set
+                     input/fu_svamod.sv(143)            0         37        813          2        852          0           1 off
+/mycpu_tb/DUT/SVA_FU/af_fu_z_unset
+                     input/fu_svamod.sv(144)            0        431        419          2        852          0           1 off
+/mycpu_tb/DUT/SVA_FU/af_fu_z_set
+                     input/fu_svamod.sv(145)            0        419        431          2        852          0           1 off
+/mycpu_tb/DUT/SVA_mycpu/X_a_out
+                     input/mycpu_svamod.sv(34)          0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/SVA_mycpu/X_d_in
+                     input/mycpu_svamod.sv(35)          0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/SVA_mycpu/X_d_out
+                     input/mycpu_svamod.sv(36)          0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/SVA_mycpu/X_io_in
+                     input/mycpu_svamod.sv(37)          0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/SVA_mycpu/X_wen_out
+                     input/mycpu_svamod.sv(38)          0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/SVA_mycpu/X_iom_out
+                     input/mycpu_svamod.sv(39)          0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/SVA_mycpu/X_ps
+                     input/mycpu_svamod.sv(40)          0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/SVA_mycpu/X_il
+                     input/mycpu_svamod.sv(41)          0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/SVA_mycpu/X_mx
+                     input/mycpu_svamod.sv(42)          0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/SVA_mycpu/X_rw
+                     input/mycpu_svamod.sv(43)          0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/SVA_mycpu/X_rs
+                     input/mycpu_svamod.sv(44)          0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/SVA_mycpu/X_fs
+                     input/mycpu_svamod.sv(45)          0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/SVA_mycpu/X_pca
+                     input/mycpu_svamod.sv(46)          0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/SVA_mycpu/X_ins
+                     input/mycpu_svamod.sv(47)          0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/SVA_mycpu/X_abus
+                     input/mycpu_svamod.sv(48)          0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/SVA_mycpu/X_bdat
+                     input/mycpu_svamod.sv(49)          0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/SVA_mycpu/X_fbus
+                     input/mycpu_svamod.sv(50)          0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/SVA_mycpu/X_nz
+                     input/mycpu_svamod.sv(51)          0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/SVA_mycpu/X_dbus
+                     input/mycpu_svamod.sv(52)          0        850          0          2        852          0           1 off
+/mycpu_tb/DUT/SVA_mycpu/X_bbus
+                     input/mycpu_svamod.sv(53)          0        850          0          2        852          0           1 off
+
+Total Coverage By Instance (filtered view): 99.00%
+

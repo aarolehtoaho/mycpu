@@ -1,0 +1,4416 @@
+##########################################################################################################################
+#
+# SETUP SECTION
+#
+##########################################################################################################################
+remove_design -all
+1
+set REF_LIB_PATH       $env(REF_LIB_PATH)
+/research/cas/public/DT2_2026/lib
+set DC_ALIB_PATH       "${REF_LIB_PATH}/logic_lib/alib-52"
+/research/cas/public/DT2_2026/lib/logic_lib/alib-52
+set search_path        "${REF_LIB_PATH}/logic_lib $search_path"
+/research/cas/public/DT2_2026/lib/logic_lib . /sw/rhel7/synopsys/syn/T-2022.03-SP5-1/libraries/syn /sw/rhel7/synopsys/syn/T-2022.03-SP5-1/dw/syn_ver /sw/rhel7/synopsys/syn/T-2022.03-SP5-1/dw/sim_ver
+set target_library     "saed32hvt_tt1p05v25c.db"
+saed32hvt_tt1p05v25c.db
+set synthetic_library  "dw_foundation.sldb"
+dw_foundation.sldb
+set link_library       "* saed32hvt_tt1p05v25c.db dw_foundation.sldb"
+* saed32hvt_tt1p05v25c.db dw_foundation.sldb
+set_app_var alib_library_analysis_path $DC_ALIB_PATH
+/research/cas/public/DT2_2026/lib/logic_lib/alib-52
+set_app_var hdlin_reporting_level      verbose
+verbose
+saif_map -start
+Information: The SAIF name mapping information database is now active. (PWR-602)
+1
+define_design_lib WORK -path output/synopsys_work
+1
+source input/0_setup_design.tcl 
+input/questa_seq.tcl
+set sh_output_log_file reports/${DESIGN_NAME}.rtl.synthesis_log.txt
+reports/mycpu.rtl.synthesis_log.txt
+suppress_message "VO-4" ;  # Ignore Warning: Verilog 'assign' or 'tran' statements are written out.
+suppress_message "UCN-1" ; # Warning: In the design *, net * is connecting multiple ports. (UCN-1)
+set_svf results/${DESIGN_NAME}.svf
+1
+set user $::env(USER)
+alehtoah24
+set char  [string index $user 0]
+a
+scan $char %c numval
+1
+set derate [expr { 1.0 + ( ($numval-96.0) / 500 ) } ]
+1.002
+echo $derate
+1.002
+##########################################################################################################################
+#
+# DESIGN IMPORT
+#
+##########################################################################################################################
+analyze -library WORK -format sverilog ${COMMON_FILES}
+Running PRESTO HDLC
+Compiling source file ./input/mycpu_pkg.sv
+Presto compilation completed successfully.
+Loading db file '/research/cas/public/DT2_2026/lib/logic_lib/saed32hvt_tt1p05v25c.db'
+Loading db file '/sw/rhel7/synopsys/syn/T-2022.03-SP5-1/libraries/syn/dw_foundation.sldb'
+1
+analyze -library WORK -format sverilog ${RTL_FILES}
+Running PRESTO HDLC
+Compiling source file ./input/fu.sv
+Opening include file ./input/mycpu.svh
+Compiling source file ./input/muxm.sv
+Opening include file ./input/mycpu.svh
+Compiling source file ./input/muxd.sv
+Opening include file ./input/mycpu.svh
+Compiling source file ./input/muxb.sv
+Opening include file ./input/mycpu.svh
+Compiling source file ./input/ir.sv
+Opening include file ./input/mycpu.svh
+Compiling source file ./input/pc.sv
+Opening include file ./input/mycpu.svh
+Compiling source file ./input/rb.sv
+Opening include file ./input/mycpu.svh
+Compiling source file ./input/cu.sv
+Opening include file ./input/mycpu.svh
+Compiling source file ./input/mycpu.sv
+Opening include file ./input/mycpu.svh
+Presto compilation completed successfully.
+1
+elaborate $DESIGN_NAME -library WORK
+Loading db file '/sw/rhel7/synopsys/syn/T-2022.03-SP5-1/libraries/syn/gtech.db'
+Loading db file '/sw/rhel7/synopsys/syn/T-2022.03-SP5-1/libraries/syn/standard.sldb'
+  Loading link library 'saed32hvt_tt1p05v25c'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+
+statistics for FSM inference:
+
+  no finite state machine inferred.
+Presto compilation completed successfully. (mycpu)
+Elaborated 1 design.
+Current design is now 'mycpu'.
+Information: Building the design 'cu'. (HDL-193)
+
+Statistics for case statements in always block at line 27 in file
+        './input/cu.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            40            |    auto/auto     |
+|            59            |    auto/auto     |
+===============================================
+
+statistics for FSM inference:
+  state register: st_r
+  states
+  ======
+  RST:          000000
+  INF:          000001
+  EX0:          000010
+  HLT:          000100
+
+  total number of states: 4
+
+
+Inferred memory devices in process
+        in routine cu line 131 in file
+                './input/cu.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      st_r_reg       | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Sequential Cell (st_r_reg[5])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load: 1
+
+Sequential Cell (st_r_reg[4])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load: 1
+
+Sequential Cell (st_r_reg[3])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load: 1
+
+Sequential Cell (st_r_reg[2])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load: 1
+
+Sequential Cell (st_r_reg[1])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load: 1
+
+Sequential Cell (st_r_reg[0])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load: 1
+Synthetic Cells Summary
+==================================
+|       Cell Type        | Count |
+==================================
+| SELECT_OP_12.1_12.1_12 |   4   |
+| SELECT_OP_12.2_12.2_12 |   2   |
+| SELECT_OP_12.4_12.4_12 |   1   |
+|  SELECT_OP_5.3_5.3_5   |   2   |
+|  SELECT_OP_5.1_5.1_5   |   4   |
+|  SELECT_OP_2.1_2.1_2   |   5   |
+|  SELECT_OP_5.4_5.4_5   |   1   |
+|  SELECT_OP_2.4_2.4_2   |   2   |
+|  SELECT_OP_2.3_2.3_2   |   1   |
+|  SELECT_OP_2.2_2.2_2   |   1   |
+==================================
+Presto compilation completed successfully. (cu)
+Information: Building the design 'ir'. (HDL-193)
+
+statistics for FSM inference:
+
+  no finite state machine inferred.
+
+Inferred memory devices in process
+        in routine ir line 17 in file
+                './input/ir.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      ir_r_reg       | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Sequential Cell (ir_r_reg[15])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load: il_in
+
+Sequential Cell (ir_r_reg[14])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load: il_in
+
+Sequential Cell (ir_r_reg[13])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load: il_in
+
+Sequential Cell (ir_r_reg[12])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load: il_in
+
+Sequential Cell (ir_r_reg[11])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load: il_in
+
+Sequential Cell (ir_r_reg[10])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load: il_in
+
+Sequential Cell (ir_r_reg[9])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load: il_in
+
+Sequential Cell (ir_r_reg[8])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load: il_in
+
+Sequential Cell (ir_r_reg[7])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load: il_in
+
+Sequential Cell (ir_r_reg[6])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load: il_in
+
+Sequential Cell (ir_r_reg[5])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load: il_in
+
+Sequential Cell (ir_r_reg[4])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load: il_in
+
+Sequential Cell (ir_r_reg[3])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load: il_in
+
+Sequential Cell (ir_r_reg[2])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load: il_in
+
+Sequential Cell (ir_r_reg[1])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load: il_in
+
+Sequential Cell (ir_r_reg[0])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load: il_in
+Presto compilation completed successfully. (ir)
+Information: Building the design 'pc'. (HDL-193)
+
+Statistics for case statements in always block at line 21 in file
+        './input/pc.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            27            |    auto/auto     |
+===============================================
+
+statistics for FSM inference:
+
+  no finite state machine inferred.
+
+Inferred memory devices in process
+        in routine pc line 21 in file
+                './input/pc.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      pc_r_reg       | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Sequential Cell (pc_r_reg[15])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load: ps_in[0] + ps_in[1]
+
+Sequential Cell (pc_r_reg[14])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load: ps_in[0] + ps_in[1]
+
+Sequential Cell (pc_r_reg[13])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load: ps_in[0] + ps_in[1]
+
+Sequential Cell (pc_r_reg[12])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load: ps_in[0] + ps_in[1]
+
+Sequential Cell (pc_r_reg[11])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load: ps_in[0] + ps_in[1]
+
+Sequential Cell (pc_r_reg[10])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load: ps_in[0] + ps_in[1]
+
+Sequential Cell (pc_r_reg[9])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load: ps_in[0] + ps_in[1]
+
+Sequential Cell (pc_r_reg[8])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load: ps_in[0] + ps_in[1]
+
+Sequential Cell (pc_r_reg[7])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load: ps_in[0] + ps_in[1]
+
+Sequential Cell (pc_r_reg[6])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load: ps_in[0] + ps_in[1]
+
+Sequential Cell (pc_r_reg[5])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load: ps_in[0] + ps_in[1]
+
+Sequential Cell (pc_r_reg[4])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load: ps_in[0] + ps_in[1]
+
+Sequential Cell (pc_r_reg[3])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load: ps_in[0] + ps_in[1]
+
+Sequential Cell (pc_r_reg[2])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load: ps_in[0] + ps_in[1]
+
+Sequential Cell (pc_r_reg[1])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load: ps_in[0] + ps_in[1]
+
+Sequential Cell (pc_r_reg[0])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load: ps_in[0] + ps_in[1]
+Synthetic Cells Summary
+=================================
+|       Cell Type       | Count |
+=================================
+|  ADD_UNS_OP;16;1;16   |   1   |
+|  ADD_UNS_OP;16;16;16  |   1   |
+| SELECT_OP_3.16_3.16_3 |   1   |
+=================================
+Presto compilation completed successfully. (pc)
+Information: Building the design 'fu'. (HDL-193)
+
+Statistics for case statements in always block at line 19 in file
+        './input/fu.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            26            |    auto/auto     |
+===============================================
+
+statistics for FSM inference:
+
+  no finite state machine inferred.
+Synthetic Cells Summary
+====================================
+|        Cell Type         | Count |
+====================================
+|  ASHR_TC_UNS_OP;16;4;16  |   1   |
+|  ASH_UNS_UNS_OP;16;4;16  |   1   |
+|   MULT_TC_OP;16;16;32    |   1   |
+|     GT_TC_OP;32;16;1     |   1   |
+|     LT_TC_OP;32;16;1     |   1   |
+|    ADD_UNS_OP;16;1;16    |   1   |
+|   ADD_UNS_OP;16;16;16    |   1   |
+|   SUB_UNS_OP;16;16;16    |   1   |
+|    SUB_UNS_OP;16;1;16    |   1   |
+|     ADD_UNS_OP;3;1;4     |   2   |
+| SELECT_OP_15.16_15.16_15 |   1   |
+|  SELECT_OP_2.16_2.16_2   |   3   |
+|  SELECT_OP_3.16_3.16_3   |   1   |
+====================================
+Presto compilation completed successfully. (fu)
+Information: Building the design 'rb'. (HDL-193)
+
+statistics for FSM inference:
+
+  no finite state machine inferred.
+
+Inferred memory devices in process
+        in routine rb line 20 in file
+                './input/rb.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      hb_r_reg       | Flip-flop |  128  |  Y  | N  | Y  | N  | N  | N  | N  |
+|      rb_r_reg       | Flip-flop |  128  |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Sequential Cell (hb_r_reg[7][15])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N512  N7
+
+Sequential Cell (hb_r_reg[7][14])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N512  N7
+
+Sequential Cell (hb_r_reg[7][13])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N512  N7
+
+Sequential Cell (hb_r_reg[7][12])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N512  N7
+
+Sequential Cell (hb_r_reg[7][11])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N512  N7
+
+Sequential Cell (hb_r_reg[7][10])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N512  N7
+
+Sequential Cell (hb_r_reg[7][9])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N512  N7
+
+Sequential Cell (hb_r_reg[7][8])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N512  N7
+
+Sequential Cell (hb_r_reg[7][7])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N512  N7
+
+Sequential Cell (hb_r_reg[7][6])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N512  N7
+
+Sequential Cell (hb_r_reg[7][5])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N512  N7
+
+Sequential Cell (hb_r_reg[7][4])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N512  N7
+
+Sequential Cell (hb_r_reg[7][3])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N512  N7
+
+Sequential Cell (hb_r_reg[7][2])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N512  N7
+
+Sequential Cell (hb_r_reg[7][1])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N512  N7
+
+Sequential Cell (hb_r_reg[7][0])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N512  N7
+
+Sequential Cell (hb_r_reg[6][15])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N480  N7
+
+Sequential Cell (hb_r_reg[6][14])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N480  N7
+
+Sequential Cell (hb_r_reg[6][13])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N480  N7
+
+Sequential Cell (hb_r_reg[6][12])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N480  N7
+
+Sequential Cell (hb_r_reg[6][11])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N480  N7
+
+Sequential Cell (hb_r_reg[6][10])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N480  N7
+
+Sequential Cell (hb_r_reg[6][9])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N480  N7
+
+Sequential Cell (hb_r_reg[6][8])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N480  N7
+
+Sequential Cell (hb_r_reg[6][7])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N480  N7
+
+Sequential Cell (hb_r_reg[6][6])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N480  N7
+
+Sequential Cell (hb_r_reg[6][5])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N480  N7
+
+Sequential Cell (hb_r_reg[6][4])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N480  N7
+
+Sequential Cell (hb_r_reg[6][3])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N480  N7
+
+Sequential Cell (hb_r_reg[6][2])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N480  N7
+
+Sequential Cell (hb_r_reg[6][1])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N480  N7
+
+Sequential Cell (hb_r_reg[6][0])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N480  N7
+
+Sequential Cell (hb_r_reg[5][15])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N448  N7
+
+Sequential Cell (hb_r_reg[5][14])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N448  N7
+
+Sequential Cell (hb_r_reg[5][13])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N448  N7
+
+Sequential Cell (hb_r_reg[5][12])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N448  N7
+
+Sequential Cell (hb_r_reg[5][11])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N448  N7
+
+Sequential Cell (hb_r_reg[5][10])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N448  N7
+
+Sequential Cell (hb_r_reg[5][9])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N448  N7
+
+Sequential Cell (hb_r_reg[5][8])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N448  N7
+
+Sequential Cell (hb_r_reg[5][7])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N448  N7
+
+Sequential Cell (hb_r_reg[5][6])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N448  N7
+
+Sequential Cell (hb_r_reg[5][5])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N448  N7
+
+Sequential Cell (hb_r_reg[5][4])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N448  N7
+
+Sequential Cell (hb_r_reg[5][3])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N448  N7
+
+Sequential Cell (hb_r_reg[5][2])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N448  N7
+
+Sequential Cell (hb_r_reg[5][1])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N448  N7
+
+Sequential Cell (hb_r_reg[5][0])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N448  N7
+
+Sequential Cell (hb_r_reg[4][15])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N416  N7
+
+Sequential Cell (hb_r_reg[4][14])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N416  N7
+
+Sequential Cell (hb_r_reg[4][13])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N416  N7
+
+Sequential Cell (hb_r_reg[4][12])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N416  N7
+
+Sequential Cell (hb_r_reg[4][11])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N416  N7
+
+Sequential Cell (hb_r_reg[4][10])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N416  N7
+
+Sequential Cell (hb_r_reg[4][9])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N416  N7
+
+Sequential Cell (hb_r_reg[4][8])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N416  N7
+
+Sequential Cell (hb_r_reg[4][7])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N416  N7
+
+Sequential Cell (hb_r_reg[4][6])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N416  N7
+
+Sequential Cell (hb_r_reg[4][5])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N416  N7
+
+Sequential Cell (hb_r_reg[4][4])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N416  N7
+
+Sequential Cell (hb_r_reg[4][3])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N416  N7
+
+Sequential Cell (hb_r_reg[4][2])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N416  N7
+
+Sequential Cell (hb_r_reg[4][1])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N416  N7
+
+Sequential Cell (hb_r_reg[4][0])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N416  N7
+
+Sequential Cell (hb_r_reg[3][15])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N384  N7
+
+Sequential Cell (hb_r_reg[3][14])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N384  N7
+
+Sequential Cell (hb_r_reg[3][13])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N384  N7
+
+Sequential Cell (hb_r_reg[3][12])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N384  N7
+
+Sequential Cell (hb_r_reg[3][11])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N384  N7
+
+Sequential Cell (hb_r_reg[3][10])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N384  N7
+
+Sequential Cell (hb_r_reg[3][9])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N384  N7
+
+Sequential Cell (hb_r_reg[3][8])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N384  N7
+
+Sequential Cell (hb_r_reg[3][7])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N384  N7
+
+Sequential Cell (hb_r_reg[3][6])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N384  N7
+
+Sequential Cell (hb_r_reg[3][5])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N384  N7
+
+Sequential Cell (hb_r_reg[3][4])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N384  N7
+
+Sequential Cell (hb_r_reg[3][3])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N384  N7
+
+Sequential Cell (hb_r_reg[3][2])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N384  N7
+
+Sequential Cell (hb_r_reg[3][1])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N384  N7
+
+Sequential Cell (hb_r_reg[3][0])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N384  N7
+
+Sequential Cell (hb_r_reg[2][15])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N352  N7
+
+Sequential Cell (hb_r_reg[2][14])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N352  N7
+
+Sequential Cell (hb_r_reg[2][13])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N352  N7
+
+Sequential Cell (hb_r_reg[2][12])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N352  N7
+
+Sequential Cell (hb_r_reg[2][11])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N352  N7
+
+Sequential Cell (hb_r_reg[2][10])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N352  N7
+
+Sequential Cell (hb_r_reg[2][9])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N352  N7
+
+Sequential Cell (hb_r_reg[2][8])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N352  N7
+
+Sequential Cell (hb_r_reg[2][7])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N352  N7
+
+Sequential Cell (hb_r_reg[2][6])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N352  N7
+
+Sequential Cell (hb_r_reg[2][5])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N352  N7
+
+Sequential Cell (hb_r_reg[2][4])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N352  N7
+
+Sequential Cell (hb_r_reg[2][3])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N352  N7
+
+Sequential Cell (hb_r_reg[2][2])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N352  N7
+
+Sequential Cell (hb_r_reg[2][1])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N352  N7
+
+Sequential Cell (hb_r_reg[2][0])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N352  N7
+
+Sequential Cell (hb_r_reg[1][15])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N320  N7
+
+Sequential Cell (hb_r_reg[1][14])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N320  N7
+
+Sequential Cell (hb_r_reg[1][13])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N320  N7
+
+Sequential Cell (hb_r_reg[1][12])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N320  N7
+
+Sequential Cell (hb_r_reg[1][11])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N320  N7
+
+Sequential Cell (hb_r_reg[1][10])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N320  N7
+
+Sequential Cell (hb_r_reg[1][9])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N320  N7
+
+Sequential Cell (hb_r_reg[1][8])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N320  N7
+
+Sequential Cell (hb_r_reg[1][7])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N320  N7
+
+Sequential Cell (hb_r_reg[1][6])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N320  N7
+
+Sequential Cell (hb_r_reg[1][5])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N320  N7
+
+Sequential Cell (hb_r_reg[1][4])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N320  N7
+
+Sequential Cell (hb_r_reg[1][3])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N320  N7
+
+Sequential Cell (hb_r_reg[1][2])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N320  N7
+
+Sequential Cell (hb_r_reg[1][1])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N320  N7
+
+Sequential Cell (hb_r_reg[1][0])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N320  N7
+
+Sequential Cell (hb_r_reg[0][15])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N288  N7
+
+Sequential Cell (hb_r_reg[0][14])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N288  N7
+
+Sequential Cell (hb_r_reg[0][13])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N288  N7
+
+Sequential Cell (hb_r_reg[0][12])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N288  N7
+
+Sequential Cell (hb_r_reg[0][11])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N288  N7
+
+Sequential Cell (hb_r_reg[0][10])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N288  N7
+
+Sequential Cell (hb_r_reg[0][9])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N288  N7
+
+Sequential Cell (hb_r_reg[0][8])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N288  N7
+
+Sequential Cell (hb_r_reg[0][7])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N288  N7
+
+Sequential Cell (hb_r_reg[0][6])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N288  N7
+
+Sequential Cell (hb_r_reg[0][5])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N288  N7
+
+Sequential Cell (hb_r_reg[0][4])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N288  N7
+
+Sequential Cell (hb_r_reg[0][3])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N288  N7
+
+Sequential Cell (hb_r_reg[0][2])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N288  N7
+
+Sequential Cell (hb_r_reg[0][1])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N288  N7
+
+Sequential Cell (hb_r_reg[0][0])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N288  N7
+
+Sequential Cell (rb_r_reg[7][15])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N256  N7
+
+Sequential Cell (rb_r_reg[7][14])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N256  N7
+
+Sequential Cell (rb_r_reg[7][13])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N256  N7
+
+Sequential Cell (rb_r_reg[7][12])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N256  N7
+
+Sequential Cell (rb_r_reg[7][11])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N256  N7
+
+Sequential Cell (rb_r_reg[7][10])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N256  N7
+
+Sequential Cell (rb_r_reg[7][9])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N256  N7
+
+Sequential Cell (rb_r_reg[7][8])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N256  N7
+
+Sequential Cell (rb_r_reg[7][7])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N256  N7
+
+Sequential Cell (rb_r_reg[7][6])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N256  N7
+
+Sequential Cell (rb_r_reg[7][5])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N256  N7
+
+Sequential Cell (rb_r_reg[7][4])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N256  N7
+
+Sequential Cell (rb_r_reg[7][3])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N256  N7
+
+Sequential Cell (rb_r_reg[7][2])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N256  N7
+
+Sequential Cell (rb_r_reg[7][1])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N256  N7
+
+Sequential Cell (rb_r_reg[7][0])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N256  N7
+
+Sequential Cell (rb_r_reg[6][15])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N224  N7
+
+Sequential Cell (rb_r_reg[6][14])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N224  N7
+
+Sequential Cell (rb_r_reg[6][13])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N224  N7
+
+Sequential Cell (rb_r_reg[6][12])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N224  N7
+
+Sequential Cell (rb_r_reg[6][11])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N224  N7
+
+Sequential Cell (rb_r_reg[6][10])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N224  N7
+
+Sequential Cell (rb_r_reg[6][9])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N224  N7
+
+Sequential Cell (rb_r_reg[6][8])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N224  N7
+
+Sequential Cell (rb_r_reg[6][7])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N224  N7
+
+Sequential Cell (rb_r_reg[6][6])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N224  N7
+
+Sequential Cell (rb_r_reg[6][5])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N224  N7
+
+Sequential Cell (rb_r_reg[6][4])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N224  N7
+
+Sequential Cell (rb_r_reg[6][3])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N224  N7
+
+Sequential Cell (rb_r_reg[6][2])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N224  N7
+
+Sequential Cell (rb_r_reg[6][1])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N224  N7
+
+Sequential Cell (rb_r_reg[6][0])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N224  N7
+
+Sequential Cell (rb_r_reg[5][15])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N192  N7
+
+Sequential Cell (rb_r_reg[5][14])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N192  N7
+
+Sequential Cell (rb_r_reg[5][13])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N192  N7
+
+Sequential Cell (rb_r_reg[5][12])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N192  N7
+
+Sequential Cell (rb_r_reg[5][11])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N192  N7
+
+Sequential Cell (rb_r_reg[5][10])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N192  N7
+
+Sequential Cell (rb_r_reg[5][9])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N192  N7
+
+Sequential Cell (rb_r_reg[5][8])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N192  N7
+
+Sequential Cell (rb_r_reg[5][7])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N192  N7
+
+Sequential Cell (rb_r_reg[5][6])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N192  N7
+
+Sequential Cell (rb_r_reg[5][5])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N192  N7
+
+Sequential Cell (rb_r_reg[5][4])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N192  N7
+
+Sequential Cell (rb_r_reg[5][3])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N192  N7
+
+Sequential Cell (rb_r_reg[5][2])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N192  N7
+
+Sequential Cell (rb_r_reg[5][1])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N192  N7
+
+Sequential Cell (rb_r_reg[5][0])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N192  N7
+
+Sequential Cell (rb_r_reg[4][15])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N160  N7
+
+Sequential Cell (rb_r_reg[4][14])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N160  N7
+
+Sequential Cell (rb_r_reg[4][13])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N160  N7
+
+Sequential Cell (rb_r_reg[4][12])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N160  N7
+
+Sequential Cell (rb_r_reg[4][11])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N160  N7
+
+Sequential Cell (rb_r_reg[4][10])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N160  N7
+
+Sequential Cell (rb_r_reg[4][9])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N160  N7
+
+Sequential Cell (rb_r_reg[4][8])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N160  N7
+
+Sequential Cell (rb_r_reg[4][7])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N160  N7
+
+Sequential Cell (rb_r_reg[4][6])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N160  N7
+
+Sequential Cell (rb_r_reg[4][5])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N160  N7
+
+Sequential Cell (rb_r_reg[4][4])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N160  N7
+
+Sequential Cell (rb_r_reg[4][3])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N160  N7
+
+Sequential Cell (rb_r_reg[4][2])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N160  N7
+
+Sequential Cell (rb_r_reg[4][1])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N160  N7
+
+Sequential Cell (rb_r_reg[4][0])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N160  N7
+
+Sequential Cell (rb_r_reg[3][15])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N128  N7
+
+Sequential Cell (rb_r_reg[3][14])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N128  N7
+
+Sequential Cell (rb_r_reg[3][13])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N128  N7
+
+Sequential Cell (rb_r_reg[3][12])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N128  N7
+
+Sequential Cell (rb_r_reg[3][11])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N128  N7
+
+Sequential Cell (rb_r_reg[3][10])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N128  N7
+
+Sequential Cell (rb_r_reg[3][9])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N128  N7
+
+Sequential Cell (rb_r_reg[3][8])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N128  N7
+
+Sequential Cell (rb_r_reg[3][7])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N128  N7
+
+Sequential Cell (rb_r_reg[3][6])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N128  N7
+
+Sequential Cell (rb_r_reg[3][5])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N128  N7
+
+Sequential Cell (rb_r_reg[3][4])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N128  N7
+
+Sequential Cell (rb_r_reg[3][3])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N128  N7
+
+Sequential Cell (rb_r_reg[3][2])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N128  N7
+
+Sequential Cell (rb_r_reg[3][1])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N128  N7
+
+Sequential Cell (rb_r_reg[3][0])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N128  N7
+
+Sequential Cell (rb_r_reg[2][15])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N7  N96
+
+Sequential Cell (rb_r_reg[2][14])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N7  N96
+
+Sequential Cell (rb_r_reg[2][13])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N7  N96
+
+Sequential Cell (rb_r_reg[2][12])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N7  N96
+
+Sequential Cell (rb_r_reg[2][11])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N7  N96
+
+Sequential Cell (rb_r_reg[2][10])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N7  N96
+
+Sequential Cell (rb_r_reg[2][9])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N7  N96
+
+Sequential Cell (rb_r_reg[2][8])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N7  N96
+
+Sequential Cell (rb_r_reg[2][7])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N7  N96
+
+Sequential Cell (rb_r_reg[2][6])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N7  N96
+
+Sequential Cell (rb_r_reg[2][5])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N7  N96
+
+Sequential Cell (rb_r_reg[2][4])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N7  N96
+
+Sequential Cell (rb_r_reg[2][3])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N7  N96
+
+Sequential Cell (rb_r_reg[2][2])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N7  N96
+
+Sequential Cell (rb_r_reg[2][1])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N7  N96
+
+Sequential Cell (rb_r_reg[2][0])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N7  N96
+
+Sequential Cell (rb_r_reg[1][15])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N64  N7
+
+Sequential Cell (rb_r_reg[1][14])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N64  N7
+
+Sequential Cell (rb_r_reg[1][13])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N64  N7
+
+Sequential Cell (rb_r_reg[1][12])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N64  N7
+
+Sequential Cell (rb_r_reg[1][11])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N64  N7
+
+Sequential Cell (rb_r_reg[1][10])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N64  N7
+
+Sequential Cell (rb_r_reg[1][9])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N64  N7
+
+Sequential Cell (rb_r_reg[1][8])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N64  N7
+
+Sequential Cell (rb_r_reg[1][7])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N64  N7
+
+Sequential Cell (rb_r_reg[1][6])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N64  N7
+
+Sequential Cell (rb_r_reg[1][5])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N64  N7
+
+Sequential Cell (rb_r_reg[1][4])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N64  N7
+
+Sequential Cell (rb_r_reg[1][3])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N64  N7
+
+Sequential Cell (rb_r_reg[1][2])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N64  N7
+
+Sequential Cell (rb_r_reg[1][1])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N64  N7
+
+Sequential Cell (rb_r_reg[1][0])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N64  N7
+
+Sequential Cell (rb_r_reg[0][15])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N32  N7
+
+Sequential Cell (rb_r_reg[0][14])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N32  N7
+
+Sequential Cell (rb_r_reg[0][13])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N32  N7
+
+Sequential Cell (rb_r_reg[0][12])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N32  N7
+
+Sequential Cell (rb_r_reg[0][11])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N32  N7
+
+Sequential Cell (rb_r_reg[0][10])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N32  N7
+
+Sequential Cell (rb_r_reg[0][9])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N32  N7
+
+Sequential Cell (rb_r_reg[0][8])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N32  N7
+
+Sequential Cell (rb_r_reg[0][7])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N32  N7
+
+Sequential Cell (rb_r_reg[0][6])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N32  N7
+
+Sequential Cell (rb_r_reg[0][5])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N32  N7
+
+Sequential Cell (rb_r_reg[0][4])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N32  N7
+
+Sequential Cell (rb_r_reg[0][3])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N32  N7
+
+Sequential Cell (rb_r_reg[0][2])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N32  N7
+
+Sequential Cell (rb_r_reg[0][1])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N32  N7
+
+Sequential Cell (rb_r_reg[0][0])
+        Cell Type: Flip-Flop
+        Multibit Attribute: N
+        Clock: clk
+        Async Clear: rst_n'
+        Async Set: 0
+        Async Load: 0
+        Sync Clear: 0
+        Sync Set: 0
+        Sync Toggle: 0
+        Sync Load:  N32  N7
+Synthetic Cells Summary
+=================================
+|       Cell Type       | Count |
+=================================
+|  SELECT_OP_2.8_2.8_2  |   4   |
+| SELECT_OP_2.16_2.16_2 |   2   |
+|     MUX_OP_8_3.32     |   2   |
+=================================
+Statistics for MUX_OPs
+======================================================
+| block name/line  | Inputs | Outputs | # sel inputs |
+======================================================
+|      rb/42       |   8    |   32    |      3       |
+|      rb/51       |   8    |   32    |      3       |
+======================================================
+Presto compilation completed successfully. (rb)
+Information: Building the design 'muxm'. (HDL-193)
+
+Statistics for case statements in always block at line 12 in file
+        './input/muxm.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            14            |    auto/auto     |
+===============================================
+
+statistics for FSM inference:
+
+  no finite state machine inferred.
+Synthetic Cells Summary
+=================================
+|       Cell Type       | Count |
+=================================
+| SELECT_OP_2.16_2.16_2 |   1   |
+=================================
+Presto compilation completed successfully. (muxm)
+Information: Building the design 'muxb'. (HDL-193)
+
+Statistics for case statements in always block at line 12 in file
+        './input/muxb.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            14            |    auto/auto     |
+===============================================
+
+statistics for FSM inference:
+
+  no finite state machine inferred.
+Synthetic Cells Summary
+=================================
+|       Cell Type       | Count |
+=================================
+| SELECT_OP_2.16_2.16_2 |   1   |
+=================================
+Presto compilation completed successfully. (muxb)
+Information: Building the design 'muxd' instantiated from design 'mycpu' with
+        the parameters "N=3". (HDL-193)
+
+statistics for FSM inference:
+
+  no finite state machine inferred.
+Synthetic Cells Summary
+=================================
+|       Cell Type       | Count |
+=================================
+|    LT_UNS_OP;2;2;1    |   1   |
+| SELECT_OP_2.16_2.16_2 |   1   |
+|  SELECT_OP_3.1_3.1_3  |  16   |
+=================================
+Presto compilation completed successfully. (muxd_N3)
+1
+current_design ${DESIGN_NAME}
+Current design is 'mycpu'.
+{mycpu}
+if { [ file exists $SDC_FILE] } {
+    read_sdc $SDC_FILE
+}
+
+Reading SDC version 2.1...
+1
+if { [info exists DC_DONT_UNGROUP] } {
+    foreach design $DC_DONT_UNGROUP {
+        set_ungroup $design false
+    }
+}
+##########################################################################################################################
+#
+# OPTIMIZATION
+#
+##########################################################################################################################
+set_timing_derate -max -late $derate
+1
+if { [info exists DC_COMPILE_COMMAND] } {
+    eval "$DC_COMPILE_COMMAND"
+} else {
+    compile_ultra
+}
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | T-2022.03-DWBB_202203.4 |     *     |
+| Licensed DW Building Blocks        | T-2022.03-DWBB_202203.4 |     *     |
+============================================================================
+
+====================================================================================================
+| Flow Information                                                                                 |
+----------------------------------------------------------------------------------------------------
+| Flow         | Design Compiler WLM                                                               |
+| Comand Line  | compile_ultra                                                                     |
+====================================================================================================
+| Design Information                                      | Value                                  |
+====================================================================================================
+| Number of Scenarios                                     | 0                                      |
+| Leaf Cell Count                                         | 804                                    |
+| Number of User Hierarchies                              | 8                                      |
+| Sequential Cell Count                                   | 294                                    |
+| Macro Count                                             | 0                                      |
+| Number of Power Domains                                 | 0                                      |
+| Number of Path Groups                                   | 2                                      |
+| Number of VT Class                                      | 1                                      |
+| Number of Clocks                                        | 1                                      |
+| Number of Dont Touch Cells                              | 150                                    |
+| Number of Dont Touch Nets                               | 0                                      |
+| Number of Size Only Cells                               | 0                                      |
+| Design with UPF Data                                    | false                                  |
+====================================================================================================
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+
+Information: There are 47 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+  Simplifying Design 'mycpu'
+
+Loaded alib file '/research/cas/public/DT2_2026/lib/logic_lib/alib-52/saed32hvt_tt1p05v25c.db.alib'
+  Building model 'DW01_NAND2'
+Information: Ungrouping 0 of 9 hierarchies before Pass 1 (OPT-775)
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'rb'
+  Processing 'fu'
+Information: Added key list 'DesignWare' to design 'fu'. (DDB-72)
+ Implement Synthetic for 'fu'.
+  Processing 'cu'
+Information: The register 'st_r_reg[3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'st_r_reg[4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'st_r_reg[5]' is a constant and will be removed. (OPT-1206)
+  Processing 'mycpu'
+  Processing 'pc'
+ Implement Synthetic for 'pc'.
+  Processing 'ir'
+  Processing 'muxd_N3'
+Information: Added key list 'DesignWare' to design 'muxd_N3'. (DDB-72)
+  Processing 'muxm'
+  Processing 'muxb'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The library cell 'PMT3_HVT' in the library 'saed32hvt_tt1p05v25c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PMT2_HVT' in the library 'saed32hvt_tt1p05v25c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PMT1_HVT' in the library 'saed32hvt_tt1p05v25c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'NMT3_HVT' in the library 'saed32hvt_tt1p05v25c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'NMT2_HVT' in the library 'saed32hvt_tt1p05v25c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'NMT1_HVT' in the library 'saed32hvt_tt1p05v25c' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+
+Threshold voltage group cell usage:
+>> saed32cell_hvt 100.00%
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+  Mapping Optimization (Phase 1)
+  Mapping Optimization (Phase 2)
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:09    8542.3      1.40      18.2     238.7                           120291040.0000
+    0:00:09    8481.3      1.49      19.8     249.4                           120045400.0000
+
+Threshold voltage group cell usage:
+>> saed32cell_hvt 100.00%
+
+  Beginning Constant Register Removal
+  -----------------------------------
+    0:00:09    8481.3      1.49      19.8     249.4                           120045400.0000
+    0:00:09    8476.5      1.49      19.8     249.4                           120026552.0000
+
+Threshold voltage group cell usage:
+>> saed32cell_hvt 100.00%
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+  Mapping 'fu_DP_OP_31J1_122_6311_1'
+  Mapping 'pc_DP_OP_13_131_8958_3'
+Information: Added key list 'DesignWare' to design 'pc'. (DDB-72)
+
+Threshold voltage group cell usage:
+>> saed32cell_hvt 100.00%
+
+  Beginning Isolate Ports
+  -----------------------
+
+Threshold voltage group cell usage:
+>> saed32cell_hvt 100.00%
+
+  Beginning Delay Optimization
+  ----------------------------
+    0:00:11    7392.8      1.30      18.2      47.9                           41974156.0000
+    0:00:21    7779.6      0.40       5.3      20.9                           49797624.0000
+    0:00:21    7779.6      0.40       5.3      20.9                           49797624.0000
+    0:00:21    7791.5      0.39       5.3      20.9                           49942552.0000
+
+Threshold voltage group cell usage:
+>> saed32cell_hvt 100.00%
+    0:00:24    7695.0      0.39       5.1      20.9                           49597760.0000
+    0:00:24    7695.0      0.39       5.1      20.9                           49597760.0000
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:00:26    7237.0      0.38       4.6       0.2                           33596984.0000
+    0:00:26    7232.2      0.37       4.4       0.2                           33490120.0000
+    0:00:26    7232.2      0.37       4.4       0.2                           33490120.0000
+    0:00:27    7186.9      0.37       4.4       0.1                           32108006.0000
+    0:00:27    7186.9      0.37       4.4       0.1                           32108006.0000
+    0:00:43    7501.3      0.13       1.1       3.0                           49547428.0000
+    0:00:43    7501.3      0.13       1.1       3.0                           49547428.0000
+    0:00:43    7500.3      0.12       1.1       3.0                           49528020.0000
+    0:00:43    7500.3      0.12       1.1       3.0                           49528020.0000
+    0:00:51    7547.8      0.12       1.1       3.0                           54574336.0000
+    0:00:51    7547.8      0.12       1.1       3.0                           54574336.0000
+    0:00:54    7556.7      0.09       0.7       0.1                           54675620.0000
+    0:00:54    7556.7      0.09       0.7       0.1                           54675620.0000
+    0:01:03    7582.6      0.07       0.6       0.1                           54855636.0000
+    0:01:03    7582.6      0.07       0.6       0.1                           54855636.0000
+    0:01:06    7583.4      0.06       0.5       0.1                           54560216.0000
+    0:01:06    7583.4      0.06       0.5       0.1                           54560216.0000
+    0:01:17    7614.9      0.05       0.4       0.1                           57302816.0000
+    0:01:17    7614.9      0.05       0.4       0.1                           57302816.0000
+    0:01:20    7622.8      0.04       0.3       7.8                           57682992.0000
+    0:01:20    7622.8      0.04       0.3       7.8                           57682992.0000
+    0:01:27    7654.1      0.04       0.2       7.8                           58207832.0000
+
+
+  Beginning Design Rule Fixing  (max_transition)  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:01:27    7654.1      0.04       0.2       7.8                           58207832.0000
+  Global Optimization (Phase 31)
+  Global Optimization (Phase 32)
+  Global Optimization (Phase 33)
+    0:01:29    7648.5      0.02       0.1       0.0                           57693884.0000
+    0:01:32    7647.4      0.02       0.1       0.0                           57690396.0000
+
+Threshold voltage group cell usage:
+>> saed32cell_hvt 100.00%
+
+
+  Beginning Leakage Power Optimization  (max_leakage_power 0)
+  ------------------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:01:32    7647.4      0.02       0.1       0.0                           57690396.0000
+  Global Optimization (Phase 34)
+  Global Optimization (Phase 35)
+  Global Optimization (Phase 36)
+  Global Optimization (Phase 37)
+  Global Optimization (Phase 38)
+  Global Optimization (Phase 39)
+  Global Optimization (Phase 40)
+  Global Optimization (Phase 41)
+  Global Optimization (Phase 42)
+  Global Optimization (Phase 43)
+  Global Optimization (Phase 44)
+  Global Optimization (Phase 45)
+  Global Optimization (Phase 46)
+  Global Optimization (Phase 47)
+  Global Optimization (Phase 48)
+  Global Optimization (Phase 49)
+    0:01:34    7328.2      0.03       0.2      24.1 PC/pc_r_reg[11]/D         39094876.0000
+    0:01:34    7328.0      0.03       0.2      24.1                           39087952.0000
+    0:01:40    7390.0      0.01       0.0      26.5                           41042852.0000
+    0:01:40    7390.0      0.01       0.0      26.5                           41042852.0000
+    0:01:40    7210.8      0.01       0.0      24.1                           29532670.0000
+    0:01:40    7210.8      0.01       0.0      24.1                           29532670.0000
+    0:01:42    7258.9      0.00       0.0      24.1                           32389504.0000
+    0:01:42    7258.9      0.00       0.0      24.1                           32389504.0000
+    0:01:42    7258.9      0.00       0.0      24.1                           32389504.0000
+    0:01:42    7258.9      0.00       0.0      24.1                           32389504.0000
+    0:01:42    7258.9      0.00       0.0      24.1                           32389504.0000
+    0:01:42    7258.9      0.00       0.0      24.1                           32389504.0000
+    0:01:42    7258.9      0.00       0.0      24.1                           32389504.0000
+    0:01:42    7258.9      0.00       0.0      24.1                           32389504.0000
+    0:01:42    7258.9      0.00       0.0      24.1                           32389504.0000
+    0:01:42    7258.9      0.00       0.0      24.1                           32389504.0000
+    0:01:42    7258.9      0.00       0.0      24.1                           32389504.0000
+    0:01:42    7258.9      0.00       0.0      24.1                           32389504.0000
+    0:01:42    7258.9      0.00       0.0      24.1                           32389504.0000
+    0:01:42    7258.9      0.00       0.0      24.1                           32389504.0000
+    0:01:42    7258.9      0.00       0.0      24.1                           32389504.0000
+    0:01:42    7258.9      0.00       0.0      24.1                           32389504.0000
+    0:01:42    7258.9      0.00       0.0      24.1                           32389504.0000
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:01:42    7253.0      0.00       0.0      24.1                           32380310.0000
+    0:01:42    7112.0      0.28       2.9      24.1                           23264472.0000
+    0:01:44    7134.6      0.02       0.1      24.1                           26661288.0000
+    0:01:44    7134.6      0.02       0.1      24.1                           26661288.0000
+    0:01:44    7140.7      0.02       0.1      24.1                           27459236.0000
+    0:01:45    7094.4      0.01       0.0       0.0                           25769310.0000
+    0:01:45    7096.5      0.00       0.0       0.0                           25882520.0000
+    0:01:45    7096.5      0.00       0.0       0.0                           25882520.0000
+    0:01:45    7096.5      0.00       0.0       0.0                           25882520.0000
+    0:01:45    7096.5      0.00       0.0       0.0                           25882520.0000
+    0:01:45    7096.5      0.00       0.0       0.0                           25882520.0000
+    0:01:45    7065.2      0.00       0.0      50.3                           23256654.0000
+Loading db file '/research/cas/public/DT2_2026/lib/logic_lib/saed32hvt_tt1p05v25c.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+1
+##########################################################################################################################
+#
+# WRITE OUT RESULTS
+#
+##########################################################################################################################
+report_timing
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : mycpu
+Version: T-2022.03-SP5-1
+Date   : Tue Oct 27 14:41:44 2026
+****************************************
+
+Operating Conditions: tt1p05v25c   Library: saed32hvt_tt1p05v25c
+Wire Load Model Mode: enclosed
+
+  Startpoint: IR/ir_r_reg[3]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: PC/pc_r_reg[9]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  mycpu              8000                  saed32hvt_tt1p05v25c
+  rb                 8000                  saed32hvt_tt1p05v25c
+  fu                 8000                  saed32hvt_tt1p05v25c
+  cu                 ForQA                 saed32hvt_tt1p05v25c
+  pc                 8000                  saed32hvt_tt1p05v25c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  IR/ir_r_reg[3]/CLK (DFFASX2_HVT)         0.00       0.00 r
+  IR/ir_r_reg[3]/QN (DFFASX2_HVT)          0.15       0.15 r
+  IR/ins_out[3] (ir)                       0.00       0.15 r
+  CU/ins_in[3] (cu)                        0.00       0.15 r
+  CU/rs_out[4] (cu)                        0.00       0.15 r
+  RB/rs_in[4] (rb)                         0.00       0.15 r
+  RB/U40/Y (OR2X1_HVT)                     0.10       0.25 r
+  RB/U22/Y (NOR2X2_HVT)                    0.11       0.36 f
+  RB/U21/Y (INVX1_HVT)                     0.07       0.43 r
+  RB/U117/Y (OA22X1_HVT)                   0.11       0.54 r
+  RB/U32/Y (NAND4X0_HVT)                   0.10       0.64 f
+  RB/a_out[0] (rb)                         0.00       0.64 f
+  U3/Y (NBUFFX2_HVT)                       0.10       0.74 f
+  FU/a_in[0] (fu)                          0.00       0.74 f
+  FU/U501/Y (INVX2_HVT)                    0.13       0.86 r
+  FU/U235/Y (NAND2X4_HVT)                  0.16       1.02 f
+  FU/U200/Y (OAI22X1_HVT)                  0.12       1.15 r
+  FU/U188/Y (INVX0_HVT)                    0.04       1.19 f
+  FU/U166/Y (XNOR2X1_HVT)                  0.15       1.34 r
+  FU/U890/CO (FADDX1_HVT)                  0.17       1.51 r
+  FU/U893/S (FADDX1_HVT)                   0.20       1.71 f
+  FU/U560/CO (FADDX1_HVT)                  0.13       1.83 f
+  FU/U266/Y (INVX0_HVT)                    0.05       1.89 r
+  FU/U121/Y (XOR2X1_HVT)                   0.14       2.03 f
+  FU/U263/Y (OA21X1_HVT)                   0.08       2.10 f
+  FU/U281/Y (INVX0_HVT)                    0.03       2.14 r
+  FU/U280/Y (NAND2X0_HVT)                  0.05       2.18 f
+  FU/U562/Y (AO21X1_HVT)                   0.08       2.26 f
+  FU/U960/Y (AO21X1_HVT)                   0.06       2.32 f
+  FU/U541/Y (AOI21X1_HVT)                  0.10       2.41 r
+  FU/U75/Y (OR2X2_HVT)                     0.08       2.49 r
+  FU/U552/Y (AND2X1_HVT)                   0.10       2.59 r
+  FU/U1366/Y (AND4X1_HVT)                  0.11       2.70 r
+  FU/U533/Y (NAND4X0_HVT)                  0.10       2.80 f
+  FU/U1511/Y (NOR2X0_HVT)                  0.11       2.91 r
+  FU/U1513/Y (AND3X1_HVT)                  0.09       3.00 r
+  FU/nz_out[0] (fu)                        0.00       3.00 r
+  CU/nz_in[0] (cu)                         0.00       3.00 r
+  CU/U41/Y (INVX0_HVT)                     0.05       3.05 f
+  CU/U9/Y (AO21X1_HVT)                     0.09       3.14 f
+  CU/ps_out[0] (cu)                        0.00       3.14 f
+  PC/ps_in[0] (pc)                         0.00       3.14 f
+  PC/U18/Y (NOR2X2_HVT)                    0.11       3.25 r
+  PC/U90/Y (AO21X1_HVT)                    0.10       3.35 r
+  PC/U93/Y (AO21X1_HVT)                    0.10       3.46 r
+  PC/U100/Y (NAND3X0_HVT)                  0.07       3.53 f
+  PC/U97/Y (AND2X1_HVT)                    0.08       3.61 f
+  PC/U19/Y (OAI21X2_HVT)                   0.12       3.72 r
+  PC/U168/Y (INVX0_HVT)                    0.05       3.78 f
+  PC/U169/Y (OA21X1_HVT)                   0.07       3.85 f
+  PC/U119/Y (XOR2X1_HVT)                   0.12       3.97 r
+  PC/U173/Y (AO21X1_HVT)                   0.10       4.06 r
+  PC/pc_r_reg[9]/D (DFFARX1_HVT)           0.01       4.08 r
+  data arrival time                                   4.08
+
+  clock clk (rise edge)                    4.15       4.15
+  clock network delay (ideal)              0.00       4.15
+  PC/pc_r_reg[9]/CLK (DFFARX1_HVT)         0.00       4.15 r
+  library setup time                      -0.07       4.08
+  data required time                                  4.08
+  -----------------------------------------------------------
+  data required time                                  4.08
+  data arrival time                                  -4.08
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+1
+report_area -hierarchy > reports/${DESIGN_NAME}.gatelevel.area.txt
+report_timing > reports/${DESIGN_NAME}.gatelevel.timing.txt
+report_qor > reports/${DESIGN_NAME}.gatelevel.qor.txt
+read_saif -auto_map_names -input results/${DESIGN_NAME}.saif -instance_name ${DESIGN_NAME}_tb/DUT -verbose
+1
+report_power > reports/${DESIGN_NAME}.gatelevel.power.txt
+if { ${DESIGN_NAME} == "mycpu" } { report_power -hierarchy >> reports/${DESIGN_NAME}.gatelevel.power.txt }
+report_reference  -hierarchy > reports/${DESIGN_NAME}.gatelevel.reference.txt
+change_names -rules verilog -hierarchy
+1
+write -hierarchy -format verilog -output results/${DESIGN_NAME}_gatelevel.v
+Writing verilog file '/homedir01/alehtoah24/DT2_2026/project/workdir/results/mycpu_gatelevel.v'.
+1
+write_sdf -version 2.1 results/${DESIGN_NAME}_gatelevel.sdf
+Information: Annotated 'cell' delays are assumed to include load delay. (UID-282)
+Information: Writing timing information to file '/homedir01/alehtoah24/DT2_2026/project/workdir/results/mycpu_gatelevel.sdf'. (WT-3)
+1
+reset_timing_derate
+1
+write_sdc -version 1.7 results/${DESIGN_NAME}_gatelevel.sdc
+1
+saif_map -write_map results/${DESIGN_NAME}_rtl.saifmap
+Information: Writing SAIF name mapping information to file 'results/mycpu_rtl.saifmap'. (PWR-635)
+1
+gui_start
+Current design is 'mycpu'.
+4.1.1
+gui_create_schematic
+Current design is 'mycpu'.
+Schematic.1
+print_message_info
+
+Id             Severity         Limit    Occurrences   Suppressed
+--------------------------------------------------------------------
+CMD-005           Error             0             12           12
+CMD-025           Error             0              1            0
+DDB-72      Information             0              1            0
+HDL-193     Information             0              8            0
+LINT-99     Information             0              1            0
+OPT-1208    Information             0              1            0
+OPT-775     Information             0              1            0
+PWR-12          Warning             0              1            0
+PWR-18          Warning             0             71           71
+PWR-19          Warning             0              1            0
+PWR-24      Information             0              1            0
+PWR-414         Warning             0              1            0
+PWR-536     Information             0              6            0
+PWR-6       Information             0              2            0
+PWR-602     Information             0              1            0
+PWR-635     Information             0              1            0
+PWR-850     Information             0              1            0
+UCN-1           Warning             0             14           14
+UID-101         Warning             0              1            0
+UID-282     Information             0              1            0
+UID-85      Information             0              2            0
+UISN-27     Information             0              1            0
+UPF-213         Warning            10              0            0
+UPF-213a        Warning            10              0            0
+UPF-213b        Warning            10              0            0
+UPF-213c        Warning            10              0            0
+UPF-213d        Warning            10              0            0
+UPF-213e        Warning            10              0            0
+UPF-213f        Warning            10              0            0
+VO-4            Warning             0              1            1
+WT-3        Information             0              1            0
+
+Diagnostics summary: 1 error, 4 warnings, 29 informationals
+Current design is 'mycpu'.
+Information: Updating design information... (UID-85)
+dc_shell> uplevel #0 { report_timing -path full -delay max -nworst 1 -max_paths 1 -significant_digits 2 -sort_by group }
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+        -sort_by group
+Design : mycpu
+Version: T-2022.03-SP5-1
+Date   : Tue Oct 27 14:45:11 2026
+****************************************
+
+Operating Conditions: tt1p05v25c   Library: saed32hvt_tt1p05v25c
+Wire Load Model Mode: enclosed
+
+  Startpoint: IR/ir_r_reg_3_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: PC/pc_r_reg_9_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  mycpu              8000                  saed32hvt_tt1p05v25c
+  rb                 8000                  saed32hvt_tt1p05v25c
+  fu                 8000                  saed32hvt_tt1p05v25c
+  cu                 ForQA                 saed32hvt_tt1p05v25c
+  pc                 8000                  saed32hvt_tt1p05v25c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  IR/ir_r_reg_3_/CLK (DFFASX2_HVT)         0.00       0.00 r
+  IR/ir_r_reg_3_/QN (DFFASX2_HVT)          0.14       0.14 r
+  IR/ins_out[3] (ir)                       0.00       0.14 r
+  CU/ins_in[3] (cu)                        0.00       0.14 r
+  CU/rs_out[4] (cu)                        0.00       0.14 r
+  RB/rs_in[4] (rb)                         0.00       0.14 r
+  RB/U40/Y (OR2X1_HVT)                     0.10       0.24 r
+  RB/U22/Y (NOR2X2_HVT)                    0.11       0.36 f
+  RB/U21/Y (INVX1_HVT)                     0.07       0.43 r
+  RB/U117/Y (OA22X1_HVT)                   0.11       0.53 r
+  RB/U32/Y (NAND4X0_HVT)                   0.10       0.64 f
+  RB/a_out[0] (rb)                         0.00       0.64 f
+  U3/Y (NBUFFX2_HVT)                       0.10       0.74 f
+  FU/a_in[0] (fu)                          0.00       0.74 f
+  FU/U501/Y (INVX2_HVT)                    0.13       0.86 r
+  FU/U235/Y (NAND2X4_HVT)                  0.16       1.02 f
+  FU/U200/Y (OAI22X1_HVT)                  0.12       1.14 r
+  FU/U188/Y (INVX0_HVT)                    0.04       1.19 f
+  FU/U166/Y (XNOR2X1_HVT)                  0.15       1.34 r
+  FU/U890/CO (FADDX1_HVT)                  0.17       1.51 r
+  FU/U893/S (FADDX1_HVT)                   0.20       1.70 f
+  FU/U560/CO (FADDX1_HVT)                  0.13       1.83 f
+  FU/U266/Y (INVX0_HVT)                    0.05       1.88 r
+  FU/U121/Y (XOR2X1_HVT)                   0.14       2.03 f
+  FU/U263/Y (OA21X1_HVT)                   0.07       2.10 f
+  FU/U281/Y (INVX0_HVT)                    0.03       2.13 r
+  FU/U280/Y (NAND2X0_HVT)                  0.05       2.18 f
+  FU/U562/Y (AO21X1_HVT)                   0.08       2.26 f
+  FU/U960/Y (AO21X1_HVT)                   0.06       2.31 f
+  FU/U541/Y (AOI21X1_HVT)                  0.09       2.41 r
+  FU/U75/Y (OR2X2_HVT)                     0.08       2.49 r
+  FU/U552/Y (AND2X1_HVT)                   0.10       2.58 r
+  FU/U1366/Y (AND4X1_HVT)                  0.11       2.69 r
+  FU/U533/Y (NAND4X0_HVT)                  0.10       2.79 f
+  FU/U1511/Y (NOR2X0_HVT)                  0.11       2.91 r
+  FU/U1513/Y (AND3X1_HVT)                  0.09       3.00 r
+  FU/nz_out[0] (fu)                        0.00       3.00 r
+  CU/nz_in[0] (cu)                         0.00       3.00 r
+  CU/U41/Y (INVX0_HVT)                     0.05       3.04 f
+  CU/U9/Y (AO21X1_HVT)                     0.09       3.13 f
+  CU/ps_out[0] (cu)                        0.00       3.13 f
+  PC/ps_in[0] (pc)                         0.00       3.13 f
+  PC/U18/Y (NOR2X2_HVT)                    0.11       3.24 r
+  PC/U90/Y (AO21X1_HVT)                    0.10       3.35 r
+  PC/U93/Y (AO21X1_HVT)                    0.10       3.45 r
+  PC/U100/Y (NAND3X0_HVT)                  0.07       3.52 f
+  PC/U97/Y (AND2X1_HVT)                    0.08       3.60 f
+  PC/U19/Y (OAI21X2_HVT)                   0.12       3.72 r
+  PC/U168/Y (INVX0_HVT)                    0.05       3.77 f
+  PC/U169/Y (OA21X1_HVT)                   0.07       3.84 f
+  PC/U119/Y (XOR2X1_HVT)                   0.12       3.96 r
+  PC/U173/Y (AO21X1_HVT)                   0.10       4.06 r
+  PC/pc_r_reg_9_/D (DFFARX1_HVT)           0.01       4.07 r
+  data arrival time                                   4.07
+
+  clock clk (rise edge)                    4.15       4.15
+  clock network delay (ideal)              0.00       4.15
+  PC/pc_r_reg_9_/CLK (DFFARX1_HVT)         0.00       4.15 r
+  library setup time                      -0.07       4.08
+  data required time                                  4.08
+  -----------------------------------------------------------
+  data required time                                  4.08
+  data arrival time                                  -4.07
+  -----------------------------------------------------------
+  slack (MET)                                         0.01
+
+
+dc_shell> 

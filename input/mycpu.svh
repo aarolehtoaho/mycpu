@@ -6,7 +6,7 @@
 `define INCLUDE_ASSERTIONS
 
 // Uncomment this to enable reporting functions in mycpu_tb.sv
-// `define ENABLE_CPU_REPORTER
+`define ENABLE_CPU_REPORTER
 
 // This macro creates an unknowns check assertion
 `define xcheck(name) X_``name``: assert property ( @(posedge clk) disable iff (rst_n !== '1) !$isunknown( name) ) else $error(`"name has unknown bits.`")   
